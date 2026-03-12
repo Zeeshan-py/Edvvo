@@ -5,7 +5,18 @@ import { defineConfig } from "vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: "html-env-replace",
+      transformIndexHtml(html) {
+        return html.replace(
+          /__OMNIDIM_KEY__/g,
+          process.env.VITE_OMNIDIM_KEY ?? ""
+        );
+      },
+    },
+  ],
   base: "./",
   resolve: {
     alias: {

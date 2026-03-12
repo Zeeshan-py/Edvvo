@@ -46,11 +46,19 @@
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6172365135839149"
       crossorigin="anonymous"
     ></script>
-    <script
-      id="omnidimension-web-widget"
-      async
-      src="https://backend.omnidim.io/web_widget.js?secret_key=afa5ee8ae9b24c6c9dbae9a74274562c"
-    ></script>
+    <!-- Omnidimension widget: load only if VITE_OMNIDIM_KEY is set at build time -->
+    <script>
+      (function() {
+        var key = "__OMNIDIM_KEY__";
+        if (key && key !== "__" + "OMNIDIM_KEY" + "__") {
+          var s = document.createElement("script");
+          s.id = "omnidimension-web-widget";
+          s.async = true;
+          s.src = "https://backend.omnidim.io/web_widget.js?secret_key=" + key;
+          document.head.appendChild(s);
+        }
+      })();
+    </script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
