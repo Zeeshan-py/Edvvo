@@ -1,255 +1,191 @@
-import { SearchIcon, Menu, X, Bell, ArrowLeft } from "lucide-react";
 import React, { useState } from "react";
+import { Bell, ChevronRight, Menu, Sparkles, X } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Input } from "@/components/ui/input";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
-import globalResources from "@/utils/globalResources";
+import { BrandMark } from "@/components/ui/brand-mark";
+import { cn } from "@/utils/cn";
 import { notificationsData, markAllNotificationsAsRead } from "../../../../utils/notificationsData";
+
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "Explore", href: "/explore" },
+  { label: "Workspace", href: "/entertainment" },
+  { label: "About", href: "/about" },
+];
 
 export const HeroSection = (): JSX.Element => {
   const location = useLocation();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  // Notification state using centralized data
-  const [notifications, setNotifications] = useState(notificationsData);
-  const hasUnread = notifications.some(n => !n.read);
-  const [showNotificationModal, setShowNotificationModal] = useState(false);
   const navigate = useNavigate();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showNotifications, setShowNotifications] = useState(false);
+  const [notifications, setNotifications] = useState(notificationsData);
 
-  const handleNotificationClick = () => {
-    setShowNotificationModal(true);
-    // Mark all notifications as read when opening the modal
+  const unreadCount = notifications.filter((notification) => !notification.read).length;
+
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
+  const openNotifications = () => {
     markAllNotificationsAsRead();
-    setNotifications([...notificationsData]); // Update local state
-  };
-  const handleCloseNotificationModal = () => {
-    setShowNotificationModal(false);
-  };
-  
-  // Navigation menu items with routing
-  const navItems = [
-    { label: "Home", href: "/" },
-    { label: "Explore", href: "/explore" },
-    { label: "Workspace", href: "/entertainment" },
-    { label: "About Us", href: "/about" },
-  ];
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
+    setNotifications([...notificationsData]);
+    setShowNotifications(true);
   };
 
   return (
     <>
-      <header className="flex items-center justify-between px-4 md:px-10 py-4 border-b border-gray-200 dark:border-gray-700 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 transition-colors duration-300">
-        {/* Logo and Navigation */}
-        <div className="flex items-center gap-4 md:gap-8">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
-              <svg 
-                viewBox="0 0 32 32" 
-                className="w-6 h-6 text-white"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* Outer shield/protection ring */}
-                <circle cx="16" cy="16" r="14" stroke="currentColor" strokeWidth="1.5" opacity="0.3"/>
-                
-                {/* Main shield background */}
-                <path 
-                  d="M16 3L6 8V14C6 22 10 29 16 30C22 29 26 22 26 14V8L16 3Z" 
-                  fill="currentColor" 
-                  opacity="0.8"
-                />
-                
-                {/* Open book at the center */}
-                <path 
-                  d="M10 12C10 11.5 10.5 11 11 11H15V19H11C10.5 19 10 18.5 10 18V12Z" 
-                  fill="rgba(255,255,255,0.9)"
-                />
-                <path 
-                  d="M17 11H21C21.5 11 22 11.5 22 12V18C22 18.5 21.5 19 21 19H17V11Z" 
-                  fill="rgba(255,255,255,0.9)"
-                />
-                <line x1="16" y1="11" x2="16" y2="19" stroke="rgba(255,255,255,0.6)" strokeWidth="0.5"/>
-                
-                {/* Graduation cap on top */}
-                <path 
-                  d="M16 7L12 9L16 11L20 9L16 7Z" 
-                  fill="rgba(255,255,255,1)"
-                />
-                <path 
-                  d="M19.5 9.5V12C19.5 12.5 18 13.5 16 13.5C14 13.5 12.5 12.5 12.5 12V9.5" 
-                  stroke="rgba(255,255,255,0.8)" 
-                  strokeWidth="0.8" 
-                  fill="none"
-                />
-                
-                {/* Knowledge dots/stars around */}
-                <circle cx="8" cy="14" r="1" fill="rgba(255,255,255,0.6)"/>
-                <circle cx="24" cy="14" r="1" fill="rgba(255,255,255,0.6)"/>
-                <circle cx="16" cy="23" r="1" fill="rgba(255,255,255,0.6)"/>
-                
-                {/* Inner glow effect */}
-                <circle cx="16" cy="16" r="11" stroke="rgba(255,255,255,0.2)" strokeWidth="0.5" fill="none"/>
-              </svg>
-            </div>
-            <h1 className="font-bold text-xl text-gray-900 dark:text-white font-['Newsreader',Helvetica] leading-6">
-              Edvvo
-            </h1>
-          </Link>
+      <header className="sticky top-0 z-50 border-b border-white/60 bg-white/75 backdrop-blur-2xl dark:border-white/10 dark:bg-slate-950/72">
+        <div className="section-shell flex h-20 items-center justify-between gap-4">
+          <div className="flex items-center gap-4 lg:gap-8">
+            <Link to="/" className="shrink-0">
+              <BrandMark />
+            </Link>
 
-          {/* Desktop Navigation Menu */}
-          <NavigationMenu className="hidden md:block">
-            <NavigationMenuList className="flex gap-3 lg:gap-5">
-              {navItems.map((item, index) => (
-                <NavigationMenuItem key={index}>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      to={item.href}
-                      className={`inline-flex items-center justify-center px-4 py-2 text-base font-medium font-['Newsreader',Helvetica] transition-all duration-200 rounded-lg hover:scale-[1.02] ${
-                        location.pathname === item.href
-                          ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20"
-                          : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800"
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
-        </div>
+            <nav className="hidden items-center gap-2 rounded-full border border-slate-200/80 bg-white/70 px-2 py-2 shadow-[0_12px_24px_rgba(15,23,42,0.05)] dark:border-white/10 dark:bg-slate-900/60 md:flex">
+              {navItems.map((item) => {
+                const active = location.pathname === item.href;
 
-        {/* Right side - Theme Toggle and Mobile Menu Button */}
-        <div className="flex items-center gap-3 md:gap-6 relative">
-          {/* Theme Toggle */}
-          <ThemeToggle />
+                return (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className={cn(
+                      "rounded-full px-4 py-2 text-sm font-semibold transition",
+                      active
+                        ? "bg-slate-950 text-white shadow-[0_10px_20px_rgba(15,23,42,0.18)] dark:bg-white dark:text-slate-950"
+                        : "text-slate-600 hover:bg-slate-100 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white",
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </nav>
+          </div>
 
-          {/* Notification Icon */}
-          <button
-            className="relative p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
-            aria-label="Notifications"
-            onClick={handleNotificationClick}
-          >
-            <Bell className="h-6 w-6 text-gray-700 dark:text-gray-300" />
-            {hasUnread && (
-              <span className="absolute top-1 right-1 block w-2.5 h-2.5 bg-red-500 rounded-full ring-2 ring-white dark:ring-gray-900 animate-pulse" />
-            )}
-          </button>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Link
+              to="/explore"
+              className="hidden items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-4 py-2 text-sm font-semibold text-sky-800 transition hover:border-sky-300 hover:bg-sky-100 lg:inline-flex dark:border-sky-400/20 dark:bg-sky-400/10 dark:text-sky-200 dark:hover:bg-sky-400/15"
+            >
+              <Sparkles className="h-4 w-4" />
+              Quick Access
+            </Link>
 
-          {/* Notification Modal Popup */}
-          {showNotificationModal && (
-            <div className="fixed inset-0 z-[9999] flex flex-col bg-white dark:bg-gray-900 transition-all duration-300 w-screen h-screen min-h-0 min-w-0">
-              {/* Full-screen Back to Home Button */}
-              <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 w-full">
-                <button
-                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-base transition-all duration-200 shadow"
-                  onClick={() => {
-                    setShowNotificationModal(false);
-                    navigate("/");
-                  }}
-                  aria-label="Back to Home"
-                >
-                  <ArrowLeft className="w-5 h-5" />
-                  Back to Home
-                </button>
-                <div className="flex items-center gap-3">
-                  <div className="p-3 rounded-full bg-blue-100 dark:bg-blue-900">
-                    <Bell className="w-8 h-8 text-blue-600 dark:text-blue-300" />
-                  </div>
-                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white font-['Newsreader',Helvetica]">Notifications</h2>
-                </div>
-                <button
-                  className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300"
-                  onClick={handleCloseNotificationModal}
-                  aria-label="Close notifications"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-              {/* Notification List or Detail */}
-              <div className="flex-1 flex flex-col overflow-y-auto px-0 py-0 w-full">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 p-4 sm:p-8 w-full">
-                  {notifications.length === 0 ? (
-                    <div className="bg-white dark:bg-gray-900 rounded-xl shadow p-8 text-center text-gray-500 dark:text-gray-400 col-span-full">
-                      No notifications yet.
-                    </div>
-                  ) : (
-                    notifications.map((n) => (
-                      <div
-                        key={n.id}
-                        className={`flex flex-col sm:flex-row items-start gap-2 sm:gap-4 p-4 sm:p-5 rounded-xl shadow-xl border-2 transition-all duration-200 cursor-pointer w-full 
-                          ${n.read 
-                            ? 'bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-900 dark:to-gray-950 border-gray-200 dark:border-gray-800' 
-                            : 'bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 dark:from-blue-900 dark:via-purple-900 dark:to-pink-900 border-blue-200 dark:border-blue-800'} 
-                          hover:scale-[1.03] hover:shadow-2xl`}
-                        onClick={() => { setShowNotificationModal(false); navigate(`/notifications/${n.id}`); }}
-                      >
-                        <div className="pt-1">
-                          <span className={`block w-3 h-3 rounded-full ${n.read ? 'bg-gray-300 dark:bg-gray-700' : 'bg-red-500 animate-pulse'}`}></span>
-                        </div>
-                        <div className="flex-1">
-                          <div className="text-gray-900 dark:text-white font-medium mb-1 text-base sm:text-lg">{n.message}</div>
-                          <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-1">{n.time}</div>
-                          <div className="hidden sm:block text-xs font-semibold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 line-clamp-2">{n.detail}</div>
-                          <div className="mt-2 text-xs text-blue-600 dark:text-blue-400 font-medium">Click to view details →</div>
-                        </div>
-                      </div>
-                    ))
-                  )}
-                </div>
-              </div>
-            </div>
-          )}
+            <button
+              onClick={openNotifications}
+              className="relative rounded-full border border-slate-200/80 bg-white/70 p-2.5 text-slate-600 transition hover:border-slate-300 hover:text-slate-950 dark:border-white/10 dark:bg-slate-900/60 dark:text-slate-300 dark:hover:text-white"
+              aria-label="Open notifications"
+            >
+              <Bell className="h-5 w-5" />
+              {unreadCount > 0 && (
+                <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-rose-500 px-1 text-[10px] font-bold text-white">
+                  {unreadCount > 9 ? "9+" : unreadCount}
+                </span>
+              )}
+            </button>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMobileMenu}
-            className="md:hidden flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
-            aria-label="Toggle mobile menu"
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6 text-gray-700 dark:text-gray-300" />
-            ) : (
-              <div className="flex items-center space-x-1">
-                <Menu className="h-6 w-6 text-gray-700 dark:text-gray-300 animate-bounce" />
-                <span className="text-gray-700 dark:text-gray-300">Menu</span>
-              </div>
-            )}
-          </button>
+            <ThemeToggle />
+
+            <button
+              onClick={() => setIsMobileMenuOpen((current) => !current)}
+              className="rounded-full border border-slate-200/80 bg-white/70 p-2.5 text-slate-700 transition hover:text-slate-950 dark:border-white/10 dark:bg-slate-900/60 dark:text-slate-200 md:hidden"
+              aria-label="Toggle mobile menu"
+            >
+              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
       </header>
 
-      {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-[73px] z-40 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md">
-          <nav className="flex flex-col p-4 space-y-3">
-            {navItems.map((item, index) => (
-              <Link
-                key={index}
-                to={item.href}
-                onClick={closeMobileMenu}
-                className={`block py-3 px-5 rounded-lg font-medium text-lg font-['Newsreader',Helvetica] transition-all duration-200 hover:scale-[1.01] ${
-                  location.pathname === item.href
-                    ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 shadow-sm"
-                    : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 hover:shadow-sm"
-                }`}
+        <div className="fixed inset-x-0 top-20 z-40 border-b border-white/60 bg-white/92 backdrop-blur-2xl dark:border-white/10 dark:bg-slate-950/94 md:hidden">
+          <div className="section-shell py-4">
+            <div className="app-panel space-y-2 p-3">
+              {navItems.map((item) => {
+                const active = location.pathname === item.href;
+
+                return (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    onClick={closeMobileMenu}
+                    className={cn(
+                      "flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold transition",
+                      active
+                        ? "bg-slate-950 text-white dark:bg-white dark:text-slate-950"
+                        : "text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/10",
+                    )}
+                  >
+                    {item.label}
+                    <ChevronRight className="h-4 w-4" />
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showNotifications && (
+        <div className="fixed inset-0 z-[70] bg-slate-950/55 backdrop-blur-sm">
+          <div className="absolute right-0 top-0 h-full w-full max-w-xl border-l border-white/10 bg-white/92 p-4 shadow-[0_24px_80px_rgba(15,23,42,0.24)] backdrop-blur-2xl dark:bg-slate-950/94">
+            <div className="flex items-center justify-between rounded-[28px] border border-slate-200/80 bg-white/80 px-5 py-4 dark:border-white/10 dark:bg-slate-900/75">
+              <div>
+                <div className="section-kicker">Updates</div>
+                <h2 className="mt-3 font-display text-2xl font-bold text-slate-950 dark:text-white">
+                  Notifications
+                </h2>
+              </div>
+              <button
+                onClick={() => setShowNotifications(false)}
+                className="rounded-full border border-slate-200 p-2 text-slate-500 hover:text-slate-950 dark:border-white/10 dark:text-slate-300 dark:hover:text-white"
+                aria-label="Close notifications"
               >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            <div className="mt-4 flex h-[calc(100%-104px)] flex-col gap-3 overflow-y-auto pr-1">
+              {notifications.map((notification) => (
+                <button
+                  key={notification.id}
+                  onClick={() => {
+                    setShowNotifications(false);
+                    navigate(notification.path || `/notifications/${notification.id}`);
+                  }}
+                  className="app-card-3d text-left"
+                >
+                  <div className="flex items-start gap-4 p-5">
+                    <div
+                      className={cn(
+                        "mt-1 h-3 w-3 rounded-full",
+                        notification.read ? "bg-slate-300 dark:bg-slate-600" : "bg-emerald-400",
+                      )}
+                    />
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between gap-4">
+                        <div>
+                          <p className="font-semibold text-slate-950 dark:text-white">{notification.title}</p>
+                          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
+                            {notification.message}
+                          </p>
+                        </div>
+                        <span className="rounded-full bg-slate-100 px-2 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500 dark:bg-white/10 dark:text-slate-300">
+                          {notification.category}
+                        </span>
+                      </div>
+                      <p className="mt-3 text-sm leading-6 text-slate-500 dark:text-slate-400">
+                        {notification.detail}
+                      </p>
+                      <div className="mt-4 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">
+                        <span>{notification.time}</span>
+                        <span>{notification.actionText || "Open"}</span>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       )}
     </>
