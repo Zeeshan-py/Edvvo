@@ -1,0 +1,8 @@
+{
+  "framework": "React 18 / Vite 6",
+  "existingFonts": ["Manrope", "Space Grotesk", "Newsreader"],
+  "design": "Tactile student desk; warm ivory and cobalt",
+  "motion": "CSS and pointer events; reduced-motion support",
+  "scope": "Main discovery pages and shared navigation",
+  "sources": ["package.json", "src/styles/tailwind.css", "tailwind.config.js", "index.html"]
+}

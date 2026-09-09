@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { 
   Target, BookOpen, ArrowLeft, FileText, Users, Star, Search, Filter, HardDrive, Download, Clock, Eye, ExternalLink, ChevronRight, Zap
 } from 'lucide-react';
-import { HeroSection } from '../Home/sections/HeroSection';
-import { FooterSection } from '../Home/sections/FooterSection';
+import { HeroSection } from '../../Home/sections/HeroSection';
+import { FooterSection } from '../../Home/sections/FooterSection';
 import globalResources from "@/utils/globalResources";
 
 // Type definitions based on usage

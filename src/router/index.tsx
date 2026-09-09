@@ -44,6 +44,7 @@ import { SolutionDetailPage } from "@/pages/Workspace/SolutionDetailPage";
 
 // About pages
 import { AboutPage } from "@/pages/About/AboutPage";
+import { ContactPage } from "@/pages/About/ContactPage";
 import { PrivacyPolicyPage } from "@/pages/About/PrivacyPolicyPage";
 import { TermsOfServicePage } from "@/pages/About/TermsOfServicePage";
 
@@ -93,6 +94,7 @@ export const AppRouter = () => {
 
       {/* About Pages */}
       <Route path="/about" element={<AboutPage />} />
+      <Route path="/contact" element={<ContactPage />} />
       <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
       <Route path="/terms-of-service" element={<TermsOfServicePage />} />
     </Routes>

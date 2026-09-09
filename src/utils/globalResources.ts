@@ -10,7 +10,13 @@ import { categories as class12Notes } from '../pages/Explore/notes/Class12notes'
 import { categories as scholarlyVaultCategories } from '../pages/Explore/ScholarlyVault';
 
 // Helper to flatten notes/resources
-function flattenCategories(categories) {
+function flattenCategories(categories: Array<{ title: string; resources?: Array<{
+  id: string;
+  title: string;
+  description: string;
+  tags: string[];
+  downloadLink: string;
+}> }>) {
   return categories.flatMap(cat =>
     (cat.resources || []).map(resource => ({
       ...resource,
@@ -36,7 +42,18 @@ const allNotes = [
 
 const allVault = flattenCategories(scholarlyVaultCategories || []);
 
-const globalResources = [
+export interface SearchResource {
+  id: string;
+  title: string;
+  description: string;
+  subject: string;
+  tags: string[];
+  downloadUrl?: string;
+  downloadLink?: string;
+  type: string;
+}
+
+const globalResources: SearchResource[] = [
   ...allBooks.map(book => ({
     id: book.id,
     title: book.title,
@@ -66,4 +83,4 @@ const globalResources = [
   })),
 ];
 
-export default globalResources; 
+export default globalResources;
