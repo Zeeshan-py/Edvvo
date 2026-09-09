@@ -8,6 +8,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { AppRouter } from "./router";
 import "./styles/tailwind.css";
 import "./styles/studio.css";
+import "./styles/roadmaps.css";
 
 // Get the root element
 const rootElement = document.getElementById("app");
