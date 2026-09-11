@@ -3,150 +3,150 @@
 
   <!-- ====== Home ====== -->
   <url>
-    <loc>https://edvvo.com/</loc>
+    <loc>https://edvvo.netlify.app/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- ====== Explore ====== -->
   <url>
-    <loc>https://edvvo.com/explore</loc>
+    <loc>https://edvvo.netlify.app/explore</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/entertainment</loc>
+    <loc>https://edvvo.netlify.app/entertainment</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/entry-test</loc>
+    <loc>https://edvvo.netlify.app/entry-test</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/scholarly-vault</loc>
+    <loc>https://edvvo.netlify.app/scholarly-vault</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/academic-explorer</loc>
+    <loc>https://edvvo.netlify.app/academic-explorer</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/result</loc>
+    <loc>https://edvvo.netlify.app/result</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <!-- ====== Academic Disciplines ====== -->
   <url>
-    <loc>https://edvvo.com/islamic-studies</loc>
+    <loc>https://edvvo.netlify.app/islamic-studies</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/engineering-applied-science</loc>
+    <loc>https://edvvo.netlify.app/engineering-applied-science</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/engineering-programs</loc>
+    <loc>https://edvvo.netlify.app/engineering-programs</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/applied-science-programs</loc>
+    <loc>https://edvvo.netlify.app/applied-science-programs</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/computer-science</loc>
+    <loc>https://edvvo.netlify.app/computer-science</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/business-finance</loc>
+    <loc>https://edvvo.netlify.app/business-finance</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/natural-biological-sciences</loc>
+    <loc>https://edvvo.netlify.app/natural-biological-sciences</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/health-paramedical</loc>
+    <loc>https://edvvo.netlify.app/health-paramedical</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/social-sciences-humanities</loc>
+    <loc>https://edvvo.netlify.app/social-sciences-humanities</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/architecture-design</loc>
+    <loc>https://edvvo.netlify.app/architecture-design</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/law</loc>
+    <loc>https://edvvo.netlify.app/law</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/education</loc>
+    <loc>https://edvvo.netlify.app/education</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/agriculture-vet</loc>
+    <loc>https://edvvo.netlify.app/agriculture-vet</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- ====== Workspace ====== -->
   <url>
-    <loc>https://edvvo.com/roadmaps</loc>
+    <loc>https://edvvo.netlify.app/roadmaps</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/focus-timer</loc>
+    <loc>https://edvvo.netlify.app/focus-timer</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/solutions</loc>
+    <loc>https://edvvo.netlify.app/solutions</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/research-papers</loc>
+    <loc>https://edvvo.netlify.app/research-papers</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/study-plan</loc>
+    <loc>https://edvvo.netlify.app/study-plan</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- ====== About ====== -->
   <url>
-    <loc>https://edvvo.com/about</loc>
+    <loc>https://edvvo.netlify.app/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/contact</loc>
+    <loc>https://edvvo.netlify.app/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/privacy-policy</loc>
+    <loc>https://edvvo.netlify.app/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

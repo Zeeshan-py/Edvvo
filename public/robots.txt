@@ -1,6 +1,6 @@
 # ============================================
 # Edvvo — robots.txt
-# https://edvvo.com
+# https://edvvo.netlify.app
 # ============================================
 
 # --- Default: Allow all crawlers ---
@@ -60,4 +60,4 @@ User-agent: FacebookBot
 Disallow: /
 
 # --- Sitemap ---
-Sitemap: https://edvvo.com/sitemap.xml
+Sitemap: https://edvvo.netlify.app/sitemap.xml
