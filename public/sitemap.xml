@@ -151,7 +151,7 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://edvvo.com/terms-of-service</loc>
+    <loc>https://edvvo.netlify.app/terms-of-service</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
