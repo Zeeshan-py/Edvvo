@@ -28,8 +28,8 @@ export const BoardPage: React.FC = () => {
     'punjab-board': {
       title: 'Punjab Board',
       description: 'Complete study materials and resources for Punjab Board examinations and curriculum.',
-      color: 'from-emerald-500 to-teal-600',
-      bgPattern: 'bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20',
+      color: ' ',
+      bgPattern: 'ed-tint    ',
       classes: [
         { id: 'class-9', title: 'Class 9', description: 'Ninth grade study materials', resourceCount: 450 },
         { id: 'class-10', title: 'Class 10', description: 'Tenth grade study materials', resourceCount: 520 },
@@ -40,8 +40,8 @@ export const BoardPage: React.FC = () => {
     'scholarly-vault': {
       title: 'Scholarly Vault',
       description: 'Comprehensive collection of academic books and resources across various fields of study.',
-      color: 'from-indigo-500 to-purple-600',
-      bgPattern: 'bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20',
+      color: ' ',
+      bgPattern: 'ed-tint    ',
       classes: []
     }
   };
@@ -53,24 +53,24 @@ export const BoardPage: React.FC = () => {
       title: 'Books',
       description: 'Complete textbooks and reference materials for all subjects and classes.',
       icon: BookOpen,
-      color: 'from-blue-500 to-indigo-600',
-      bgPattern: 'bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20',
+      color: ' ',
+      bgPattern: 'ed-tint    ',
     },
     {
       id: 'notes',
       title: 'Notes/Solution',
       description: 'Detailed notes, solved examples, and step-by-step solutions for better understanding.',
       icon: FileText,
-      color: 'from-emerald-500 to-teal-600',
-      bgPattern: 'bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20',
+      color: ' ',
+      bgPattern: 'ed-tint    ',
     },
     {
       id: 'mind-sprint',
       title: 'Mind Sprint',
       description: 'AI-powered MCQ generator with customizable difficulty levels and syllabus-based questions. (Updated)',
       icon: Brain,
-      color: 'from-purple-500 to-pink-600',
-      bgPattern: 'bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20',
+      color: ' ',
+      bgPattern: 'ed-tint    ',
     }
   ];
 
@@ -114,7 +114,7 @@ export const BoardPage: React.FC = () => {
 
     if (selectedCategory === 'mind-sprint') {
       return (
-        <MindSprint 
+        <MindSprint
           classLevel={selectedClass || 'class-9'}
           boardName={selectedBoard.title}
           onBack={() => setSelectedCategory(null)}
@@ -124,10 +124,10 @@ export const BoardPage: React.FC = () => {
 
     return (
       <div className="text-center py-12">
-        <p className="text-lg text-gray-600 dark:text-gray-400">
+        <p className="text-lg ed-muted ">
           No resources available at this time.
         </p>
-        <div className="mt-4 text-sm text-gray-500">
+        <div className="mt-4 text-sm ed-muted">
           <p>Debug Info:</p>
           <p>Selected Class: {selectedClass || 'null'}</p>
           <p>Selected Category: {selectedCategory || 'null'}</p>
@@ -139,19 +139,19 @@ export const BoardPage: React.FC = () => {
   // If board doesn't exist
   if (!selectedBoard) {
     return (
-      <main className="flex flex-col w-full bg-white dark:bg-gray-900 overflow-x-hidden transition-colors duration-300">
+      <main className="flex flex-col w-full ed-surface  overflow-x-hidden transition-colors duration-300">
         <HeroSection />
-        <div className="flex flex-col w-full items-center bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
+        <div className="flex flex-col w-full items-center ed-tint       min-h-screen">
           <section className="w-full max-w-[1400px] px-4 md:px-6 lg:px-8 py-12 text-center">
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white font-['Newsreader',Helvetica] mb-4">
+            <h1 className="text-4xl font-bold ed-ink  ed-type mb-4">
               Board Not Found
             </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
+            <p className="text-lg ed-muted  mb-8">
               The educational board you're looking for doesn't exist or hasn't been added yet.
             </p>
-            <Link 
+            <Link
               to="/explore"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-200"
+              className="inline-flex items-center gap-2 ed-accent ed-hover-surface text-white px-6 py-3 rounded-xl font-medium transition-all duration-200"
             >
               <ArrowLeft className="w-5 h-5" />
               <span>Back to Explore</span>
@@ -171,45 +171,45 @@ export const BoardPage: React.FC = () => {
   // If category is selected, render the component
   if (selectedClass && selectedCategory) {
     const categoryData = resourceCategories.find(cat => cat.id === selectedCategory);
-    
+
     return (
-      <main className="flex flex-col w-full bg-white dark:bg-gray-900 overflow-x-hidden transition-colors duration-300">
+      <main className="flex flex-col w-full ed-surface  overflow-x-hidden transition-colors duration-300">
         <HeroSection />
         <div className={`flex flex-col w-full items-center ${selectedBoard.bgPattern} transition-colors duration-300 min-h-screen`}>
           <section className="w-full max-w-[1400px] px-4 md:px-6 lg:px-8 py-12">
             {/* Breadcrumb */}
-            <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400 mb-6">
-              <Link to="/explore" className="hover:text-gray-900 dark:hover:text-white transition-colors">
+            <div className="flex items-center space-x-2 text-sm ed-muted  mb-6">
+              <Link to="/explore" className="ed-hover-ink  transition-colors">
                 Explore
               </Link>
               <span>{">"}</span>
-              <button 
+              <button
                 onClick={() => {
                   setSelectedClass(null);
                   setSelectedCategory(null);
                 }}
-                className="hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="ed-hover-ink  transition-colors"
               >
                 {selectedBoard.title}
               </button>
               <span>{">"}</span>
-              <button 
+              <button
                 onClick={() => setSelectedCategory(null)}
-                className="hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="ed-hover-ink  transition-colors"
               >
                 {selectedBoard.classes.find(c => c.id === selectedClass)?.title}
               </button>
               <span>{">"}</span>
-              <span className="text-gray-900 dark:text-white font-medium">
+              <span className="ed-ink  font-medium">
                 {categoryData?.title}
               </span>
             </div>
 
             {/* Back Button */}
             <div className="mb-8">
-              <button 
+              <button
                 onClick={() => setSelectedCategory(null)}
-                className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 group"
+                className="inline-flex items-center gap-2 ed-muted  ed-hover-ink  transition-colors duration-200 group"
               >
                 <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
                 <span className="font-medium">Back to Categories</span>
@@ -228,35 +228,35 @@ export const BoardPage: React.FC = () => {
   // If class is selected, show categories
   if (selectedClass) {
     const classData = selectedBoard.classes.find(c => c.id === selectedClass);
-    
+
     return (
-      <main className="flex flex-col w-full bg-white dark:bg-gray-900 overflow-x-hidden transition-colors duration-300">
+      <main className="flex flex-col w-full ed-surface  overflow-x-hidden transition-colors duration-300">
         <HeroSection />
         <div className={`flex flex-col w-full items-center ${selectedBoard.bgPattern} transition-colors duration-300 min-h-screen`}>
           <section className="w-full max-w-[1400px] px-4 md:px-6 lg:px-8 py-12">
             {/* Breadcrumb */}
-            <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400 mb-6">
-              <Link to="/explore" className="hover:text-gray-900 dark:hover:text-white transition-colors">
+            <div className="flex items-center space-x-2 text-sm ed-muted  mb-6">
+              <Link to="/explore" className="ed-hover-ink  transition-colors">
                 Explore
               </Link>
               <span>{">"}</span>
-              <button 
+              <button
                 onClick={() => setSelectedClass(null)}
-                className="hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="ed-hover-ink  transition-colors"
               >
                 {selectedBoard.title}
               </button>
               <span>{">"}</span>
-              <span className="text-gray-900 dark:text-white font-medium">
+              <span className="ed-ink  font-medium">
                 {classData?.title}
               </span>
             </div>
 
             {/* Back Button */}
             <div className="mb-8">
-              <button 
+              <button
                 onClick={() => setSelectedClass(null)}
-                className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 group"
+                className="inline-flex items-center gap-2 ed-muted  ed-hover-ink  transition-colors duration-200 group"
               >
                 <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
                 <span className="font-medium">Back to Classes</span>
@@ -265,10 +265,10 @@ export const BoardPage: React.FC = () => {
 
             {/* Header */}
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white font-['Newsreader',Helvetica] mb-4 leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold ed-ink  ed-type mb-4 leading-tight">
                 {selectedBoard.title} - {classData?.title}
               </h1>
-              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
+              <p className="text-lg md:text-xl ed-muted  max-w-3xl mx-auto leading-relaxed mb-8">
                 Choose from our comprehensive collection of study materials for {classData?.title}
               </p>
             </div>
@@ -281,42 +281,42 @@ export const BoardPage: React.FC = () => {
                   <div
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
-                    className={`group relative ${category.bgPattern} rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 cursor-pointer border border-white/50 dark:border-gray-700/50 backdrop-blur-sm overflow-hidden`}
-                  >
+                    className={`group relative ${category.bgPattern} rounded-xl p-6 lg:p-8 ed-elevation ed-hover-shadow transition-all duration-500 transform ed-lift cursor-pointer border border-white/50  backdrop-blur-sm overflow-hidden`}
+                   role="button" tabIndex={0} onKeyDown={event => { if (event.target === event.currentTarget && (event.key === "Enter" || event.key === " ")) { event.preventDefault(); event.currentTarget.click(); } }}>
                     {/* Background Pattern */}
                     <div className="absolute inset-0 opacity-5 dark:opacity-10">
-                      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent transform rotate-12 scale-150" />
+                      <div className="absolute inset-0 ed-tint    transform rotate-12 scale-150" />
                     </div>
 
                     {/* Content */}
                     <div className="relative z-10 flex flex-col h-full">
                       {/* Header with Icon */}
                       <div className="flex items-start justify-between mb-6">
-                        <div className={`w-14 h-14 lg:w-16 lg:h-16 rounded-2xl bg-gradient-to-br ${category.color} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+                        <div className={`w-14 h-14 lg:w-16 lg:h-16 rounded-2xl ed-tint ${category.color} flex items-center justify-center ed-elevation ed-hover-shadow transition-all duration-300 ed-lift`}>
                           <IconComponent className="w-7 h-7 lg:w-8 lg:h-8 text-white" />
                         </div>
                       </div>
 
                       {/* Title and Description */}
                       <div className="flex-grow mb-6">
-                        <h3 className="font-bold text-xl lg:text-2xl text-gray-900 dark:text-white font-['Newsreader',Helvetica] mb-3 leading-tight">
+                        <h3 className="font-bold text-xl lg:text-2xl ed-ink  ed-type mb-3 leading-tight">
                           {category.title}
                         </h3>
-                        <p className="text-sm lg:text-base text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2">
+                        <p className="text-sm lg:text-base ed-muted  leading-relaxed line-clamp-2">
                           {category.description}
                         </p>
                       </div>
 
                       {/* Action Button */}
                       <button
-                        className="w-full py-3 px-4 rounded-xl font-semibold text-sm bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500 transition-all duration-300 transform group-hover:scale-105"
+                        className="w-full py-3 px-4 rounded-xl font-semibold text-sm ed-surface  ed-hover-surface  ed-ink  border ed-border  hover:border-gray-300  transition-all duration-300 transform ed-lift"
                       >
                         Browse Collection
                       </button>
                     </div>
 
                     {/* Hover Effect Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl" />
+                    <div className="absolute inset-0 ed-tint   opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
                   </div>
                 );
               })}
@@ -331,26 +331,26 @@ export const BoardPage: React.FC = () => {
   // Show classes for the selected board
   // Add Scholarly Vault card
   return (
-    <main className="flex flex-col w-full bg-white dark:bg-gray-900 overflow-x-hidden transition-colors duration-300">
+    <main className="flex flex-col w-full ed-surface  overflow-x-hidden transition-colors duration-300">
       <HeroSection />
       <div className={`flex flex-col w-full items-center ${selectedBoard.bgPattern} transition-colors duration-300 min-h-screen`}>
         <section className="w-full max-w-[1400px] px-4 md:px-6 lg:px-8 py-12">
           {/* Breadcrumb */}
-          <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400 mb-6">
-            <Link to="/explore" className="hover:text-gray-900 dark:hover:text-white transition-colors">
+          <div className="flex items-center space-x-2 text-sm ed-muted  mb-6">
+            <Link to="/explore" className="ed-hover-ink  transition-colors">
               Explore
             </Link>
             <span>{">"}</span>
-            <span className="text-gray-900 dark:text-white font-medium">
+            <span className="ed-ink  font-medium">
               {selectedBoard.title}
             </span>
           </div>
 
           {/* Back Button */}
           <div className="mb-8">
-            <Link 
+            <Link
               to="/explore"
-              className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 group"
+              className="inline-flex items-center gap-2 ed-muted  ed-hover-ink  transition-colors duration-200 group"
             >
               <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
               <span className="font-medium">Back to Explore</span>
@@ -359,10 +359,10 @@ export const BoardPage: React.FC = () => {
 
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white font-['Newsreader',Helvetica] mb-4 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold ed-ink  ed-type mb-4 leading-tight">
               {selectedBoard.title}
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
+            <p className="text-lg md:text-xl ed-muted  max-w-3xl mx-auto leading-relaxed mb-8">
               Select your grade/class to access relevant study materials
             </p>
           </div>
@@ -373,75 +373,75 @@ export const BoardPage: React.FC = () => {
               <div
                 key={classItem.id}
                 onClick={() => setSelectedClass(classItem.id)}
-                className={`group relative ${selectedBoard.bgPattern} rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 cursor-pointer border border-white/50 dark:border-gray-700/50 backdrop-blur-sm overflow-hidden`}
-              >
+                className={`group relative ${selectedBoard.bgPattern} rounded-xl p-6 lg:p-8 ed-elevation ed-hover-shadow transition-all duration-500 transform ed-lift cursor-pointer border border-white/50  backdrop-blur-sm overflow-hidden`}
+               role="button" tabIndex={0} onKeyDown={event => { if (event.target === event.currentTarget && (event.key === "Enter" || event.key === " ")) { event.preventDefault(); event.currentTarget.click(); } }}>
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-5 dark:opacity-10">
-                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent transform rotate-12 scale-150" />
+                  <div className="absolute inset-0 ed-tint    transform rotate-12 scale-150" />
                 </div>
 
                 {/* Content */}
                 <div className="relative z-10 flex flex-col h-full text-center">
                   {/* Title and Description */}
                   <div className="flex-grow mb-6">
-                    <h3 className="font-bold text-2xl text-gray-900 dark:text-white font-['Newsreader',Helvetica] mb-3 leading-tight">
+                    <h3 className="font-bold text-2xl ed-ink  ed-type mb-3 leading-tight">
                       {classItem.title}
                     </h3>
-                    <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                    <p className="text-base ed-muted  leading-relaxed mb-4">
                       {classItem.description}
                     </p>
-                    <div className="inline-flex items-center gap-2 bg-white/60 dark:bg-gray-700/60 rounded-full px-4 py-2">
-                      <FileText className="w-4 h-4 text-gray-600 dark:text-gray-400" />
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {classItem.resourceCount} Resources
+                    <div className="inline-flex items-center gap-2 ed-surface  rounded-full px-4 py-2">
+                      <FileText className="w-4 h-4 ed-muted " />
+                      <span className="text-sm font-medium ed-ink ">
+                        Books &amp; notes
                       </span>
                     </div>
                   </div>
 
                   {/* Action Button */}
-                  <button className="w-full py-3 px-4 rounded-xl font-semibold text-sm bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500 transition-all duration-300 transform group-hover:scale-105">
+                  <button className="w-full py-3 px-4 rounded-xl font-semibold text-sm ed-surface  ed-hover-surface  ed-ink  border ed-border  hover:border-gray-300  transition-all duration-300 transform ed-lift">
                     Explore Resources
                   </button>
                 </div>
 
                 {/* Hover Effect Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl" />
+                <div className="absolute inset-0 ed-tint   opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
               </div>
             ))}
 
             {/* Scholarly Vault Card */}
             <div
               onClick={() => window.location.assign('/board/scholarly-vault')}
-              className="group relative bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 cursor-pointer border border-white/50 dark:border-gray-700/50 backdrop-blur-sm overflow-hidden"
-            >
+              className="group relative ed-tint     rounded-xl p-6 lg:p-8 ed-elevation ed-hover-shadow transition-all duration-500 transform ed-lift cursor-pointer border border-white/50  backdrop-blur-sm overflow-hidden"
+             role="button" tabIndex={0} onKeyDown={event => { if (event.target === event.currentTarget && (event.key === "Enter" || event.key === " ")) { event.preventDefault(); event.currentTarget.click(); } }}>
               {/* Background Pattern */}
               <div className="absolute inset-0 opacity-5 dark:opacity-10">
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent transform rotate-12 scale-150" />
+                <div className="absolute inset-0 ed-tint    transform rotate-12 scale-150" />
               </div>
               {/* Content */}
               <div className="relative z-10 flex flex-col h-full text-center">
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-6">
+                <div className="w-16 h-16 mx-auto rounded-2xl ed-tint   flex items-center justify-center ed-elevation ed-hover-shadow transition-all duration-300 ed-lift mb-6">
                   <Archive className="w-8 h-8 text-white" />
                 </div>
                 <div className="flex-grow mb-6">
-                  <h3 className="font-bold text-2xl text-gray-900 dark:text-white font-['Newsreader',Helvetica] mb-3 leading-tight">
+                  <h3 className="font-bold text-2xl ed-ink  ed-type mb-3 leading-tight">
                     Scholarly Vault
                   </h3>
-                  <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                  <p className="text-base ed-muted  leading-relaxed mb-4">
                     Comprehensive collection of academic books and resources across various fields of study.
                   </p>
-                  <div className="inline-flex items-center gap-2 bg-white/60 dark:bg-gray-700/60 rounded-full px-4 py-2">
-                    <FileText className="w-4 h-4 text-gray-600 dark:text-gray-400" />
-                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <div className="inline-flex items-center gap-2 ed-surface  rounded-full px-4 py-2">
+                    <FileText className="w-4 h-4 ed-muted " />
+                    <span className="text-sm font-medium ed-ink ">
                       Latest Additions
                     </span>
                   </div>
                 </div>
-                <button className="w-full py-3 px-4 rounded-xl font-semibold text-sm bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500 transition-all duration-300 transform group-hover:scale-105">
+                <button className="w-full py-3 px-4 rounded-xl font-semibold text-sm ed-surface  ed-hover-surface  ed-ink  border ed-border  hover:border-gray-300  transition-all duration-300 transform ed-lift">
                   View Scholarly Vault
                 </button>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl" />
+              <div className="absolute inset-0 ed-tint   opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
             </div>
           </div>
         </section>

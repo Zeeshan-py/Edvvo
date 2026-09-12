@@ -17,8 +17,6 @@ export const HeroSection = () => {
   useEffect(() => {
     setOpen(false);
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
-    const title = pathname === "/" ? "Study a little smarter" : navigation.find(n => n.to === pathname)?.label || pathname.split("/").filter(Boolean)[0]?.replace(/-/g, " ");
-    document.title = `${title ? title.charAt(0).toUpperCase() + title.slice(1) : "Study resources"} | Edvvo`;
   }, [pathname]);
   useEffect(() => {
     const close = (event: KeyboardEvent) => { if (event.key === "Escape") setOpen(false); };
@@ -26,7 +24,10 @@ export const HeroSection = () => {
     return () => window.removeEventListener("keydown", close);
   }, []);
   return <>
-    <a className="skip-link" href="#study-content">Skip to content</a>
+    <a className="skip-link" href="#study-content" onClick={event => {
+      const content = document.getElementById('study-content') || document.querySelector<HTMLElement>('.site-shell h1');
+      if (content) { event.preventDefault(); content.tabIndex = -1; content.focus(); content.scrollIntoView(); }
+    }}>Skip to content</a>
     <header className="ed-header">
       <div className="ed-container header-inner">
         <Link to="/" aria-label="Edvvo home"><BrandMark /></Link>

@@ -1,8 +1,8 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { 
-  ArrowLeft, GraduationCap, Cpu, ChevronRight, 
-  Wrench, TestTube, BookOpen, Users 
+import {
+  ArrowLeft, GraduationCap, Cpu, ChevronRight,
+  Wrench, TestTube, BookOpen, Users
 } from "lucide-react";
 import { HeroSection } from "../../Home/sections/HeroSection";
 import { FooterSection } from "../../Home/sections/FooterSection";
@@ -14,8 +14,8 @@ const programCategories = [
     subtitle: "PEC-approved + others",
     description: "Comprehensive engineering programs including PEC-approved degrees and specialized engineering disciplines.",
     icon: Wrench,
-    color: "from-blue-500 to-blue-700",
-    bgPattern: "bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-900/20",
+    color: " ",
+    bgPattern: "ed-tint    ",
     path: "/engineering-programs"
   },
   {
@@ -24,8 +24,8 @@ const programCategories = [
     subtitle: "Non-PEC but technical",
     description: "Technical and applied science programs focusing on practical applications and research.",
     icon: TestTube,
-    color: "from-purple-500 to-purple-700",
-    bgPattern: "bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-900/20",
+    color: " ",
+    bgPattern: "ed-tint    ",
     path: "/applied-science-programs"
   }
 ];
@@ -38,16 +38,16 @@ export const EngineeringAppliedSciencePage = (): JSX.Element => {
   };
 
   return (
-    <main className="flex flex-col w-full bg-white dark:bg-gray-900 overflow-x-hidden transition-colors duration-300">
+    <main className="flex flex-col w-full ed-surface  overflow-x-hidden transition-colors duration-300">
       <HeroSection />
 
-      <div className="flex flex-col w-full items-center bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-900/20 dark:via-gray-800 dark:to-purple-900/20 transition-colors duration-300 min-h-screen">
+      <div className="flex flex-col w-full items-center ed-tint       transition-colors duration-300 min-h-screen">
         <section className="w-full max-w-7xl px-4 md:px-6 lg:px-8 py-12">
           {/* Back Button */}
           <div className="mb-8">
-            <Link 
+            <Link
               to="/academic-explorer"
-              className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 group"
+              className="inline-flex items-center gap-2 ed-muted  ed-hover-ink  transition-colors duration-200 group"
             >
               <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
               <span className="font-medium">Back to Academic Explorer</span>
@@ -56,14 +56,14 @@ export const EngineeringAppliedSciencePage = (): JSX.Element => {
 
           {/* Header Section */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-gradient-to-br from-blue-500 to-purple-600 shadow-2xl mb-6">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-xl ed-tint   ed-elevation mb-6">
               <GraduationCap className="w-10 h-10 text-white" />
             </div>
-            
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white font-['Newsreader',Helvetica] mb-4 leading-tight">
+
+            <h1 className="text-4xl md:text-5xl font-bold ed-ink  ed-type mb-4 leading-tight">
               Engineering & Applied Science
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl ed-muted  max-w-3xl mx-auto leading-relaxed">
               Choose your path in engineering or applied sciences. Explore PEC-approved engineering programs and specialized technical disciplines.
             </p>
           </div>
@@ -76,36 +76,36 @@ export const EngineeringAppliedSciencePage = (): JSX.Element => {
                 <div
                   key={category.id}
                   onClick={() => handleCategoryClick(category)}
-                  className="group relative bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 cursor-pointer border border-gray-200 dark:border-gray-700 overflow-hidden"
-                >
+                  className="group relative ed-surface  rounded-xl p-8 lg:p-10 ed-elevation ed-hover-shadow transition-all duration-500 transform ed-lift cursor-pointer border ed-border  overflow-hidden"
+                 role="button" tabIndex={0} onKeyDown={event => { if (event.target === event.currentTarget && (event.key === "Enter" || event.key === " ")) { event.preventDefault(); event.currentTarget.click(); } }}>
                   {/* Background Pattern */}
                   <div className={`absolute inset-0 ${category.bgPattern} opacity-50`} />
-                  
+
                   {/* Content */}
                   <div className="relative z-10 flex flex-col h-full">
                     {/* Header with Icon */}
                     <div className="flex items-start justify-between mb-8">
-                      <div className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${category.color} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+                      <div className={`w-20 h-20 rounded-xl ed-tint ${category.color} flex items-center justify-center ed-elevation ed-hover-shadow transition-all duration-300 ed-lift`}>
                         <IconComponent className="w-10 h-10 text-white" />
                       </div>
                     </div>
 
                     {/* Title and Description */}
                     <div className="flex-grow mb-8">
-                      <h3 className="font-bold text-2xl lg:text-3xl text-gray-900 dark:text-white font-['Newsreader',Helvetica] mb-2 leading-tight">
+                      <h3 className="font-bold text-2xl lg:text-3xl ed-ink  ed-type mb-2 leading-tight">
                         {category.title}
                       </h3>
-                      <p className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-4">
+                      <p className="text-sm font-semibold ed-muted  mb-4">
                         {category.subtitle}
                       </p>
-                      <p className="text-base lg:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                      <p className="text-base lg:text-lg ed-muted  leading-relaxed">
                         {category.description}
                       </p>
                     </div>
 
                     {/* Action Button */}
                     <div className="flex items-center justify-between">
-                      <button className="flex items-center gap-2 text-gray-600 dark:text-gray-400 font-medium group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300">
+                      <button className="flex items-center gap-2 ed-muted  font-medium ed-group-ink  transition-colors duration-300">
                         <span>Explore Programs</span>
                         <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                       </button>
@@ -113,7 +113,7 @@ export const EngineeringAppliedSciencePage = (): JSX.Element => {
                   </div>
 
                   {/* Hover Effect Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl" />
+                  <div className="absolute inset-0 ed-tint   opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
                 </div>
               );
             })}
@@ -121,23 +121,23 @@ export const EngineeringAppliedSciencePage = (): JSX.Element => {
 
           {/* Bottom CTA Section */}
           <div className="mt-16 text-center">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-              <h2 className="text-2xl font-bold mb-4 font-['Newsreader',Helvetica]">
+            <div className="ed-tint   rounded-2xl p-8 text-white">
+              <h2 className="text-2xl font-bold mb-4 ed-type">
                 Ready to Choose Your Path?
               </h2>
               <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
                 Select between engineering programs or applied science programs to explore degree levels and specializations.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link 
-                  to="/academic-explorer" 
-                  className="bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                <Link
+                  to="/academic-explorer"
+                  className="ed-surface ed-link px-6 py-3 rounded-xl font-semibold ed-hover-surface transition-all duration-300 transform ed-lift ed-elevation"
                 >
                   Back to Academic Explorer
                 </Link>
-                <Link 
-                  to="/scholarly-vault" 
-                  className="bg-white/20 text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105 border border-white/30"
+                <Link
+                  to="/scholarly-vault"
+                  className="ed-surface text-white px-6 py-3 rounded-xl font-semibold ed-hover-surface transition-all duration-300 transform ed-lift border border-white/30"
                 >
                   Visit Scholarly Vault
                 </Link>
@@ -150,4 +150,4 @@ export const EngineeringAppliedSciencePage = (): JSX.Element => {
       <FooterSection />
     </main>
   );
-}; 
+};

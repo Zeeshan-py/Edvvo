@@ -82,15 +82,15 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
     try {
       // Try environment variable first, then hardcoded fallback for deployment
       let apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-      
+
       // If no env variable, use hardcoded key for deployment
       if (!apiKey) {
         apiKey = 'AIzaSyAHzHi-JEcfg5FIE4A_jLgKdYu4yF8h9T4';
       }
-      
+
       console.log('API Key loaded:', apiKey ? 'Yes' : 'No');
       console.log('Environment:', import.meta.env.MODE);
-      
+
       if (!apiKey) {
         alert('Gemini API Key is required to generate MCQs. Please contact support.');
         setLoading(false);
@@ -158,10 +158,10 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
 
       const data = await response.json();
       console.log('Raw API Response:', data);
-      
+
       const generatedText = data.candidates[0].content.parts[0].text;
       console.log('Generated text:', generatedText);
-      
+
       // Parse the JSON response
       let parsedData;
       try {
@@ -230,9 +230,9 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
         {/* Back Button - only show if header is not hidden */}
         {!hideHeader && (
           <div className="mb-6">
-            <button 
+            <button
               onClick={onBack}
-              className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 group"
+              className="inline-flex items-center gap-2 ed-muted  ed-hover-ink  transition-colors duration-200 group"
             >
               <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
               <span className="font-medium">Back to Categories</span>
@@ -243,16 +243,16 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
         <Card className="p-6">
           {!hideHeader && (
             <CardHeader className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-2xl ed-tint   flex items-center justify-center">
                 <Brain className="w-8 h-8 text-white" />
               </div>
               <CardTitle className="text-2xl font-bold">Mind Sprint Configuration</CardTitle>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="ed-muted ">
                 Customize your AI-powered MCQ quiz for {classLevel.replace('-', ' ')} - {boardName}
               </p>
             </CardHeader>
           )}
-          
+
           <CardContent className="space-y-6">
             {/* Number of Questions */}
             <div>
@@ -260,7 +260,7 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
               <select
                 value={config.numQuestions}
                 onChange={(e) => setConfig({ ...config, numQuestions: parseInt(e.target.value) })}
-                className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800"
+                className="w-full p-3 border ed-border  rounded-lg ed-surface "
               >
                 <option value={5}>5 Questions</option>
                 <option value={10}>10 Questions</option>
@@ -279,7 +279,7 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
                     onClick={() => setConfig({ ...config, difficulty: level as any })}
                     className={`p-3 rounded-lg border-2 transition-all duration-200 ${
                       config.difficulty === level
-                        ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300'
+                        ? 'ed-border ed-tint  ed-link '
                         : 'border-gray-300 dark:border-gray-600 hover:border-purple-300'
                     }`}
                   >
@@ -292,8 +292,8 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
             {/* Class Level (Read-only display) */}
             <div>
               <label className="block text-sm font-medium mb-2">Class Level</label>
-              <div className="w-full p-3 bg-gray-100 dark:bg-gray-700 rounded-lg border border-gray-300 dark:border-gray-600">
-                <span className="text-gray-900 dark:text-white font-medium">
+              <div className="w-full p-3 ed-canvas  rounded-lg border ed-border ">
+                <span className="ed-ink  font-medium">
                   {classLevel.replace('-', ' ').toUpperCase()} - {boardName}
                 </span>
               </div>
@@ -305,7 +305,7 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
               <select
                 value={config.subject}
                 onChange={(e) => setConfig({ ...config, subject: e.target.value, book: '' })}
-                className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800"
+                className="w-full p-3 border ed-border  rounded-lg ed-surface "
                 required
               >
                 <option value="">Select Subject</option>
@@ -322,7 +322,7 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
                 <select
                   value={config.book}
                   onChange={(e) => setConfig({ ...config, book: e.target.value })}
-                  className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800"
+                  className="w-full p-3 border ed-border  rounded-lg ed-surface "
                   required
                 >
                   <option value="">Select Book/Topic</option>
@@ -337,7 +337,7 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
             <Button
               onClick={generateMCQs}
               disabled={!config.subject || !config.book || loading}
-              className="w-full py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold"
+              className="w-full py-3 ed-tint     text-white font-semibold"
             >
               {loading ? (
                 <>
@@ -353,7 +353,7 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
             </Button>
 
             {/* Info Text */}
-            <div className="text-center text-sm text-gray-500 dark:text-gray-400">
+            <div className="text-center text-sm ed-muted ">
               <p>MCQs will be generated based on the {boardName} syllabus for {classLevel.replace('-', ' ')} level</p>
             </div>
           </CardContent>
@@ -372,11 +372,11 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
         <div className="mb-6">
           <div className="flex justify-between items-center mb-2">
             <span className="text-sm font-medium">Question {currentQuestion + 1} of {questions.length}</span>
-            <span className="text-sm text-gray-600 dark:text-gray-400">{Math.round(progress)}% Complete</span>
+            <span className="text-sm ed-muted ">{Math.round(progress)}% Complete</span>
           </div>
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-            <div 
-              className="bg-gradient-to-r from-purple-500 to-pink-600 h-2 rounded-full transition-all duration-300"
+          <div className="w-full ed-canvas  rounded-full h-2">
+            <div
+              className="ed-tint   h-2 rounded-full transition-all duration-300"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -397,7 +397,7 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
                   onClick={() => handleAnswerSelect(index)}
                   className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-200 ${
                     userAnswers[currentQuestion] === index
-                      ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20'
+                      ? 'ed-border ed-tint '
                       : 'border-gray-300 dark:border-gray-600 hover:border-purple-300'
                   }`}
                 >
@@ -412,7 +412,7 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
               <Button
                 onClick={handleNextQuestion}
                 disabled={userAnswers[currentQuestion] === -1}
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white"
+                className="ed-tint     text-white"
               >
                 {currentQuestion === questions.length - 1 ? 'Finish Quiz' : 'Next Question'}
               </Button>
@@ -425,14 +425,14 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
 
   if (step === 'results') {
     const percentage = Math.round((score / questions.length) * 100);
-    
+
     return (
       <div className="max-w-4xl mx-auto">
         <Card className="p-6 mb-6">
           <CardHeader className="text-center">
             <CardTitle className="text-3xl font-bold mb-2">Quiz Complete!</CardTitle>
-            <div className="text-6xl font-bold text-purple-600 mb-2">{percentage}%</div>
-            <p className="text-lg text-gray-600 dark:text-gray-400">
+            <div className="text-6xl font-bold ed-link mb-2">{percentage}%</div>
+            <p className="text-lg ed-muted ">
               You scored {score} out of {questions.length} questions correctly
             </p>
           </CardHeader>
@@ -443,28 +443,28 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
           {questions.map((question, index) => {
             const userAnswer = userAnswers[index];
             const isCorrect = userAnswer === question.correctAnswer;
-            
+
             return (
               <Card key={index} className={`p-4 ${isCorrect ? 'border-green-500' : 'border-red-500'}`}>
                 <CardContent>
                   <div className="flex items-start justify-between mb-3">
                     <h3 className="font-semibold">Question {index + 1}</h3>
                     <span className={`px-2 py-1 rounded text-sm font-medium ${
-                      isCorrect ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                      isCorrect ? 'ed-tint text-green-800' : 'bg-red-100 text-red-800'
                     }`}>
                       {isCorrect ? 'Correct' : 'Incorrect'}
                     </span>
                   </div>
-                  
+
                   <p className="mb-3">{question.question}</p>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
                     {question.options.map((option, optionIndex) => (
                       <div
                         key={optionIndex}
                         className={`p-2 rounded border ${
                           optionIndex === question.correctAnswer
-                            ? 'bg-green-50 border-green-500 text-green-800'
+                            ? 'ed-tint border-green-500 text-green-800'
                             : optionIndex === userAnswer && !isCorrect
                             ? 'bg-red-50 border-red-500 text-red-800'
                             : 'border-gray-300'
@@ -475,8 +475,8 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
                       </div>
                     ))}
                   </div>
-                  
-                  <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded">
+
+                  <div className="ed-tint  p-3 rounded">
                     <p className="text-sm"><strong>Explanation:</strong> {question.explanation}</p>
                   </div>
                 </CardContent>
@@ -490,7 +490,7 @@ const MindSprint: React.FC<MindSprintProps> = ({ classLevel, boardName, onBack, 
           <Button onClick={resetQuiz} variant="outline">
             Take Another Quiz
           </Button>
-          <Button onClick={onBack} className="bg-gradient-to-r from-purple-500 to-pink-600">
+          <Button onClick={onBack} className="ed-tint  ">
             Back to Categories
           </Button>
         </div>

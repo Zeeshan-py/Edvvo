@@ -3,6 +3,20 @@
 This redesign does not establish eligibility or guarantee approval.
 
 ## Implemented
+- Extended student-desk typography, surfaces, colors, focus styles and restrained motion
+  to all routed pages, resource collections, article readers and shared UI controls.
+- Added the missing notification index, consistent results/article navigation and a 404.
+- Generated route-specific HTML titles, descriptions, Open Graph metadata and canonical
+  URLs for 41 indexable pages, including all 12 learning guides. Content still renders
+  through React; these HTML files provide metadata, not full server-rendered articles.
+- Sitemap and robots are generated from the shared route catalog during production builds.
+  The canonical origin is https://edvvo.com; old research-paper routes redirect to guides.
+- Notifications are archived utility content and use noindex; they are not in the sitemap.
+- Confirmed the current AdSense publisher matches public/ads.txt. Retained the current
+  Analytics and Tag Manager account IDs from the repository.
+- Removed unverified result-page ratings and board resource-count claims, repaired board
+  portal URLs using the official BBISE directory, and removed misplaced object text from
+  the first React guide.
 - Clear navigation, working class shortcuts and labeled external search results.
 - Removed invented testimonials and unsupported audience metrics from Home and About.
 - Added a contact route using the site's existing public channels.
@@ -10,6 +24,11 @@ This redesign does not establish eligibility or guarantee approval.
 - No new ad placements or deceptive download buttons.
 
 ## Review Before Applying
+- In Netlify, set VITE_GEMINI_API_KEY if the optional quiz generator is needed. The key
+  previously hardcoded in netlify.toml was removed; rotate it because it was exposed.
+  A VITE-prefixed key is still public in the browser; restrict it or use a backend proxy.
+- Submit https://edvvo.com/sitemap.xml in the verified Search Console property after
+  deployment. Confirm the custom domain, redirects, certificate and final HTTP responses.
 - Verify distribution rights for all linked books and PDFs. The vault includes commercial
   textbook titles on third-party file hosts; a link alone does not prove permission.
 - Review original educational content, accuracy, attribution, and broken links across all
@@ -31,3 +50,9 @@ This redesign does not establish eligibility or guarantee approval.
 - https://support.google.com/adsense/answer/13554116
 
 Design alone cannot replace content ownership, valuable original content, or policy review.
+
+## Verification
+Run npm run typecheck, npm run build, npm run verify:seo and npm test -- --run.
+The SEO verifier checks every sitemap URL against the generated HTML, canonical uniqueness,
+metadata, asset paths, the 404 robots directive and AdSense publisher consistency.
+External references: https://bbise.edu.pk/OtherBoards and https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics.

@@ -3,7 +3,15 @@
  * Centralizes all route definitions for better maintainability
  * Organized by main pages: Home, Explore, Workspace, About
  */
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate, useParams } from "react-router-dom";
+import { RouteMetadata } from '@/seo/RouteMetadata';
+import { NotFoundPage } from '@/pages/NotFoundPage';
+import { NotificationPage } from '@/pages/Home/sections/NotificationPage';
+
+function ResearchRedirect() {
+  const { id } = useParams();
+  return <Navigate replace to={id ? `/solutions/${id}` : '/solutions'} />;
+}
 
 // Home page
 import { LandingPage } from "@/pages/Home/LandingPage";
@@ -54,10 +62,12 @@ import { TermsOfServicePage } from "@/pages/About/TermsOfServicePage";
  */
 export const AppRouter = () => {
   return (
-    <Routes>
+    <div className="site-shell"><RouteMetadata /><Routes>
       {/* Home Page */}
       <Route path="/" element={<LandingPage />} />
       <Route path="/notifications/:id" element={<NotificationDetailPage />} />
+      <Route path="/notifications" element={<NotificationPage />} />
+      <Route path="/board/scholarly-vault" element={<Navigate replace to="/scholarly-vault" />} />
 
       {/* Explore Pages */}
       <Route path="/explore" element={<ExplorePage />} />
@@ -67,7 +77,7 @@ export const AppRouter = () => {
       <Route path="/scholarly-vault" element={<ScholarlyVault />} />
       <Route path="/academic-explorer" element={<AcademicExplorer />} />
       <Route path="/result" element={<ResultPage />} />
-      
+
       {/* Academic Disciplines */}
       <Route path="/islamic-studies" element={<IslamicStudiesPage />} />
       <Route path="/engineering-applied-science" element={<EngineeringAppliedSciencePage />} />
@@ -88,8 +98,8 @@ export const AppRouter = () => {
       <Route path="/focus-timer" element={<FocusTimerPage />} />
       <Route path="/solutions" element={<SolutionsPage />} />
       <Route path="/solutions/:id" element={<SolutionDetailPage />} />
-      <Route path="/research-papers" element={<SolutionsPage />} />
-      <Route path="/research-papers/:id" element={<SolutionDetailPage />} />
+      <Route path="/research-papers" element={<ResearchRedirect />} />
+      <Route path="/research-papers/:id" element={<ResearchRedirect />} />
       <Route path="/study-plan" element={<StudyPlanPage />} />
 
       {/* About Pages */}
@@ -97,6 +107,7 @@ export const AppRouter = () => {
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
       <Route path="/terms-of-service" element={<TermsOfServicePage />} />
-    </Routes>
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes></div>
   );
 };

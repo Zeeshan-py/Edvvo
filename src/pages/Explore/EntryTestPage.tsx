@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HeroSection } from "../Home/sections/HeroSection";
 import { FooterSection } from "../Home/sections/FooterSection";
-import { 
+import {
   ArrowLeft,
   Search,
   Filter,
@@ -58,8 +58,8 @@ export const EntryTestPage = (): JSX.Element => {
       title: "NUST Entry Test Materials",
       description: "Comprehensive preparation materials for NUST entrance examination including past papers and practice tests.",
       icon: Target,
-      color: "from-blue-500 to-indigo-600",
-      bgPattern: "bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20",
+      color: " ",
+      bgPattern: "ed-tint    ",
       resourceCount: 45,
       resources: [
         {
@@ -153,8 +153,8 @@ export const EntryTestPage = (): JSX.Element => {
       title: "MDCAT Past Papers",
       description: "Medical College Admission Test past papers with detailed explanations and answer keys.",
       icon: BookOpen,
-      color: "from-emerald-500 to-teal-600",
-      bgPattern: "bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20",
+      color: " ",
+      bgPattern: "ed-tint    ",
       resourceCount: 38,
       resources: [
         {
@@ -248,8 +248,8 @@ export const EntryTestPage = (): JSX.Element => {
       title: "ECAT Past Papers",
       description: "Engineering College Admission Test materials including solved papers and practice questions.",
       icon: Zap,
-      color: "from-purple-500 to-violet-600",
-      bgPattern: "bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20",
+      color: " ",
+      bgPattern: "ed-tint    ",
       resourceCount: 42,
       resources: [
         {
@@ -371,8 +371,8 @@ export const EntryTestPage = (): JSX.Element => {
       title: "STEP Books Collection",
       description: "Sindh Testing Service books and preparation materials for various entry tests.",
       icon: Award,
-      color: "from-orange-500 to-red-600",
-      bgPattern: "bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20",
+      color: " ",
+      bgPattern: "ed-tint    ",
       resourceCount: 28,
       resources: [
         {
@@ -396,8 +396,8 @@ export const EntryTestPage = (): JSX.Element => {
       title: "KIPS Books Library",
       description: "KIPS Academy books and study materials for entry test preparation across all subjects.",
       icon: BookOpen,
-      color: "from-cyan-500 to-blue-600",
-      bgPattern: "bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-900/20 dark:to-blue-900/20",
+      color: " ",
+      bgPattern: "ed-tint    ",
       resourceCount: 35,
       resources: [
         {
@@ -421,8 +421,8 @@ export const EntryTestPage = (): JSX.Element => {
       title: "PMC Books Library",
       description: "PMC books and study materials for entry test preparation across all subjects.",
       icon: BookOpen,
-      color: "from-cyan-500 to-blue-600",
-      bgPattern: "bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-900/20 dark:to-blue-900/20",
+      color: " ",
+      bgPattern: "ed-tint    ",
       resourceCount: 35,
       resources: [
         {
@@ -446,8 +446,8 @@ export const EntryTestPage = (): JSX.Element => {
       title: "Punjab College Library",
       description: "Punjab books and study materials for entry test preparation across all subjects.",
       icon: BookOpen,
-      color: "from-cyan-500 to-blue-600",
-      bgPattern: "bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-900/20 dark:to-blue-900/20",
+      color: " ",
+      bgPattern: "ed-tint    ",
       resourceCount: 35,
       resources: [
         {
@@ -513,8 +513,8 @@ export const EntryTestPage = (): JSX.Element => {
       title: "Star Academy Library",
       description: "Star books and study materials for entry test preparation across all subjects.",
       icon: BookOpen,
-      color: "from-cyan-500 to-blue-600",
-      bgPattern: "bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-900/20 dark:to-blue-900/20",
+      color: " ",
+      bgPattern: "ed-tint    ",
       resourceCount: 35,
       resources: [
         {
@@ -580,8 +580,8 @@ export const EntryTestPage = (): JSX.Element => {
       title: "LAT Entry Test",
       description: "LAT Entry Test books and study materials for preparation across all subjects.",
       icon: BookOpen,
-      color: "from-cyan-500 to-blue-600",
-      bgPattern: "bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-900/20 dark:to-blue-900/20",
+      color: " ",
+      bgPattern: "ed-tint    ",
       resourceCount: 35,
       resources: [
         {
@@ -622,9 +622,9 @@ export const EntryTestPage = (): JSX.Element => {
     const matchesSearch = resource.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          resource.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          resource.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
+
     const matchesDifficulty = filterDifficulty === "All" || resource.difficulty === filterDifficulty;
-    
+
     return matchesSearch && matchesDifficulty;
   }) || [];
 
@@ -641,25 +641,25 @@ export const EntryTestPage = (): JSX.Element => {
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'Beginner': return 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400';
-      case 'Intermediate': return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400';
-      case 'Advanced': return 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400';
-      default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-400';
+      case 'Beginner': return 'ed-tint text-green-800  ';
+      case 'Intermediate': return 'ed-tint text-yellow-800  ';
+      case 'Advanced': return 'bg-red-100 text-red-800  ';
+      default: return 'ed-canvas ed-ink  ';
     }
   };
 
   if (selectedCategory && selectedCategoryData) {
     return (
-      <main className="flex flex-col w-full bg-white dark:bg-gray-900 overflow-x-hidden transition-colors duration-300">
+      <main className="flex flex-col w-full ed-surface  overflow-x-hidden transition-colors duration-300">
         <HeroSection />
 
         <div className={`flex flex-col w-full items-center ${selectedCategoryData.bgPattern} transition-colors duration-300 min-h-screen`}>
           <section className="w-full max-w-[1400px] px-4 md:px-6 lg:px-8 py-12">
             {/* Back Button */}
             <div className="mb-8">
-              <button 
+              <button
                 onClick={() => setSelectedCategory(null)}
-                className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 group"
+                className="inline-flex items-center gap-2 ed-muted  ed-hover-ink  transition-colors duration-200 group"
               >
                 <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
                 <span className="font-medium">Back to Categories</span>
@@ -668,56 +668,56 @@ export const EntryTestPage = (): JSX.Element => {
 
             {/* Header */}
             <div className="text-center mb-12">
-              <div className={`inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-gradient-to-br ${selectedCategoryData.color} shadow-2xl mb-6`}>
+              <div className={`inline-flex items-center justify-center w-20 h-20 rounded-xl ed-tint ${selectedCategoryData.color} ed-elevation mb-6`}>
                 <selectedCategoryData.icon className="w-10 h-10 text-white" />
               </div>
-              
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white font-['Newsreader',Helvetica] mb-4 leading-tight">
+
+              <h1 className="text-4xl md:text-5xl font-bold ed-ink  ed-type mb-4 leading-tight">
                 {selectedCategoryData.title}
               </h1>
-              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
+              <p className="text-lg md:text-xl ed-muted  max-w-3xl mx-auto leading-relaxed mb-8">
                 {selectedCategoryData.description}
               </p>
 
               {/* Stats */}
               <div className="flex flex-wrap justify-center gap-6 mb-8">
-                <div className="flex items-center gap-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
-                  <FileText className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                  <span className="font-semibold text-gray-900 dark:text-white">{selectedCategoryData.resourceCount}</span>
-                  <span className="text-gray-600 dark:text-gray-400">Resources</span>
+                <div className="flex items-center gap-2 ed-surface  backdrop-blur-sm rounded-full px-4 py-2 ed-elevation">
+                  <FileText className="w-5 h-5 ed-muted " />
+                  <span className="font-semibold ed-ink ">{selectedCategoryData.resourceCount}</span>
+                  <span className="ed-muted ">Resources</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
-                  <Users className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                  <span className="font-semibold text-gray-900 dark:text-white">5K+</span>
-                  <span className="text-gray-600 dark:text-gray-400">Downloads</span>
+                <div className="flex items-center gap-2 ed-surface  backdrop-blur-sm rounded-full px-4 py-2 ed-elevation">
+                  <Users className="w-5 h-5 ed-muted " />
+                  <span className="font-semibold ed-ink ">5K+</span>
+                  <span className="ed-muted ">Downloads</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
+                <div className="flex items-center gap-2 ed-surface  backdrop-blur-sm rounded-full px-4 py-2 ed-elevation">
                   <Star className="w-5 h-5 text-yellow-500" />
-                  <span className="font-semibold text-gray-900 dark:text-white">4.8</span>
-                  <span className="text-gray-600 dark:text-gray-400">Rating</span>
+                  <span className="font-semibold ed-ink ">4.8</span>
+                  <span className="ed-muted ">Rating</span>
                 </div>
               </div>
             </div>
 
             {/* Search and Filter */}
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/50 dark:border-gray-700/50 mb-8">
+            <div className="ed-surface  backdrop-blur-sm rounded-2xl p-6 ed-elevation border border-white/50  mb-8">
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="flex-1 relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 ed-muted" />
                   <input
                     type="text"
                     placeholder="Search resources..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="w-full pl-12 pr-4 py-3 ed-surface  border ed-border  rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   />
                 </div>
                 <div className="flex items-center gap-2">
-                  <Filter className="w-5 h-5 text-gray-400" />
+                  <Filter className="w-5 h-5 ed-muted" />
                   <select
                     value={filterDifficulty}
                     onChange={(e) => setFilterDifficulty(e.target.value)}
-                    className="px-4 py-3 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="px-4 py-3 ed-surface  border ed-border  rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   >
                     <option value="All">All Levels</option>
                     <option value="Beginner">Beginner</option>
@@ -733,13 +733,13 @@ export const EntryTestPage = (): JSX.Element => {
               {filteredResources.map((resource) => (
                 <div
                   key={resource.id}
-                  className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/50 dark:border-gray-700/50 hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                  className="ed-surface  backdrop-blur-sm rounded-2xl p-6 ed-elevation border border-white/50  ed-hover-shadow transition-all duration-300 transform ed-lift"
                 >
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
-                      <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
-                        <FileText className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                      <div className="w-10 h-10 ed-tint  rounded-xl flex items-center justify-center">
+                        <FileText className="w-5 h-5 ed-link " />
                       </div>
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(resource.difficulty)}`}>
                         {resource.difficulty}
@@ -747,15 +747,15 @@ export const EntryTestPage = (): JSX.Element => {
                     </div>
                     <div className="flex items-center gap-1 text-yellow-500">
                       <Star className="w-4 h-4 fill-current" />
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{resource.rating}</span>
+                      <span className="text-sm font-medium ed-ink ">{resource.rating}</span>
                     </div>
                   </div>
 
                   {/* Content */}
-                  <h3 className="font-bold text-lg text-gray-900 dark:text-white font-['Newsreader',Helvetica] mb-2 leading-tight">
+                  <h3 className="font-bold text-lg ed-ink  ed-type mb-2 leading-tight">
                     {resource.title}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4 line-clamp-2">
+                  <p className="text-sm ed-muted  leading-relaxed mb-4 line-clamp-2">
                     {resource.description}
                   </p>
 
@@ -764,7 +764,7 @@ export const EntryTestPage = (): JSX.Element => {
                     {resource.tags.slice(0, 3).map((tag, index) => (
                       <span
                         key={index}
-                        className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-xs font-medium text-gray-600 dark:text-gray-400 rounded-full"
+                        className="px-2 py-1 ed-canvas  text-xs font-medium ed-muted  rounded-full"
                       >
                         {tag}
                       </span>
@@ -772,7 +772,7 @@ export const EntryTestPage = (): JSX.Element => {
                   </div>
 
                   {/* File Info */}
-                  <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                  <div className="flex items-center justify-between text-sm ed-muted  mb-4">
                     <div className="flex items-center gap-4">
                       <div className="flex items-center gap-1">
                         <HardDrive className="w-4 h-4" />
@@ -790,7 +790,7 @@ export const EntryTestPage = (): JSX.Element => {
                   </div>
 
                   {/* Last Updated */}
-                  <div className="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400 mb-4">
+                  <div className="flex items-center gap-1 text-xs ed-muted  mb-4">
                     <Clock className="w-3 h-3" />
                     <span>Updated {new Date(resource.lastUpdated).toLocaleDateString()}</span>
                   </div>
@@ -799,7 +799,7 @@ export const EntryTestPage = (): JSX.Element => {
                   <div className="flex gap-2">
                     <button
                       onClick={() => handleDownload(resource.downloadLink, resource.title)}
-                      className="flex-1 flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
+                      className="flex-1 flex items-center justify-center gap-2 ed-accent ed-hover-surface text-white px-4 py-2 rounded-xl font-medium transition-all duration-200 transform ed-lift"
                     >
                       <Download className="w-4 h-4" />
                       <span>Download</span>
@@ -807,14 +807,14 @@ export const EntryTestPage = (): JSX.Element => {
                     {resource.previewAvailable && (
                       <button
                         onClick={() => handlePreview(resource)}
-                        className="flex items-center justify-center gap-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-xl font-medium transition-all duration-200"
+                        className="flex items-center justify-center gap-2 ed-canvas  ed-hover-surface  ed-ink  px-4 py-2 rounded-xl font-medium transition-all duration-200"
                       >
                         <Eye className="w-4 h-4" />
                       </button>
                     )}
                     <button
                       onClick={() => window.open(resource.downloadLink, '_blank')}
-                      className="flex items-center justify-center gap-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-xl font-medium transition-all duration-200"
+                      className="flex items-center justify-center gap-2 ed-canvas  ed-hover-surface  ed-ink  px-4 py-2 rounded-xl font-medium transition-all duration-200"
                     >
                       <ExternalLink className="w-4 h-4" />
                     </button>
@@ -826,11 +826,11 @@ export const EntryTestPage = (): JSX.Element => {
             {/* No Results */}
             {filteredResources.length === 0 && (
               <div className="text-center py-12">
-                <div className="w-20 h-20 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Search className="w-8 h-8 text-gray-400" />
+                <div className="w-20 h-20 ed-canvas  rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Search className="w-8 h-8 ed-muted" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">No resources found</h3>
-                <p className="text-gray-600 dark:text-gray-400">Try adjusting your search terms or filters</p>
+                <h3 className="text-xl font-semibold ed-ink  mb-2">No resources found</h3>
+                <p className="ed-muted ">Try adjusting your search terms or filters</p>
               </div>
             )}
           </section>
@@ -842,16 +842,16 @@ export const EntryTestPage = (): JSX.Element => {
   }
 
   return (
-    <main className="flex flex-col w-full bg-white dark:bg-gray-900 overflow-x-hidden transition-colors duration-300">
+    <main className="flex flex-col w-full ed-surface  overflow-x-hidden transition-colors duration-300">
       <HeroSection />
 
-      <div className="flex flex-col w-full items-center bg-gradient-to-br from-pink-50 via-white to-rose-50 dark:from-pink-900/20 dark:via-gray-800 dark:to-rose-900/20 transition-colors duration-300 min-h-screen">
+      <div className="flex flex-col w-full items-center ed-tint       transition-colors duration-300 min-h-screen">
         <section className="w-full max-w-[1400px] px-4 md:px-6 lg:px-8 py-12">
           {/* Back Button */}
           <div className="mb-8">
-            <Link 
+            <Link
               to="/explore"
-              className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 group"
+              className="inline-flex items-center gap-2 ed-muted  ed-hover-ink  transition-colors duration-200 group"
             >
               <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
               <span className="font-medium">Back to Explore</span>
@@ -860,35 +860,35 @@ export const EntryTestPage = (): JSX.Element => {
 
           {/* Header Section */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-gradient-to-br from-pink-500 to-rose-600 shadow-2xl mb-6">
-              <div className="w-10 h-10 bg-white/20 rounded-2xl flex items-center justify-center">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-xl ed-tint   ed-elevation mb-6">
+              <div className="w-10 h-10 ed-surface rounded-2xl flex items-center justify-center">
                 <Zap className="w-6 h-6 text-white" />
               </div>
             </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white font-['Newsreader',Helvetica] mb-4 leading-tight">
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold ed-ink  ed-type mb-4 leading-tight">
               Entry Test Resources
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
+            <p className="text-lg md:text-xl ed-muted  max-w-3xl mx-auto leading-relaxed mb-8">
               Comprehensive preparation materials for university entrance examinations including NUST, MDCAT, ECAT, and more.
             </p>
 
             {/* Stats */}
             <div className="flex flex-wrap justify-center gap-6 mb-12">
-              <div className="flex items-center gap-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
-                <Users className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                <span className="font-semibold text-gray-900 dark:text-white">10K+</span>
-                <span className="text-gray-600 dark:text-gray-400">Students</span>
+              <div className="flex items-center gap-2 ed-surface  backdrop-blur-sm rounded-full px-4 py-2 ed-elevation">
+                <Users className="w-5 h-5 ed-muted " />
+                <span className="font-semibold ed-ink ">10K+</span>
+                <span className="ed-muted ">Students</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
-                <FileText className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                <span className="font-semibold text-gray-900 dark:text-white">188</span>
-                <span className="text-gray-600 dark:text-gray-400">Resources</span>
+              <div className="flex items-center gap-2 ed-surface  backdrop-blur-sm rounded-full px-4 py-2 ed-elevation">
+                <FileText className="w-5 h-5 ed-muted " />
+                <span className="font-semibold ed-ink ">188</span>
+                <span className="ed-muted ">Resources</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
+              <div className="flex items-center gap-2 ed-surface  backdrop-blur-sm rounded-full px-4 py-2 ed-elevation">
                 <Star className="w-5 h-5 text-yellow-500" />
-                <span className="font-semibold text-gray-900 dark:text-white">4.8</span>
-                <span className="text-gray-600 dark:text-gray-400">Rating</span>
+                <span className="font-semibold ed-ink ">4.8</span>
+                <span className="ed-muted ">Rating</span>
               </div>
             </div>
           </div>
@@ -901,39 +901,39 @@ export const EntryTestPage = (): JSX.Element => {
                 <div
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`group relative ${category.bgPattern} rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 cursor-pointer border border-white/50 dark:border-gray-700/50 backdrop-blur-sm overflow-hidden`}
-                >
+                  className={`group relative ${category.bgPattern} rounded-xl p-6 lg:p-8 ed-elevation ed-hover-shadow transition-all duration-500 transform ed-lift cursor-pointer border border-white/50  backdrop-blur-sm overflow-hidden`}
+                 role="button" tabIndex={0} onKeyDown={event => { if (event.target === event.currentTarget && (event.key === "Enter" || event.key === " ")) { event.preventDefault(); event.currentTarget.click(); } }}>
                   {/* Background Pattern */}
                   <div className="absolute inset-0 opacity-5 dark:opacity-10">
-                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent transform rotate-12 scale-150" />
+                    <div className="absolute inset-0 ed-tint    transform rotate-12 scale-150" />
                   </div>
 
                   {/* Content */}
                   <div className="relative z-10 flex flex-col h-full">
                     {/* Header with Icon and Count */}
                     <div className="flex items-start justify-between mb-6">
-                      <div className={`w-14 h-14 lg:w-16 lg:h-16 rounded-2xl bg-gradient-to-br ${category.color} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+                      <div className={`w-14 h-14 lg:w-16 lg:h-16 rounded-2xl ed-tint ${category.color} flex items-center justify-center ed-elevation ed-hover-shadow transition-all duration-300 ed-lift`}>
                         <IconComponent className="w-7 h-7 lg:w-8 lg:h-8 text-white" />
                       </div>
-                      
-                      <span className="px-3 py-1.5 rounded-full text-xs font-semibold bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 shadow-sm transition-all duration-300">
+
+                      <span className="px-3 py-1.5 rounded-full text-xs font-semibold ed-surface  ed-ink  border ed-border  shadow-sm transition-all duration-300">
                         {category.resourceCount} Resources
                       </span>
                     </div>
 
                     {/* Title and Description */}
                     <div className="flex-grow mb-6">
-                      <h3 className="font-bold text-xl lg:text-2xl text-gray-900 dark:text-white font-['Newsreader',Helvetica] mb-3 leading-tight">
+                      <h3 className="font-bold text-xl lg:text-2xl ed-ink  ed-type mb-3 leading-tight">
                         {category.title}
                       </h3>
-                      <p className="text-sm lg:text-base text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-3">
+                      <p className="text-sm lg:text-base ed-muted  leading-relaxed line-clamp-3">
                         {category.description}
                       </p>
                     </div>
 
                     {/* Action Button */}
                     <div className="flex items-center justify-between">
-                      <button className="flex items-center gap-2 text-gray-700 dark:text-gray-300 font-medium group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300">
+                      <button className="flex items-center gap-2 ed-ink  font-medium ed-group-ink  transition-colors duration-300">
                         <span>Explore Resources</span>
                         <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                       </button>
@@ -941,7 +941,7 @@ export const EntryTestPage = (): JSX.Element => {
                   </div>
 
                   {/* Hover Effect Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl" />
+                  <div className="absolute inset-0 ed-tint   opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
                 </div>
               );
             })}
@@ -949,24 +949,24 @@ export const EntryTestPage = (): JSX.Element => {
 
           {/* Bottom CTA Section */}
           <div className="mt-16 text-center">
-            <div className="bg-gradient-to-r from-pink-600 via-rose-600 to-red-600 rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden">
+            <div className="ed-tint    rounded-xl p-8 lg:p-12 text-white relative overflow-hidden">
               {/* Background Pattern */}
               <div className="absolute inset-0 opacity-10">
-                <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-white/20 transform -rotate-12 scale-150" />
+                <div className="absolute inset-0 ed-tint    transform -rotate-12 scale-150" />
               </div>
-              
+
               <div className="relative z-10">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 font-['Newsreader',Helvetica]">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 ed-type">
                   Ready to Ace Your Entry Test?
                 </h2>
                 <p className="text-lg lg:text-xl opacity-90 max-w-3xl mx-auto mb-8 leading-relaxed">
                   Join thousands of successful students who used our comprehensive study materials to secure admission in top universities.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <button className="bg-white text-gray-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  <button className="ed-surface ed-ink px-8 py-4 rounded-xl font-bold text-lg ed-hover-surface transition-all duration-300 transform ed-lift ed-elevation">
                     Start Preparation
                   </button>
-                  <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105">
+                  <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg ed-hover-surface ed-hover-ink transition-all duration-300 transform ed-lift">
                     View Success Stories
                   </button>
                 </div>

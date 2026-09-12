@@ -26,58 +26,6 @@ Start by installing Node.js from the official website. Once installed, open your
 ## Creating the Basic Structure
 Begin by cleaning up the default files and creating a clean project structure. Remove unnecessary files from the src folder and create components for your app. Design the main App component that will hold the application state and render other components. Plan your component hierarchy: App > TodoList > TodoItem, and consider creating separate components for adding new todos and filtering existing ones.
 
-      {
-        id: 5,
-        title: "Introduction to Data Science with Python",
-        authors: "Edvvo Blog Team",
-        journal: "Edvvo Data Science",
-        year: 2025,
-        abstract: "A beginner-friendly guide to Data Science, covering Python libraries, data analysis, visualization, and real-world applications.",
-        content: "# Introduction to Data Science with Python\n\n## What is Data Science?\nData Science is an interdisciplinary field that uses scientific methods, algorithms, and systems to extract insights from structured and unstructured data. It combines statistics, computer science, and domain expertise to solve complex problems and make data-driven decisions.\n\n## Essential Python Libraries\nPopular libraries include NumPy for numerical operations, Pandas for data manipulation, Matplotlib and Seaborn for visualization, and Scikit-learn for machine learning. Install these libraries using pip and explore their documentation for practical examples.\n\n## Data Analysis Workflow\nStart by importing data using Pandas, cleaning and preprocessing it, performing exploratory data analysis (EDA), and visualizing key trends. Use Scikit-learn to build predictive models and evaluate their performance.\n\n## Real-World Applications\nData Science is used in healthcare for disease prediction, in finance for fraud detection, and in marketing for customer segmentation. Practice by working on datasets from Kaggle or UCI Machine Learning Repository.\n\n## Next Steps\nLearn about deep learning with TensorFlow or PyTorch, and explore big data tools like Spark for large-scale analysis.",
-        downloadUrl: "https://www.kaggle.com/learn/data-science",
-        citations: 0,
-        category: "Data Science",
-        keywords: ["Python", "Data Science", "Machine Learning", "Guide"]
-      },
-      {
-        id: 6,
-        title: "Getting Started with Artificial Intelligence",
-        authors: "Edvvo Blog Team",
-        journal: "Edvvo AI",
-        year: 2025,
-        abstract: "An overview of Artificial Intelligence, its branches, practical tools, and how to build your first AI model.",
-        content: "# Getting Started with Artificial Intelligence\n\n## What is AI?\nArtificial Intelligence (AI) is the simulation of human intelligence in machines that are programmed to think and learn. AI includes machine learning, natural language processing, robotics, and computer vision.\n\n## Key Branches\nMachine Learning, Deep Learning, Expert Systems, and Reinforcement Learning are major branches. Tools like TensorFlow, Keras, and PyTorch are widely used for building AI models.\n\n## Building Your First AI Model\nStart with a simple classification problem using Scikit-learn. Prepare your dataset, split it into training and test sets, train a model, and evaluate its accuracy.\n\n## Applications\nAI powers self-driving cars, voice assistants, recommendation systems, and medical diagnostics. Explore open datasets and try building models for image recognition or text classification.\n\n## Next Steps\nLearn about neural networks, transfer learning, and ethical considerations in AI development.",
-        downloadUrl: "https://ai.google/education/",
-        citations: 0,
-        category: "Artificial Intelligence",
-        keywords: ["AI", "Machine Learning", "Deep Learning", "Guide"]
-      },
-      {
-        id: 7,
-        title: "Cybersecurity Fundamentals",
-        authors: "Edvvo Blog Team",
-        journal: "Edvvo Security",
-        year: 2025,
-        abstract: "Learn the basics of cybersecurity, including threats, best practices, and how to protect digital assets.",
-        content: "# Cybersecurity Fundamentals\n\n## What is Cybersecurity?\nCybersecurity is the practice of protecting systems, networks, and programs from digital attacks. It involves risk assessment, threat mitigation, and incident response.\n\n## Common Threats\nMalware, phishing, ransomware, and social engineering are common threats. Learn how to recognize and defend against them.\n\n## Best Practices\nUse strong passwords, enable two-factor authentication, keep software updated, and regularly back up data. Educate users about safe online behavior.\n\n## Tools and Resources\nExplore tools like antivirus software, firewalls, and intrusion detection systems. Stay informed with resources from organizations like OWASP and NIST.\n\n## Next Steps\nConsider certifications like CompTIA Security+ or CISSP for a career in cybersecurity.",
-        downloadUrl: "https://www.cybrary.it/",
-        citations: 0,
-        category: "Cybersecurity",
-        keywords: ["Cybersecurity", "Security", "Threats", "Guide"]
-      },
-      {
-        id: 8,
-        title: "Environmental Science: Climate Change Essentials",
-        authors: "Edvvo Blog Team",
-        journal: "Edvvo Environment",
-        year: 2025,
-        abstract: "Understand the science of climate change, its impacts, and what can be done to address global environmental challenges.",
-        content: "# Environmental Science: Climate Change Essentials\n\n## What is Climate Change?\nClimate change refers to long-term shifts in temperatures and weather patterns, mainly caused by human activities such as burning fossil fuels.\n\n## Key Concepts\nGreenhouse gases, global warming, carbon footprint, and sustainability are central concepts. Learn how these factors affect ecosystems and human societies.\n\n## Impacts\nClimate change leads to rising sea levels, extreme weather events, loss of biodiversity, and health risks. Explore case studies and scientific reports for deeper understanding.\n\n## Solutions\nAdopt renewable energy, reduce waste, support conservation efforts, and advocate for policy changes. Individual actions matter—reduce energy use and promote sustainable practices.\n\n## Next Steps\nGet involved with organizations like the UN Environment Programme and participate in local environmental initiatives.",
-        downloadUrl: "https://climate.nasa.gov/",
-        citations: 0,
-        category: "Environmental Science",
-        keywords: ["Climate Change", "Environment", "Sustainability", "Guide"]
-      },
 ## Implementing State Management
 Use React's useState hook to manage your application state. Create state variables for storing the list of todos, input field values, and filter options. Each todo item should have properties like id, text, completed status, and creation date. Implement functions to add new todos, toggle completion status, edit existing todos, and delete todos. Remember to use functional state updates when modifying arrays or objects.
 
@@ -764,39 +712,39 @@ export const SolutionsPage = (): JSX.Element => {
   });
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-violet-50 dark:from-purple-900/20 dark:via-gray-800 dark:to-violet-900/20">
+    <main className="min-h-screen ed-tint      ">
       <HeroSection />
-      
+
       <div className="container mx-auto px-4 py-12">
         {/* Back Button */}
         <div className="mb-8">
-          <Link to="/" className="inline-flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors">
+          <Link to="/" className="inline-flex items-center gap-2 ed-link  ed-hover-ink  transition-colors">
             <ArrowLeft className="w-5 h-5" />
             Back to Home
           </Link>
         </div>
-        
+
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-gradient-to-br from-purple-500 to-violet-600 shadow-2xl mb-6">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-xl ed-tint   ed-elevation mb-6">
             <FileText className="w-10 h-10 text-white" />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4 font-['Newsreader',Helvetica] leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold ed-ink  mb-4 ed-type leading-tight">
             Solutions & Guides
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-lg md:text-xl ed-muted  max-w-3xl mx-auto leading-relaxed mb-8">
             Comprehensive step-by-step guides for developers and tech enthusiasts
           </p>
-          
+
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-6 mb-8">
-            <div className="flex items-center gap-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
-              <FileText className="w-5 h-5 text-purple-600" />
-              <span className="font-semibold text-gray-900 dark:text-white">{solutions.length} Guides</span>
+            <div className="flex items-center gap-2 ed-surface  backdrop-blur-sm rounded-full px-4 py-2 ed-elevation">
+              <FileText className="w-5 h-5 ed-link" />
+              <span className="font-semibold ed-ink ">{solutions.length} Guides</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
-              <Users className="w-5 h-5 text-purple-600" />
-              <span className="font-semibold text-gray-900 dark:text-white">Expert Authors</span>
+            <div className="flex items-center gap-2 ed-surface  backdrop-blur-sm rounded-full px-4 py-2 ed-elevation">
+              <Users className="w-5 h-5 ed-link" />
+              <span className="font-semibold ed-ink ">Expert Authors</span>
             </div>
           </div>
         </div>
@@ -806,11 +754,11 @@ export const SolutionsPage = (): JSX.Element => {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row gap-4 mb-8">
               <div className="flex-1 relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 ed-muted" />
                 <input
                   type="text"
                   placeholder="Search guides by title, author, or keywords..."
-                  className="w-full pl-12 pr-4 py-3 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                  className="w-full pl-12 pr-4 py-3 ed-surface  border ed-border  rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
@@ -819,7 +767,7 @@ export const SolutionsPage = (): JSX.Element => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                  className="px-4 py-3 ed-surface  border ed-border  rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                 >
                   {categories.map(category => (
                     <option key={category} value={category}>
@@ -839,38 +787,38 @@ export const SolutionsPage = (): JSX.Element => {
               {filteredSolutions.map((solution) => (
                 <div key={solution.id} className="relative group">
                   {/* Glassy card background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-white/20 to-white/10 dark:from-gray-800/60 dark:via-gray-800/40 dark:to-gray-800/20 backdrop-blur-xl rounded-2xl border border-white/20 dark:border-gray-700/50"></div>
-                  
+                  <div className="absolute inset-0 ed-tint       backdrop-blur-xl rounded-2xl border border-white/20 "></div>
+
                   {/* Card content */}
-                  <div className="relative bg-white/30 dark:bg-gray-800/30 backdrop-blur-lg rounded-2xl border border-white/30 dark:border-gray-700/40 p-8 hover:bg-white/40 dark:hover:bg-gray-800/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-500/10">
+                  <div className="relative ed-surface  backdrop-blur-lg rounded-2xl border border-white/30  p-8 ed-hover-surface  transition-all duration-300 hover:-translate-y-1 ed-hover-shadow hover:shadow-purple-500/10">
                     <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
                       <div className="flex-1">
-                        <div className="flex items-center gap-1 text-gray-600 dark:text-gray-300 mb-2">
+                        <div className="flex items-center gap-1 ed-muted  mb-2">
                           <span className="text-sm font-medium">{solution.journal} • {solution.year}</span>
                         </div>
-                        <Link to={`/solutions/${solution.id}`} className="text-2xl font-bold text-purple-700 dark:text-purple-300 hover:text-purple-600 dark:hover:text-purple-200 hover:underline font-['Newsreader',Helvetica] mb-3 leading-tight block transition-colors duration-200">
+                        <Link to={`/solutions/${solution.id}`} className="text-2xl font-bold ed-link  ed-hover-ink  hover:underline ed-type mb-3 leading-tight block transition-colors duration-200">
                           {solution.title}
                         </Link>
-                        <p className="text-gray-700 dark:text-gray-300 mb-4">
-                          By <span className="font-semibold text-gray-900 dark:text-white">{solution.authors}</span>
+                        <p className="ed-ink  mb-4">
+                          By <span className="font-semibold ed-ink ">{solution.authors}</span>
                         </p>
                       </div>
                     </div>
-                    
+
                     {/* Abstract */}
                     <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Description</h4>
-                      <p className="text-gray-800 dark:text-gray-200 leading-relaxed">{solution.abstract}</p>
+                      <h4 className="text-lg font-semibold ed-ink  mb-3">Description</h4>
+                      <p className="ed-ink  leading-relaxed">{solution.abstract}</p>
                     </div>
 
                     {/* Keywords */}
                     <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Keywords</h4>
+                      <h4 className="text-sm font-semibold ed-ink  mb-2">Keywords</h4>
                       <div className="flex flex-wrap gap-2">
                         {solution.keywords.map((keyword, index) => (
                           <span
                             key={index}
-                            className="px-3 py-1 bg-purple-200/50 dark:bg-purple-900/40 backdrop-blur-sm text-purple-900 dark:text-purple-300 rounded-full text-sm font-medium border border-purple-300/30 dark:border-purple-700/30"
+                            className="px-3 py-1 ed-tint  backdrop-blur-sm ed-link  rounded-full text-sm font-medium border ed-border "
                           >
                             {keyword}
                           </span>
@@ -883,16 +831,16 @@ export const SolutionsPage = (): JSX.Element => {
             </div>
           ) : (
             <div className="text-center py-12">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 dark:bg-gray-700 mb-4">
-                <Search className="w-8 h-8 text-gray-400" />
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full ed-canvas  mb-4">
+                <Search className="w-8 h-8 ed-muted" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">No guides found</h3>
-              <p className="text-gray-600 dark:text-gray-400">Try adjusting your search terms or filters</p>
+              <h3 className="text-xl font-semibold ed-ink  mb-2">No guides found</h3>
+              <p className="ed-muted ">Try adjusting your search terms or filters</p>
             </div>
           )}
         </section>
       </div>
-      
+
       <FooterSection />
     </main>
   );

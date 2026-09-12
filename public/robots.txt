@@ -1,63 +1,19 @@
-# ============================================
-# Edvvo — robots.txt
-# https://edvvo.netlify.app
-# ============================================
-
-# --- Default: Allow all crawlers ---
 User-agent: *
 Allow: /
-
-# Block internal / non-public paths
 Disallow: /api/
 Disallow: /assets/private/
-Disallow: /_headers
-Disallow: /_redirects
 
-# Block query-string pages (search results, filters, etc.)
-Disallow: /*?*
-
-# --- Google ---
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-# --- Google Images ---
-User-agent: Googlebot-Image
-Allow: /assets/
-
-# --- Bing ---
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 2
-
-# --- Yandex ---
-User-agent: Yandex
-Allow: /
-Crawl-delay: 3
-
-# --- Baidu ---
-User-agent: Baiduspider
-Allow: /
-Crawl-delay: 5
-
-# --- Block AI scrapers ---
 User-agent: GPTBot
 Disallow: /
-
 User-agent: ChatGPT-User
 Disallow: /
-
 User-agent: CCBot
 Disallow: /
-
 User-agent: anthropic-ai
 Disallow: /
-
 User-agent: Google-Extended
 Disallow: /
-
 User-agent: FacebookBot
 Disallow: /
 
-# --- Sitemap ---
-Sitemap: https://edvvo.netlify.app/sitemap.xml
+Sitemap: https://edvvo.com/sitemap.xml

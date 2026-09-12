@@ -48,7 +48,7 @@ describe('BookCard Component', () => {
     const downloadButton = screen.getByRole('button', { name: /download/i });
     await user.click(downloadButton);
 
-    expect(windowOpenSpy).toHaveBeenCalledWith(mockBookProps.downloadUrl, '_blank');
+    expect(windowOpenSpy).toHaveBeenCalledWith(mockBookProps.downloadUrl, '_blank', 'noopener,noreferrer');
     windowOpenSpy.mockRestore();
   });
 
@@ -57,14 +57,8 @@ describe('BookCard Component', () => {
     const handleClick = vi.fn();
 
     render(<BookCard {...mockBookProps} onClick={handleClick} />);
-    const card = screen.getByText('Mathematics Class 10').closest('div');
-    
-    if (card) {
-      await user.click(card);
-    }
-    
-    // The onClick is only triggered in specific scenarios
-    expect(handleClick).toHaveBeenCalledTimes(0);
+    await user.click(screen.getByRole('button', { name: /download resource/i }));
+    expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
   it('applies custom className', () => {

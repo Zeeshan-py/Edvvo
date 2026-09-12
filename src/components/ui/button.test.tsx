@@ -12,13 +12,13 @@ describe('Button Component', () => {
   it('applies default variant styles', () => {
     render(<Button>Default</Button>);
     const button = screen.getByRole('button');
-    expect(button).toHaveClass('bg-primary');
+    expect(button).toHaveClass('ed-accent');
   });
 
   it('applies secondary variant styles', () => {
     render(<Button variant="secondary">Secondary</Button>);
     const button = screen.getByRole('button');
-    expect(button).toHaveClass('bg-secondary');
+    expect(button).toHaveClass('ed-tint');
   });
 
   it('applies outline variant styles', () => {

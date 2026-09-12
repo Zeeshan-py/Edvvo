@@ -221,16 +221,16 @@ export const StudyPlanPage = (): JSX.Element => {
   }, [studyPlans]);
 
   const currentPlan = studyPlans[selectedPlan];
-  const progressPercentage = currentPlan.tasks.length > 0 
-    ? (currentPlan.completedTasks / currentPlan.tasks.length) * 100 
+  const progressPercentage = currentPlan.tasks.length > 0
+    ? (currentPlan.completedTasks / currentPlan.tasks.length) * 100
     : 0;
 
   const getPriorityColor = (priority: string) => {
     switch (priority) {
-      case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400';
-      case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400';
-      case 'low': return 'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400';
-      default: return 'text-gray-600 bg-gray-100 dark:bg-gray-600 dark:text-gray-400';
+      case 'high': return 'text-red-600 bg-red-100  ';
+      case 'medium': return 'text-yellow-600 ed-tint  ';
+      case 'low': return 'text-green-600 ed-tint  ';
+      default: return 'ed-muted ed-canvas  ';
     }
   };
 
@@ -462,16 +462,16 @@ export const StudyPlanPage = (): JSX.Element => {
   };
 
   return (
-    <main className="flex flex-col w-full bg-white dark:bg-gray-900 overflow-x-hidden transition-colors duration-300">
+    <main className="flex flex-col w-full ed-surface  overflow-x-hidden transition-colors duration-300">
       <HeroSection />
 
-      <div className="flex flex-col w-full items-center bg-[#f7f9fc] dark:bg-gray-800 transition-colors duration-300 min-h-screen">
+      <div className="flex flex-col w-full items-center bg-[#f7f9fc]  transition-colors duration-300 min-h-screen">
         <section className="w-full max-w-[1200px] px-4 md:px-6 py-12">
           {/* Header */}
           <div className="flex items-center gap-4 mb-8">
-            <Link 
-              to="/entertainment" 
-              className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
+            <Link
+              to="/entertainment"
+              className="flex items-center gap-2 ed-muted  ed-hover-ink  transition-colors duration-200"
             >
               <ArrowLeft className="w-5 h-5" />
               <span className="font-medium">Back to Workspace</span>
@@ -479,13 +479,13 @@ export const StudyPlanPage = (): JSX.Element => {
           </div>
 
           <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-gradient-to-br from-orange-500 to-red-600 shadow-2xl mb-6">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-xl ed-tint   ed-elevation mb-6">
               <Target className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white font-['Newsreader',Helvetica] mb-4 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold ed-ink  ed-type mb-4 leading-tight">
               Study Planner
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
+            <p className="text-lg md:text-xl ed-muted  max-w-3xl mx-auto leading-relaxed mb-8">
               Organize your study schedule, track your progress, and achieve your academic goals
             </p>
           </div>
@@ -498,8 +498,8 @@ export const StudyPlanPage = (): JSX.Element => {
                 onClick={() => setSelectedPlan(plan.id)}
                 className={`px-6 py-3 rounded-2xl font-semibold transition-all duration-200 ${
                   selectedPlan === plan.id
-                    ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-lg'
-                    : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600 border border-gray-200 dark:border-gray-600'
+                    ? 'ed-tint   text-white ed-elevation'
+                    : 'ed-surface  ed-ink  ed-hover-surface  border ed-border '
                 }`}
               >
                 {plan.name}
@@ -508,39 +508,39 @@ export const StudyPlanPage = (): JSX.Element => {
           </div>
 
           {/* Progress Overview */}
-          <div className="bg-white dark:bg-gray-700 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-600 mb-8">
+          <div className="ed-surface  rounded-xl p-8 ed-elevation border ed-border  mb-8">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
               <div className="flex-1">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white font-['Newsreader',Helvetica] mb-4">
+                <h2 className="text-2xl font-bold ed-ink  ed-type mb-4">
                   {currentPlan.name} Progress
                 </h2>
                 <div className="flex flex-wrap gap-6">
                   <div className="flex items-center gap-2">
-                    <Clock className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                    <span className="text-gray-600 dark:text-gray-400">
-                      <span className="font-semibold text-gray-900 dark:text-white">{currentPlan.totalHours}h</span> total planned
+                    <Clock className="w-5 h-5 ed-link " />
+                    <span className="ed-muted ">
+                      <span className="font-semibold ed-ink ">{currentPlan.totalHours}h</span> total planned
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400" />
-                    <span className="text-gray-600 dark:text-gray-400">
-                      <span className="font-semibold text-gray-900 dark:text-white">{currentPlan.completedTasks}</span> of {currentPlan.tasks.length} completed
+                    <CheckCircle className="w-5 h-5 text-green-600 " />
+                    <span className="ed-muted ">
+                      <span className="font-semibold ed-ink ">{currentPlan.completedTasks}</span> of {currentPlan.tasks.length} completed
                     </span>
                   </div>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4">
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-gray-900 dark:text-white">
+                  <div className="text-2xl font-bold ed-ink ">
                     {Math.round(progressPercentage)}%
                   </div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">Complete</div>
+                  <div className="text-sm ed-muted ">Complete</div>
                 </div>
                 <div className="w-20 h-20 relative">
                   <svg className="w-20 h-20 transform -rotate-90" viewBox="0 0 36 36">
                     <path
-                      className="text-gray-200 dark:text-gray-600"
+                      className="text-gray-200 "
                       stroke="currentColor"
                       strokeWidth="3"
                       fill="none"
@@ -561,14 +561,14 @@ export const StudyPlanPage = (): JSX.Element => {
           </div>
 
           {/* Tasks Section */}
-          <div className="bg-white dark:bg-gray-700 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-600">
+          <div className="ed-surface  rounded-xl p-8 ed-elevation border ed-border ">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white font-['Newsreader',Helvetica]">
+              <h2 className="text-2xl font-bold ed-ink  ed-type">
                 Study Tasks
               </h2>
               <button
                 onClick={() => setShowAddTask(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500 to-red-600 text-white rounded-xl font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-200"
+                className="flex items-center gap-2 px-4 py-2 ed-tint   text-white rounded-xl font-semibold   transition-all duration-200"
               >
                 <Plus className="w-4 h-4" />
                 Add Task
@@ -577,34 +577,34 @@ export const StudyPlanPage = (): JSX.Element => {
 
             {/* Add Task Modal */}
             {showAddTask && (
-              <div className="mb-6 p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-600">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Add New Task</h3>
+              <div className="mb-6 p-6 ed-canvas  rounded-2xl border ed-border ">
+                <h3 className="text-lg font-semibold ed-ink  mb-4">Add New Task</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
                   <input
                     type="text"
                     placeholder="Task title"
                     value={newTask.title}
                     onChange={(e) => setNewTask({...newTask, title: e.target.value})}
-                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="px-4 py-2 border ed-border  rounded-lg ed-surface  ed-ink  focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   />
                   <input
                     type="text"
                     placeholder="Subject"
                     value={newTask.subject}
                     onChange={(e) => setNewTask({...newTask, subject: e.target.value})}
-                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="px-4 py-2 border ed-border  rounded-lg ed-surface  ed-ink  focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   />
                   <input
                     type="number"
                     placeholder="Duration (minutes)"
                     value={newTask.duration}
                     onChange={(e) => setNewTask({...newTask, duration: parseInt(e.target.value) || 60})}
-                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="px-4 py-2 border ed-border  rounded-lg ed-surface  ed-ink  focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   />
                   <select
                     value={newTask.priority}
                     onChange={(e) => setNewTask({...newTask, priority: e.target.value as 'low' | 'medium' | 'high'})}
-                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="px-4 py-2 border ed-border  rounded-lg ed-surface  ed-ink  focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   >
                     <option value="low">Low Priority</option>
                     <option value="medium">Medium Priority</option>
@@ -614,14 +614,14 @@ export const StudyPlanPage = (): JSX.Element => {
                 <div className="flex gap-2">
                   <button
                     onClick={addTask}
-                    className="px-4 py-2 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200"
+                    className="px-4 py-2 ed-accent text-white rounded-lg font-semibold ed-hover-surface transition-colors duration-200"
                   >
                     <Save className="w-4 h-4 inline mr-2" />
                     Save Task
                   </button>
                   <button
                     onClick={() => setShowAddTask(false)}
-                    className="px-4 py-2 bg-gray-500 text-white rounded-lg font-semibold hover:bg-gray-600 transition-colors duration-200"
+                    className="px-4 py-2 ed-canvas0 text-white rounded-lg font-semibold ed-hover-surface transition-colors duration-200"
                   >
                     Cancel
                   </button>
@@ -635,7 +635,7 @@ export const StudyPlanPage = (): JSX.Element => {
                 <div
                   key={task.id}
                   className={
-                    'p-6 rounded-2xl border transition-all duration-200 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-600 hover:shadow-lg'
+                    'p-6 rounded-2xl border transition-all duration-200 ed-surface  ed-border  ed-hover-shadow'
                   }
                 >
                   <div className="flex items-center justify-between">
@@ -644,7 +644,7 @@ export const StudyPlanPage = (): JSX.Element => {
                         onClick={() => toggleTaskCompletion(task.id)}
                         className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all duration-200 ${
                           task.completed
-                            ? 'bg-green-500 border-green-500 text-white'
+                            ? 'ed-tint0 border-green-500 text-white'
                             : 'border-gray-300 dark:border-gray-600 hover:border-green-500'
                         }`}
                       >
@@ -658,27 +658,27 @@ export const StudyPlanPage = (): JSX.Element => {
                                 type="text"
                                 value={editTaskData?.title || ''}
                                 onChange={e => setEditTaskData(editTaskData ? {...editTaskData, title: e.target.value} : null)}
-                                className="px-2 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white flex-1"
+                                className="px-2 py-1 border ed-border  rounded ed-surface  ed-ink  flex-1"
                                 placeholder="Title"
                               />
                               <input
                                 type="text"
                                 value={editTaskData?.subject || ''}
                                 onChange={e => setEditTaskData(editTaskData ? {...editTaskData, subject: e.target.value} : null)}
-                                className="px-2 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white flex-1"
+                                className="px-2 py-1 border ed-border  rounded ed-surface  ed-ink  flex-1"
                                 placeholder="Subject"
                               />
                               <input
                                 type="number"
                                 value={editTaskData?.duration || 0}
                                 onChange={e => setEditTaskData(editTaskData ? {...editTaskData, duration: parseInt(e.target.value) || 0} : null)}
-                                className="px-2 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white w-24"
+                                className="px-2 py-1 border ed-border  rounded ed-surface  ed-ink  w-24"
                                 placeholder="Duration"
                               />
                               <select
                                 value={editTaskData?.priority || 'medium'}
                                 onChange={e => setEditTaskData(editTaskData ? {...editTaskData, priority: e.target.value as 'low' | 'medium' | 'high'} : null)}
-                                className="px-2 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white w-32"
+                                className="px-2 py-1 border ed-border  rounded ed-surface  ed-ink  w-32"
                               >
                                 <option value="low">Low</option>
                                 <option value="medium">Medium</option>
@@ -688,21 +688,21 @@ export const StudyPlanPage = (): JSX.Element => {
                                 type="time"
                                 value={editTaskData?.time || ''}
                                 onChange={e => setEditTaskData(editTaskData ? {...editTaskData, time: e.target.value} : null)}
-                                className="px-2 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white w-28"
+                                className="px-2 py-1 border ed-border  rounded ed-surface  ed-ink  w-28"
                               />
                             </div>
                             <div className="flex gap-2">
-                              <button onClick={saveEditedTask} className="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700 font-semibold">Save</button>
-                              <button onClick={cancelEdit} className="px-3 py-1 bg-gray-500 text-white rounded hover:bg-gray-600 font-semibold">Cancel</button>
+                              <button onClick={saveEditedTask} className="px-3 py-1 ed-accent text-white rounded ed-hover-surface font-semibold">Save</button>
+                              <button onClick={cancelEdit} className="px-3 py-1 ed-canvas0 text-white rounded ed-hover-surface font-semibold">Cancel</button>
                             </div>
                           </div>
                         ) : (
                           <>
                             <div className="flex items-center gap-3 mb-2">
                               <h3 className={`font-semibold text-lg ${
-                                task.completed 
-                                  ? 'text-green-700 dark:text-green-400 line-through' 
-                                  : 'text-gray-900 dark:text-white'
+                                task.completed
+                                  ? 'text-green-700  line-through'
+                                  : 'ed-ink '
                               }`}>
                                 {task.title}
                               </h3>
@@ -710,7 +710,7 @@ export const StudyPlanPage = (): JSX.Element => {
                                 {task.priority}
                               </span>
                             </div>
-                            <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div className="flex items-center gap-4 text-sm ed-muted ">
                               <span className="flex items-center gap-1">
                                 <BookOpen className="w-4 h-4" />
                                 {task.subject}
@@ -734,13 +734,13 @@ export const StudyPlanPage = (): JSX.Element => {
                           setEditingTask(task.id);
                           setEditTaskData({...task, planId: selectedPlan});
                         }}
-                        className="p-2 text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-200"
+                        className="p-2 ed-muted ed-hover-ink   transition-colors duration-200"
                       >
                         <Edit className="w-4 h-4" />
                       </button>
                       <button
                         onClick={() => deleteTask(task.id)}
-                        className="p-2 text-gray-500 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors duration-200"
+                        className="p-2 ed-muted hover:text-red-600   transition-colors duration-200"
                       >
                         <Trash2 className="w-4 h-4" />
                       </button>
@@ -749,7 +749,7 @@ export const StudyPlanPage = (): JSX.Element => {
                           setShowStartDialog(task);
                           setPendingShowPopup(true);
                         }}
-                        className="p-2 text-white bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg shadow-md hover:from-blue-600 hover:to-indigo-700 transition-all duration-200"
+                        className="p-2 text-white ed-tint   rounded-lg shadow-md   transition-all duration-200"
                       >
                         ▶ Start
                       </button>
@@ -757,9 +757,9 @@ export const StudyPlanPage = (): JSX.Element => {
                   </div>
                 </div>
               ))}
-              
+
               {currentPlan.tasks.length === 0 && (
-                <div className="text-center py-12 text-gray-500 dark:text-gray-400">
+                <div className="text-center py-12 ed-muted ">
                   <BookOpen className="w-12 h-12 mx-auto mb-4 opacity-50" />
                   <p className="text-lg">No tasks yet. Add your first study task!</p>
                 </div>
@@ -768,8 +768,8 @@ export const StudyPlanPage = (): JSX.Element => {
           </div>
 
           {/* Study Tips */}
-          <div className="mt-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4 font-['Newsreader',Helvetica]">Study Tips</h3>
+          <div className="mt-8 ed-tint   rounded-xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4 ed-type">Study Tips</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h4 className="font-semibold mb-2">Time Management</h4>
@@ -797,12 +797,12 @@ export const StudyPlanPage = (): JSX.Element => {
       {/* Start Task Dialog */}
       {showStartDialog && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
-          <div className="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-xs flex flex-col items-center">
-            <div className="font-bold text-lg mb-2 text-gray-900">Start Task</div>
-            <div className="mb-2 text-gray-700">{showStartDialog.title}</div>
+          <div className="ed-surface rounded-2xl ed-elevation p-6 w-full max-w-xs flex flex-col items-center">
+            <div className="font-bold text-lg mb-2 ed-ink">Start Task</div>
+            <div className="mb-2 ed-ink">{showStartDialog.title}</div>
             <div className="flex items-center gap-2 mb-4">
               <input type="checkbox" id="pendingShowPopup" checked={pendingShowPopup} onChange={e => setPendingShowPopup(e.target.checked)} className="accent-blue-500" />
-              <label htmlFor="pendingShowPopup" className="text-sm text-gray-700 cursor-pointer select-none">Show pop-up when time is up (visible on all pages)</label>
+              <label htmlFor="pendingShowPopup" className="text-sm ed-ink cursor-pointer select-none">Show pop-up when time is up (visible on all pages)</label>
             </div>
             <div className="flex gap-2">
               <button
@@ -810,11 +810,11 @@ export const StudyPlanPage = (): JSX.Element => {
                   startTaskTimer(showStartDialog, pendingShowPopup);
                   setShowStartDialog(null);
                 }}
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+                className="px-4 py-2 ed-accent text-white rounded-lg font-semibold ed-hover-surface transition"
               >Start</button>
               <button
                 onClick={() => setShowStartDialog(null)}
-                className="px-4 py-2 bg-gray-400 text-white rounded-lg font-semibold hover:bg-gray-500 transition"
+                className="px-4 py-2 bg-gray-400 text-white rounded-lg font-semibold ed-hover-surface transition"
               >Cancel</button>
             </div>
           </div>
@@ -829,8 +829,8 @@ export const StudyPlanPage = (): JSX.Element => {
           style={{position:'fixed',bottom:'auto',right:'auto',left:widgetPos.x,top:widgetPos.y,zIndex:50,cursor:dragging?'grabbing':'grab',userSelect:'none',touchAction:'none'}}
           className="transition-all duration-200"
         >
-          <div className="bg-gradient-to-br from-blue-500 to-indigo-700 text-white rounded-2xl shadow-2xl px-4 py-3 flex flex-col items-center border-2 border-white min-w-[180px] max-w-[220px]"
-            style={{boxShadow:'0 4px 24px 0 rgba(31,38,135,0.25)', fontSize:'0.95rem'}}>
+          <div className="ed-tint   text-white rounded-2xl ed-elevation px-4 py-3 flex flex-col items-center border-2 border-white min-w-[180px] max-w-[220px]"
+            style={{boxShadow:'0 4px 24px var(--ed-shadow)', fontSize:'0.95rem'}}>
             <div className="flex w-full justify-between items-center mb-1">
               <span className="font-bold text-base truncate" title={activeTask.title}>{activeTask.title}</span>
               <button onClick={stopTaskTimer} className="ml-2 text-white/80 hover:text-red-400 text-lg font-bold px-1 rounded-full focus:outline-none" style={{lineHeight:1}} title="Delete"><span>✖</span></button>
@@ -840,7 +840,7 @@ export const StudyPlanPage = (): JSX.Element => {
               {String(Math.floor(taskTimer/60)).padStart(2,'0')}:{String(taskTimer%60).padStart(2,'0')}
             </div>
             <div className="flex gap-2 mt-1">
-              <button onClick={togglePause} className={`px-2 py-1 rounded-lg text-xs font-semibold shadow transition ${isPaused ? 'bg-yellow-400 text-gray-900 hover:bg-yellow-500' : 'bg-gray-200 text-gray-900 hover:bg-gray-300'}`}>{isPaused ? 'Resume' : 'Pause'}</button>
+              <button onClick={togglePause} className={`px-2 py-1 rounded-lg text-xs font-semibold shadow transition ${isPaused ? 'bg-yellow-400 ed-ink hover:bg-yellow-500' : 'ed-canvas ed-ink ed-hover-surface'}`}>{isPaused ? 'Resume' : 'Pause'}</button>
               <button onClick={stopTaskTimer} className="px-2 py-1 bg-red-500 rounded-lg text-xs font-semibold shadow hover:bg-red-600 transition">Stop</button>
             </div>
           </div>
@@ -848,14 +848,14 @@ export const StudyPlanPage = (): JSX.Element => {
       )}
       {/* 3D Time Up Notification */}
       {show3DNotification && showPopup && (
-        <div style={{position:'fixed',bottom:120,right:32,zIndex:60}} className="animate-pulse">
-          <div className="bg-gradient-to-br from-pink-500 to-yellow-400 text-white rounded-3xl shadow-2xl p-6 flex flex-col items-center border-4 border-white transform scale-110 transition-transform duration-300" style={{boxShadow:'0 8px 32px 0 rgba(255,193,7,0.37)'}}>
+        <div style={{position:'fixed',bottom:120,right:32,zIndex:60}} className="">
+          <div className="ed-tint text-white rounded-xl ed-elevation p-6 flex flex-col items-center border ed-border" style={{boxShadow:'0 8px 32px var(--ed-shadow)'}}>
             <div className="text-2xl font-extrabold mb-2">⏰ Time's Up!</div>
             <div className="text-lg font-semibold">{activeTask?.title}</div>
-            <button onClick={stopTaskTimer} className="mt-2 px-4 py-2 bg-blue-600 rounded-xl font-bold shadow hover:bg-blue-700 transition">Dismiss</button>
+            <button onClick={stopTaskTimer} className="mt-2 px-4 py-2 ed-accent rounded-xl font-bold shadow ed-hover-surface transition">Dismiss</button>
           </div>
         </div>
       )}
     </main>
   );
-}; 
+};

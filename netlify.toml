@@ -1,0 +1,45 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "https://edvvo.netlify.app/*"
+  to = "https://edvvo.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/research-papers"
+  to = "/solutions"
+  status = 301
+
+[[redirects]]
+  from = "/research-papers/:id"
+  to = "/solutions/:id"
+  status = 301
+
+[[redirects]]
+  from = "/board/scholarly-vault"
+  to = "/scholarly-vault"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+[[headers]]
+  for = "/ads.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

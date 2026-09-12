@@ -13,7 +13,7 @@ export const ThemeToggle = (): JSX.Element => {
   const toggleTheme = () => {
     const newTheme = !isDark;
     setIsDark(newTheme);
-    
+
     if (newTheme) {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
@@ -26,7 +26,7 @@ export const ThemeToggle = (): JSX.Element => {
   React.useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
       setIsDark(true);
       document.documentElement.classList.add('dark');
@@ -41,12 +41,12 @@ export const ThemeToggle = (): JSX.Element => {
       variant="ghost"
       size="sm"
       onClick={toggleTheme}
-      className="w-9 h-9 p-0 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+      className="w-9 h-9 p-0 ed-hover-surface  transition-colors duration-200"
     >
       {isDark ? (
-        <Sun className="h-4 w-4 text-gray-600 dark:text-gray-400" />
+        <Sun className="h-4 w-4 ed-muted " />
       ) : (
-        <Moon className="h-4 w-4 text-gray-600 dark:text-gray-400" />
+        <Moon className="h-4 w-4 ed-muted " />
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>
