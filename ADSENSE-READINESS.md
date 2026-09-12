@@ -10,7 +10,7 @@ This redesign does not establish eligibility or guarantee approval.
   URLs for 41 indexable pages, including all 12 learning guides. Content still renders
   through React; these HTML files provide metadata, not full server-rendered articles.
 - Sitemap and robots are generated from the shared route catalog during production builds.
-  The canonical origin is https://edvvo.com; old research-paper routes redirect to guides.
+  The canonical origin is https://edvvo.netlify.app; old research-paper routes redirect to guides.
 - Notifications are archived utility content and use noindex; they are not in the sitemap.
 - Confirmed the current AdSense publisher matches public/ads.txt. Retained the current
   Analytics and Tag Manager account IDs from the repository.
@@ -27,7 +27,7 @@ This redesign does not establish eligibility or guarantee approval.
 - In Netlify, set VITE_GEMINI_API_KEY if the optional quiz generator is needed. The key
   previously hardcoded in netlify.toml was removed; rotate it because it was exposed.
   A VITE-prefixed key is still public in the browser; restrict it or use a backend proxy.
-- Submit https://edvvo.com/sitemap.xml in the verified Search Console property after
+- Submit https://edvvo.netlify.app/sitemap.xml in the verified Search Console property after
   deployment. Confirm the custom domain, redirects, certificate and final HTTP responses.
 - Verify distribution rights for all linked books and PDFs. The vault includes commercial
   textbook titles on third-party file hosts; a link alone does not prove permission.

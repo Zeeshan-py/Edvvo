@@ -3,12 +3,6 @@
   publish = "dist"
 
 [[redirects]]
-  from = "https://edvvo.netlify.app/*"
-  to = "https://edvvo.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/research-papers"
   to = "/solutions"
   status = 301

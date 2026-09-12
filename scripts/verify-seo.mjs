@@ -8,7 +8,7 @@ assert.equal(new Set(urls).size, urls.length, 'Duplicate sitemap entries');
 assert.ok(urls.length > 30, 'Missing route coverage');
 for (const url of urls) {
   const { pathname, origin } = new URL(url);
-  assert.equal(origin, 'https://edvvo.com');
+  assert.equal(origin, 'https://edvvo.netlify.app');
   const filename = pathname === '/' ? 'index.html' : `${pathname.slice(1)}/index.html`;
   const document = new JSDOM(fs.readFileSync(`${root}/${filename}`, 'utf8')).window.document;
   assert.equal(document.querySelectorAll('link[rel=canonical]').length, 1, filename);
@@ -24,8 +24,16 @@ for (const url of urls) {
 const notFound = new JSDOM(fs.readFileSync(`${root}/404.html`, 'utf8')).window.document;
 assert.match(notFound.querySelector('meta[name=robots]').content, /noindex/);
 const home = fs.readFileSync(`${root}/index.html`, 'utf8');
+assert.ok(!fs.readFileSync('netlify.toml', 'utf8').includes('from = "https://edvvo.netlify.app/*"'), 'Do not redirect the canonical Netlify domain away');
+for (const file of fs.readdirSync(root, { recursive: true }).filter(file => file.endsWith('.html'))) {
+  const doc = new JSDOM(fs.readFileSync(`${root}/${file}`, 'utf8')).window.document;
+  for (const selector of ['link[rel=canonical]', 'meta[property="og:url"]', 'meta[property="og:image"]', 'meta[name="twitter:image"]']) {
+    const element = doc.querySelector(selector);
+    assert.equal(new URL(element.getAttribute('href') || element.getAttribute('content')).origin, 'https://edvvo.netlify.app', `${file}: ${selector}`);
+  }
+}
 const publisher = home.match(/name="google-adsense-account" content="ca-(pub-\d+)"/)[1];
 assert.ok(fs.readFileSync(`${root}/ads.txt`, 'utf8').includes(`google.com, ${publisher}, DIRECT, f08c47fec0942fa0`));
-assert.ok(fs.readFileSync(`${root}/robots.txt`, 'utf8').includes('Sitemap: https://edvvo.com/sitemap.xml'));
+assert.ok(fs.readFileSync(`${root}/robots.txt`, 'utf8').includes('Sitemap: https://edvvo.netlify.app/sitemap.xml'));
 assert.ok(!urls.some(url => url.includes('/research-papers') || url.includes('/notifications')));
 console.log(`Verified ${urls.length} canonical pages, sitemap, robots, build assets, 404 noindex and AdSense publisher ID.`);

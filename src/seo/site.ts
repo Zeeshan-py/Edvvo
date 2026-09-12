@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://edvvo.com';
+export const SITE_URL = 'https://edvvo.netlify.app';
 export interface PageMeta { title: string; description: string; noindex?: boolean; }
 const page = (title: string, description: string): PageMeta => ({ title, description });
 export const pages: Record<string, PageMeta> = {
