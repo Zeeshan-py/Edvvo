@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowRight, ArrowUpRight, BookOpen, Check, ChevronDown, Search, Timer, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import globalResources from "@/utils/globalResources";
+import type globalResources from "@/utils/globalResources";
 import { MotionCard } from "@/components/studio/MotionCard";
 import { StudyScene, CardArt } from "@/components/studio/StudyArt";
 import { HeroSection } from "./sections/HeroSection";
@@ -22,7 +22,18 @@ const tips = [
 export const LandingPage = () => {
   const [query, setQuery] = useState("");
   const [limit, setLimit] = useState(6);
-  const filtered = query.trim() ? globalResources.filter(item =>
+  const [resources, setResources] = useState<typeof globalResources | null>(null);
+  const [searchError, setSearchError] = useState(false);
+  useEffect(() => {
+    if (!query.trim() || resources) return;
+    let active = true;
+    const timer = setTimeout(() => {
+      setSearchError(false);
+      import('@/utils/globalResources').then(module => { if (active) setResources(module.default); }).catch(() => { if (active) setSearchError(true); });
+    }, 150);
+    return () => { active = false; clearTimeout(timer); };
+  }, [query, resources]);
+  const filtered = query.trim() ? (resources || []).filter(item =>
     [item.title, item.subject, item.description, ...(item.tags || [])].some(value => value?.toLowerCase().includes(query.trim().toLowerCase()))
   ).filter(item => {
     const url = item.downloadUrl || item.downloadLink;
@@ -52,11 +63,11 @@ export const LandingPage = () => {
       <div className="class-shortcuts"><span>Jump to class</span>{[9, 10, 11, 12].map(grade => <Link key={grade} to={`/explore?grade=class-${grade}`} aria-label={`Class ${grade} resources`}>{grade}</Link>)}</div>
     </section>
     {query.trim() && <section className="ed-container search-results" aria-label="Search results">
-      <div className="search-result-heading"><h2>Results for &ldquo;{query}&rdquo;</h2><span role="status">{filtered.length} resources</span></div>
+      <div className="search-result-heading"><h2>Results for &ldquo;{query}&rdquo;</h2><span role="status">{resources ? `${filtered.length} resources` : searchError ? 'Search unavailable' : 'Loading resources...'}</span></div>
       {filtered.length ? <><div className="result-list">{filtered.slice(0, limit).map((item, i) => <a key={`${item.id}-${i}`} href={item.downloadUrl || item.downloadLink} target="_blank" rel="noopener noreferrer">
         <BookOpen size={21} /><span><strong>{item.title}</strong><small>{item.subject} / {item.type} / Opens source website</small></span><ArrowUpRight size={18} /></a>)}</div>
         {filtered.length > limit && <button className="ed-button secondary" onClick={() => setLimit(limit + 12)}>Show more results <ChevronDown size={16} /></button>}</>
-        : <p>No matches yet. Try a subject like Physics or browse the <Link to="/explore">resource library</Link>.</p>}
+        : resources ? <p>No matches yet. Try a subject like Physics or browse the <Link to="/explore">resource library</Link>.</p> : searchError ? <p>Search could not load. Please try again or browse the <Link to="/explore">resource library</Link>.</p> : null}
     </section>}
 
     <section className="ed-container home-library">

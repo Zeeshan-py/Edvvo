@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
-import { ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, ChevronDown, Clock, Code2, Compass, Cpu, Gamepad2, HeartPulse, Layers, Palette, Search, Shield, TrendingUp } from "lucide-react";
+import { Link, Navigate, useParams, useSearchParams } from "react-router-dom";
+import { roadmapUrl } from '@/data/roadmapCatalog';
+import { NotFoundPage } from '@/pages/NotFoundPage';
+import { Accessibility, ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, ChevronDown, Clock, Cloud, Code2, Compass, Cpu, Database, Gamepad2, HeartPulse, Layers, Palette, Search, Shield, Smartphone, TrendingUp } from "lucide-react";
 import { MotionCard } from "@/components/studio/MotionCard";
 import { HeroSection } from "@/pages/Home/sections/HeroSection";
 import { FooterSection } from "@/pages/Home/sections/FooterSection";
@@ -14,21 +16,26 @@ interface Step {
 }
 interface Roadmap {
   id: number;
+  slug: string;
   title: string;
   description: string;
   duration: string;
   difficulty: string;
+  prerequisites?: string;
+  outcome?: string;
   steps: Step[];
 }
-const icons = [Code2, Palette, HeartPulse, Cpu, Shield, Layers, TrendingUp, Gamepad2];
+const icons: Record<number, typeof Code2> = { 1: Code2, 6: Palette, 3: HeartPulse, 4: Cpu, 5: Shield, 7: Layers, 8: TrendingUp, 9: Gamepad2, 10: Database, 11: Smartphone, 12: Cloud, 13: Accessibility, 14: Database, 15: Cpu, 16: Shield, 17: TrendingUp };
+const relatedPaths: Record<number, number[]> = { 10: [14, 15, 17], 12: [14, 16, 1], 14: [10, 12, 17], 15: [10, 14, 16], 16: [1, 13, 12], 17: [10, 14, 8] };
 const tones = ["books", "notes", "career", "test"];
 export function RoadmapExplorer({ roadmaps }: { roadmaps: Roadmap[] }) {
   const [params, setParams] = useSearchParams();
+  const { slug } = useParams();
   const [query, setQuery] = useState("");
   const [level, setLevel] = useState("all");
   const lessonHeading = useRef<HTMLHeadingElement>(null);
   const lastSelection = useRef(params.toString());
-  const selected = roadmaps.find(r => String(r.id) === params.get("path"));
+  const selected = roadmaps.find(r => slug ? r.slug === slug : String(r.id) === params.get("path"));
   const stepNumber = Number(params.get("step") || "1");
   const stepIndex = selected && Number.isInteger(stepNumber) && stepNumber >= 1 && stepNumber <= selected.steps.length ? stepNumber - 1 : 0;
   const step = selected?.steps[stepIndex];
@@ -40,11 +47,13 @@ export function RoadmapExplorer({ roadmaps }: { roadmaps: Roadmap[] }) {
     lastSelection.current = params.toString();
   }, [params, selected]);
   const chooseStep = (index: number) => {
-    if (selected) setParams({ path: String(selected.id), step: String(index + 1) }, { preventScrollReset: true });
+    if (selected) setParams({ step: String(index + 1) }, { preventScrollReset: true });
   };
   const filtered = roadmaps.filter(r => (level === "all" || (level === "beginner" ? r.difficulty.startsWith("Beginner") : !r.difficulty.startsWith("Beginner")))
     && [r.title, r.description, ...r.steps.map(s => s.name)].some(text => text.toLowerCase().includes(query.trim().toLowerCase())));
 
+  if (slug && !selected) return <NotFoundPage />;
+  if (!slug && selected) return <Navigate replace to={`${roadmapUrl(selected.id)}?step=${stepIndex + 1}`} />;
   return <main className="ed-page"><HeroSection />
     {!selected ? <>
       <section className="ed-container page-intro">
@@ -59,8 +68,8 @@ export function RoadmapExplorer({ roadmaps }: { roadmaps: Roadmap[] }) {
         <div className="roadmap-count"><span role="status">{filtered.length} {filtered.length === 1 ? "path" : "paths"} to explore</span><span>At your own pace</span></div>
         <div className="roadmap-grid">{filtered.map((roadmap) => {
           const index = roadmaps.indexOf(roadmap);
-          const Icon = icons[index % icons.length];
-          return <MotionCard key={roadmap.id} delay={index * 45} className="roadmap-card"><Link to={`/roadmaps?path=${roadmap.id}&step=1`}>
+          const Icon = icons[roadmap.id] || Compass;
+          return <MotionCard key={roadmap.id} delay={Math.min(index, 3) * 45} className="roadmap-card"><Link to={roadmapUrl(roadmap.id)}>
             <div className={`roadmap-art tone-${tones[index % tones.length]}`} aria-hidden="true"><span className="roadmap-path-line" /><span className="roadmap-node node-a" /><span className="roadmap-node node-b" /><span className="roadmap-node node-c" /><span className="roadmap-art-icon"><Icon size={32} strokeWidth={1.6} /></span><span className="roadmap-art-label">PATH {String(index + 1).padStart(2,"0")}</span><ArrowUpRight className="roadmap-art-arrow" size={20} /></div>
             <div className="roadmap-card-body"><span className="roadmap-level">{roadmap.difficulty.startsWith("Beginner") ? "Start from the basics" : roadmap.difficulty === "Advanced" ? "Advanced path" : "Some foundations needed"}</span><h2>{roadmap.title.replace(/ Roadmap$/, "")}</h2><p>{roadmap.description}</p>
               <div className="roadmap-card-meta"><span><BookOpen size={14} />{roadmap.steps.length} steps</span><span><Clock size={14} />{roadmap.duration} est.</span></div>
@@ -75,10 +84,11 @@ export function RoadmapExplorer({ roadmaps }: { roadmaps: Roadmap[] }) {
       <section className="ed-container roadmap-heading">
         <Link className="ed-text-link" to="/roadmaps"><ArrowLeft size={16} />All roadmaps</Link>
         <div className="page-intro"><div><span className="eyebrow">YOUR LEARNING PATH</span><h1>{selected.title.replace(/ Roadmap$/, "")}</h1><p>{selected.description}</p></div><span className="roadmap-step-total">{selected.steps.length} steps / {selected.duration} estimated</span></div>
+        {selected.prerequisites && <dl className="roadmap-brief"><div><dt>Before you start</dt><dd>{selected.prerequisites}</dd></div><div><dt>What you will build</dt><dd>{selected.outcome}</dd></div></dl>}
       </section>
       <div className="ed-container roadmap-reader">
         <aside className="roadmap-sidebar" aria-label="Learning steps"><div className="roadmap-sidebar-heading"><strong>The path ahead</strong><span>{selected.steps.length} steps</span></div>
-          <ol>{selected.steps.map((s, index) => <li key={s.name}><button aria-current={index === stepIndex ? "step" : undefined} onClick={() => chooseStep(index)}><span>{String(index + 1).padStart(2,"0")}</span><span>{s.name}</span>{index === stepIndex && <ArrowRight size={14} />}</button></li>)}</ol>
+          <ol>{selected.steps.map((s, index) => <li key={s.name}><Link to={`${roadmapUrl(selected.id)}?step=${index + 1}`} preventScrollReset aria-current={index === stepIndex ? "step" : undefined}><span>{String(index + 1).padStart(2,"0")}</span><span>{s.name}</span>{index === stepIndex && <ArrowRight size={14} />}</Link></li>)}</ol>
         </aside>
         <div className="roadmap-mobile-select"><label htmlFor="roadmap-step">Choose a step</label><select id="roadmap-step" value={stepIndex} onChange={e => chooseStep(Number(e.target.value))}>{selected.steps.map((s,index) => <option value={index} key={s.name}>{index + 1}. {s.name}</option>)}</select></div>
         <article className="roadmap-lesson" key={`${selected.id}-${stepIndex}`}>
@@ -91,6 +101,10 @@ export function RoadmapExplorer({ roadmaps }: { roadmaps: Roadmap[] }) {
           <nav className="lesson-navigation" aria-label="Navigate steps"><button className="ed-button secondary" disabled={stepIndex === 0} onClick={() => chooseStep(stepIndex - 1)}><ArrowLeft size={16} />Previous</button><span>{stepIndex + 1} / {selected.steps.length}</span>{stepIndex < selected.steps.length - 1 ? <button className="ed-button" onClick={() => chooseStep(stepIndex + 1)}>Next step <ArrowRight size={16} /></button> : <Link className="ed-button" to="/roadmaps">All paths <ArrowUpRight size={16} /></Link>}</nav>
         </article>
       </div>
+      <section className="ed-container roadmap-connections" aria-label="Continue learning">
+        <div><span className="eyebrow">PUT IT INTO PRACTICE</span><h2>Your next small step</h2><p>Turn a lesson into a task, then make time to try it.</p><Link to="/study-plan">Plan this week's practice</Link><Link to="/focus-timer">Start a focused session</Link><Link to="/solutions">Browse practical project guides</Link></div>
+        <nav aria-label="Related learning paths"><h2>Build a connected skill set</h2>{roadmaps.filter(r => r.id !== selected.id && (relatedPaths[selected.id] || [10, 12, 13]).includes(r.id)).slice(0, 3).map(r => <Link key={r.id} to={roadmapUrl(r.id)}>{r.title}<ArrowUpRight size={16} /></Link>)}</nav>
+      </section>
     </>}
     <FooterSection />
   </main>;

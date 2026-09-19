@@ -6,7 +6,7 @@
   "description": "Edvvo student resources, learning roadmaps and study tools",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender.mjs && node scripts/verify-seo.mjs",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",

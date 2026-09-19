@@ -1,0 +1,347 @@
+{
+  "note": "Vite preview HTTP checks, not deployed Netlify edge verification",
+  "pages": [
+    {
+      "url": "https://edvvo.netlify.app/",
+      "status": 200,
+      "bodyCharacters": 2536,
+      "heading": "Big dreams.Small steps.Start here."
+    },
+    {
+      "url": "https://edvvo.netlify.app/explore",
+      "status": 200,
+      "bodyCharacters": 3349,
+      "heading": "Your next chapter."
+    },
+    {
+      "url": "https://edvvo.netlify.app/entertainment",
+      "status": 200,
+      "bodyCharacters": 1702,
+      "heading": "A little focus goes a long way."
+    },
+    {
+      "url": "https://edvvo.netlify.app/entry-test",
+      "status": 200,
+      "bodyCharacters": 2234,
+      "heading": "Entry Test Resources"
+    },
+    {
+      "url": "https://edvvo.netlify.app/scholarly-vault",
+      "status": 200,
+      "bodyCharacters": 1671,
+      "heading": "Scholarly Vault"
+    },
+    {
+      "url": "https://edvvo.netlify.app/academic-explorer",
+      "status": 200,
+      "bodyCharacters": 2020,
+      "heading": "Find a field that fits."
+    },
+    {
+      "url": "https://edvvo.netlify.app/result",
+      "status": 200,
+      "bodyCharacters": 1493,
+      "heading": "Find your board."
+    },
+    {
+      "url": "https://edvvo.netlify.app/roadmaps",
+      "status": 200,
+      "bodyCharacters": 4352,
+      "heading": "A direction for your ambition."
+    },
+    {
+      "url": "https://edvvo.netlify.app/focus-timer",
+      "status": 200,
+      "bodyCharacters": 1221,
+      "heading": "Focus Timer"
+    },
+    {
+      "url": "https://edvvo.netlify.app/study-plan",
+      "status": 200,
+      "bodyCharacters": 1567,
+      "heading": "Study Planner"
+    },
+    {
+      "url": "https://edvvo.netlify.app/solutions",
+      "status": 200,
+      "bodyCharacters": 4668,
+      "heading": "Solutions & Guides"
+    },
+    {
+      "url": "https://edvvo.netlify.app/about",
+      "status": 200,
+      "bodyCharacters": 1647,
+      "heading": "A little help.A new possibility."
+    },
+    {
+      "url": "https://edvvo.netlify.app/contact",
+      "status": 200,
+      "bodyCharacters": 1393,
+      "heading": "Let's make learninga little easier."
+    },
+    {
+      "url": "https://edvvo.netlify.app/privacy-policy",
+      "status": 200,
+      "bodyCharacters": 4001,
+      "heading": "Your privacy,in plain language."
+    },
+    {
+      "url": "https://edvvo.netlify.app/terms-of-service",
+      "status": 200,
+      "bodyCharacters": 5338,
+      "heading": "Terms of Service"
+    },
+    {
+      "url": "https://edvvo.netlify.app/board/punjab-board",
+      "status": 200,
+      "bodyCharacters": 1184,
+      "heading": "Punjab Board"
+    },
+    {
+      "url": "https://edvvo.netlify.app/roadmaps/data-engineering",
+      "status": 200,
+      "bodyCharacters": 2617,
+      "heading": "Data Engineering"
+    },
+    {
+      "url": "https://edvvo.netlify.app/roadmaps/applied-machine-learning",
+      "status": 200,
+      "bodyCharacters": 2699,
+      "heading": "Applied Machine Learning"
+    },
+    {
+      "url": "https://edvvo.netlify.app/roadmaps/qa-test-automation",
+      "status": 200,
+      "bodyCharacters": 2671,
+      "heading": "QA & Test Automation"
+    },
+    {
+      "url": "https://edvvo.netlify.app/roadmaps/business-intelligence",
+      "status": 200,
+      "bodyCharacters": 2720,
+      "heading": "Business Intelligence"
+    },
+    {
+      "url": "https://edvvo.netlify.app/roadmaps/web-development",
+      "status": 200,
+      "bodyCharacters": 4731,
+      "heading": "Web Development"
+    },
+    {
+      "url": "https://edvvo.netlify.app/roadmaps/ui-ux-design",
+      "status": 200,
+      "bodyCharacters": 3770,
+      "heading": "UI/UX Design"
+    },
+    {
+      "url": "https://edvvo.netlify.app/roadmaps/medical-studies",
+      "status": 200,
+      "bodyCharacters": 3186,
+      "heading": "Medical Student"
+    },
+    {
+      "url": "https://edvvo.netlify.app/roadmaps/robotics-embedded-systems",
+      "status": 200,
+      "bodyCharacters": 3612,
+      "heading": "Robotics & Embedded Systems"
+    },
+    {
+      "url": "https://edvvo.netlify.app/roadmaps/cybersecurity",
+      "status": 200,
+      "bodyCharacters": 3832,
+      "heading": "Cybersecurity"
+    },
+    {
+      "url": "https://edvvo.netlify.app/roadmaps/blockchain-web3",
+      "status": 200,
+      "bodyCharacters": 4285,
+      "heading": "Blockchain & Web3"
+    },
+    {
+      "url": "https://edvvo.netlify.app/roadmaps/digital-marketing-seo",
+      "status": 200,
+      "bodyCharacters": 4062,
+      "heading": "Digital Marketing & SEO"
+    },
+    {
+      "url": "https://edvvo.netlify.app/roadmaps/game-development",
+      "status": 200,
+      "bodyCharacters": 3711,
+      "heading": "Game Development & AR/VR"
+    },
+    {
+      "url": "https://edvvo.netlify.app/roadmaps/python-data-analysis",
+      "status": 200,
+      "bodyCharacters": 2400,
+      "heading": "Python & Data Analysis"
+    },
+    {
+      "url": "https://edvvo.netlify.app/roadmaps/android-development",
+      "status": 200,
+      "bodyCharacters": 2116,
+      "heading": "Android Development"
+    },
+    {
+      "url": "https://edvvo.netlify.app/roadmaps/cloud-devops",
+      "status": 200,
+      "bodyCharacters": 2060,
+      "heading": "Cloud & DevOps"
+    },
+    {
+      "url": "https://edvvo.netlify.app/roadmaps/web-accessibility",
+      "status": 200,
+      "bodyCharacters": 2126,
+      "heading": "Web Accessibility"
+    },
+    {
+      "url": "https://edvvo.netlify.app/islamic-studies",
+      "status": 200,
+      "bodyCharacters": 2389,
+      "heading": "Islamic Studies"
+    },
+    {
+      "url": "https://edvvo.netlify.app/engineering-applied-science",
+      "status": 200,
+      "bodyCharacters": 1355,
+      "heading": "Engineering & Applied Science"
+    },
+    {
+      "url": "https://edvvo.netlify.app/engineering-programs",
+      "status": 200,
+      "bodyCharacters": 1395,
+      "heading": "Engineering Fields"
+    },
+    {
+      "url": "https://edvvo.netlify.app/applied-science-programs",
+      "status": 200,
+      "bodyCharacters": 1192,
+      "heading": "Applied Science Fields"
+    },
+    {
+      "url": "https://edvvo.netlify.app/computer-science",
+      "status": 200,
+      "bodyCharacters": 1145,
+      "heading": "Computer Science & IT Fields"
+    },
+    {
+      "url": "https://edvvo.netlify.app/business-finance",
+      "status": 200,
+      "bodyCharacters": 1090,
+      "heading": "Business & Finance Fields"
+    },
+    {
+      "url": "https://edvvo.netlify.app/natural-biological-sciences",
+      "status": 200,
+      "bodyCharacters": 1053,
+      "heading": "Natural & Biological Sciences Fields"
+    },
+    {
+      "url": "https://edvvo.netlify.app/health-paramedical",
+      "status": 200,
+      "bodyCharacters": 1112,
+      "heading": "Health & Para-Medical Fields"
+    },
+    {
+      "url": "https://edvvo.netlify.app/social-sciences-humanities",
+      "status": 200,
+      "bodyCharacters": 1145,
+      "heading": "Social Sciences & Humanities Fields"
+    },
+    {
+      "url": "https://edvvo.netlify.app/architecture-design",
+      "status": 200,
+      "bodyCharacters": 1091,
+      "heading": "Architecture & Design Fields"
+    },
+    {
+      "url": "https://edvvo.netlify.app/law",
+      "status": 200,
+      "bodyCharacters": 1001,
+      "heading": "Law Fields"
+    },
+    {
+      "url": "https://edvvo.netlify.app/education",
+      "status": 200,
+      "bodyCharacters": 1064,
+      "heading": "Education Fields"
+    },
+    {
+      "url": "https://edvvo.netlify.app/agriculture-vet",
+      "status": 200,
+      "bodyCharacters": 1113,
+      "heading": "Agriculture & Veterinary Sciences Fields"
+    },
+    {
+      "url": "https://edvvo.netlify.app/solutions/1",
+      "status": 200,
+      "bodyCharacters": 5991,
+      "heading": "Build a Simple To-Do App with React"
+    },
+    {
+      "url": "https://edvvo.netlify.app/solutions/2",
+      "status": 200,
+      "bodyCharacters": 7127,
+      "heading": "How to Install MongoDB"
+    },
+    {
+      "url": "https://edvvo.netlify.app/solutions/3",
+      "status": 200,
+      "bodyCharacters": 9459,
+      "heading": "How to Install Node.js and What is Node.js?"
+    },
+    {
+      "url": "https://edvvo.netlify.app/solutions/4",
+      "status": 200,
+      "bodyCharacters": 10015,
+      "heading": "SQL Database Basics"
+    },
+    {
+      "url": "https://edvvo.netlify.app/solutions/5",
+      "status": 200,
+      "bodyCharacters": 10390,
+      "heading": "Machine Learning Basics"
+    },
+    {
+      "url": "https://edvvo.netlify.app/solutions/6",
+      "status": 200,
+      "bodyCharacters": 10893,
+      "heading": "How to Use Git for Version Control"
+    },
+    {
+      "url": "https://edvvo.netlify.app/solutions/7",
+      "status": 200,
+      "bodyCharacters": 12444,
+      "heading": "Getting Started with Docker"
+    },
+    {
+      "url": "https://edvvo.netlify.app/solutions/8",
+      "status": 200,
+      "bodyCharacters": 9216,
+      "heading": "Software Developer's Guide to Common Real-World Challenges"
+    },
+    {
+      "url": "https://edvvo.netlify.app/solutions/9",
+      "status": 200,
+      "bodyCharacters": 10911,
+      "heading": "Legal Professional's Survival Guide: Modern Practice Challenges"
+    },
+    {
+      "url": "https://edvvo.netlify.app/solutions/10",
+      "status": 200,
+      "bodyCharacters": 11586,
+      "heading": "Healthcare Professionals: Navigating Modern Medical Practice"
+    },
+    {
+      "url": "https://edvvo.netlify.app/solutions/11",
+      "status": 200,
+      "bodyCharacters": 11312,
+      "heading": "Educator's Toolkit: Modern Teaching Challenges and Solutions"
+    },
+    {
+      "url": "https://edvvo.netlify.app/solutions/12",
+      "status": 200,
+      "bodyCharacters": 13414,
+      "heading": "Business Professional's Guide to Workplace Excellence"
+    }
+  ]
+}

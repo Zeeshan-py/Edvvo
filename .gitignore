@@ -10,6 +10,8 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+.cache/
+reports/lighthouse/
 *.local
 
 # Editor directories and files

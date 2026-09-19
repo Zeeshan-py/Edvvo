@@ -1,3 +1,4 @@
+import { roadmapCatalog } from '../data/roadmapCatalog';
 export const SITE_URL = 'https://edvvo.netlify.app';
 export interface PageMeta { title: string; description: string; noindex?: boolean; }
 const page = (title: string, description: string): PageMeta => ({ title, description });
@@ -20,6 +21,7 @@ export const pages: Record<string, PageMeta> = {
   '/board/punjab-board': page('Punjab Board class resources', 'Choose class 9, 10, 11 or 12 and browse Punjab Board books, subject notes and practice tools.'),
   '/notifications': { ...page('Edvvo updates', 'Browse Edvvo platform updates and archived announcements.'), noindex: true },
 };
+for (const roadmap of roadmapCatalog) pages[`/roadmaps/${roadmap.slug}`] = page(roadmap.title, roadmap.description);
 const fields: Record<string, string> = {
   'islamic-studies': 'Islamic Studies', 'engineering-applied-science': 'Engineering and Applied Science',
   'engineering-programs': 'Engineering Programs', 'applied-science-programs': 'Applied Science Programs',
@@ -31,6 +33,18 @@ const fields: Record<string, string> = {
 for (const [path, title] of Object.entries(fields)) pages[`/${path}`] = page(title, `Explore ${title.toLowerCase()} study areas and university links in Pakistan. Use official institution websites to verify programs and admission requirements.`);
 export const missingPage: PageMeta = { title: 'Page not found', description: 'This Edvvo page could not be found. Return to the library to find learning resources and study tools.', noindex: true };
 export function normalizePath(path: string) { return path.replace(/\/+$/, '') || '/'; }
+export function roadmapSchema(path: string) {
+  const roadmap = roadmapCatalog.find(item => path === `/roadmaps/${item.slug}`);
+  if (!roadmap && path !== '/roadmaps') return null;
+  return {
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Edvvo', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Learning roadmaps', item: `${SITE_URL}/roadmaps` },
+      ...(roadmap ? [{ '@type': 'ListItem', position: 3, name: roadmap.title, item: SITE_URL + path }] : []),
+    ],
+  };
+}
 export function canonicalPath(path: string) {
   const normalized = normalizePath(path);
   if (normalized === '/board/scholarly-vault') return '/scholarly-vault';

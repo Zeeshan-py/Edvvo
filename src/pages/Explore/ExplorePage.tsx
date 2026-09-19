@@ -48,7 +48,7 @@ export const ExplorePage = () => {
           : board.id === "punjab-board" ? <ResourceCollection resources={mode.id === "books" ? books : notes} grade={grade} kind={mode.id === "books" ? "books" : "notes"} />
           : <div className="empty-library"><Library size={32} className="mx-auto" /><h2>This collection isn't available yet.</h2><p>{board.label} resources for Class {grade.split("-")[1]} have not been added here. You can browse the Punjab collection or find other material in the scholarly vault.</p><button className="ed-button" onClick={() => set("board", "punjab-board")}>Browse Punjab resources <ArrowUpRight size={16} /></button></div>}
       </div>
-      <nav className="portal-links" aria-label="More resources">{[{to: "/entry-test", label: "Entry tests"}, {to: "/result", label: "Board results"}, {to: "/academic-explorer", label: "Explore careers"}, {to: "/scholarly-vault", label: "Scholarly vault"}].map(n => <Link to={n.to} key={n.to}>{n.label}<ArrowUpRight size={15} /></Link>)}</nav>
+      <nav className="portal-links" aria-label="More resources">{[{to: "/board/punjab-board", label: "Punjab Board overview"}, {to: "/entry-test", label: "Entry tests"}, {to: "/result", label: "Board results"}, {to: "/academic-explorer", label: "Explore careers"}, {to: "/scholarly-vault", label: "Scholarly vault"}].map(n => <Link to={n.to} key={n.to}>{n.label}<ArrowUpRight size={15} /></Link>)}</nav>
     </section><FooterSection />
   </main>;
 };

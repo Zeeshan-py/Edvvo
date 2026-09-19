@@ -88,7 +88,8 @@ a, button, input, select, textarea, summary { touch-action: manipulation; }
 .eyebrow { font-size: 10px; font-weight: 800; letter-spacing: .13em; display: inline-flex; align-items: center; gap: 8px; line-height: 1.6; }
 .status-dot { width: 7px; height: 7px; background: var(--ed-green); border-radius: 50%; }
 .home-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; padding-block: 57px 46px; align-items: center; }
-.hero-copy { animation: arrive .65s var(--ed-ease) both; }
+.hero-copy { animation: hero-enter .65s var(--ed-ease) both; }
+@keyframes hero-enter { from { transform: translateY(12px); } to { transform: translateY(0); } }
 .hero-copy h1 { font-size: clamp(48px, 5.4vw, 76px); margin: 22px 0; }
 .hero-copy h1 > span { color: var(--ed-blue); }
 .hero-copy p { font-size: 15px; }
@@ -118,7 +119,7 @@ a, button, input, select, textarea, summary { touch-action: manipulation; }
 .scene-timer { position: absolute; right: 5%; bottom: 62px; z-index: 4; background: var(--ed-art-paper); color: var(--ed-scene-ink); transform: rotate(9deg); border: 1px solid var(--ed-rule); border-radius: 15px; padding: 17px; width: 155px; box-shadow: 0 6px 0 var(--ed-page-edge), 0 15px 25px var(--ed-shadow-strong); }
 .scene-timer > span { font-size: 7px; font-weight: 800; letter-spacing: .15em; }
 .scene-timer > strong { display: block; font-size: 35px; letter-spacing: -.07em; font-weight: 800; line-height: 1.4; }
-.scene-timer > strong span { opacity: .5; }
+.scene-timer > strong span { opacity: .75; }
 .scene-timer small { display: block; font-size: 7px; margin-top: 8px; }
 .timer-ticks { height: 9px; background: repeating-linear-gradient(90deg,var(--ed-green) 0 3px,transparent 3px 7px); border-radius: 3px; }
 .scene-pencil { position: absolute; width: 12px; height: 148px; right: 14%; top: 67px; background: linear-gradient(90deg,var(--ed-green) 50%,var(--ed-scene-ink) 50%); border-radius: 4px 4px 0 0; transform: rotate(30deg); box-shadow: 7px 7px 10px var(--ed-shadow-strong); }
@@ -167,6 +168,7 @@ a, button, input, select, textarea, summary { touch-action: manipulation; }
 .mb-one { left: 12%; transform: rotate(-16deg); background: var(--ed-orange); }
 .mb-two { left: 35%; background: var(--ed-blue-dark); transform: rotate(-3deg); z-index: 1; }
 .mb-three { left: 57%; background: var(--ed-green); transform: rotate(12deg); font-size: 9px; color: var(--ed-art-paper); }
+.dark .mini-book { color: var(--ed-scene-ink); }
 .note-sheet { position: absolute; width: 105px; height: 120px; background: var(--ed-art-paper); top: 15px; left: 25%; box-shadow: 0 7px 10px var(--ed-shadow); border-radius: 4px; padding: 15px; color: var(--ed-scene-ink); }
 .sheet-back { transform: rotate(11deg); background: var(--ed-yellow); }
 .sheet-front { transform: rotate(-9deg); }

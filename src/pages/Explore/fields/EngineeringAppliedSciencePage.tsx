@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   ArrowLeft, GraduationCap, Cpu, ChevronRight,
   Wrench, TestTube, BookOpen, Users
@@ -31,12 +31,6 @@ const programCategories = [
 ];
 
 export const EngineeringAppliedSciencePage = (): JSX.Element => {
-  const navigate = useNavigate();
-
-  const handleCategoryClick = (category: typeof programCategories[0]) => {
-    navigate(category.path);
-  };
-
   return (
     <main className="flex flex-col w-full ed-surface  overflow-x-hidden transition-colors duration-300">
       <HeroSection />
@@ -73,11 +67,11 @@ export const EngineeringAppliedSciencePage = (): JSX.Element => {
             {programCategories.map((category) => {
               const IconComponent = category.icon;
               return (
-                <div
+                <Link
                   key={category.id}
-                  onClick={() => handleCategoryClick(category)}
+                  to={category.path}
                   className="group relative ed-surface  rounded-xl p-8 lg:p-10 ed-elevation ed-hover-shadow transition-all duration-500 transform ed-lift cursor-pointer border ed-border  overflow-hidden"
-                 role="button" tabIndex={0} onKeyDown={event => { if (event.target === event.currentTarget && (event.key === "Enter" || event.key === " ")) { event.preventDefault(); event.currentTarget.click(); } }}>
+                >
                   {/* Background Pattern */}
                   <div className={`absolute inset-0 ${category.bgPattern} opacity-50`} />
 
@@ -105,16 +99,16 @@ export const EngineeringAppliedSciencePage = (): JSX.Element => {
 
                     {/* Action Button */}
                     <div className="flex items-center justify-between">
-                      <button className="flex items-center gap-2 ed-muted  font-medium ed-group-ink  transition-colors duration-300">
+                      <span className="flex items-center gap-2 ed-muted  font-medium ed-group-ink  transition-colors duration-300">
                         <span>Explore Programs</span>
                         <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                      </button>
+                      </span>
                     </div>
                   </div>
 
                   {/* Hover Effect Overlay */}
                   <div className="absolute inset-0 ed-tint   opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-                </div>
+                </Link>
               );
             })}
           </div>

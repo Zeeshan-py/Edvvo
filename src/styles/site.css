@@ -61,3 +61,10 @@
   .site-shell .min-w-\[200px\] { min-width: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .ed-lift:hover { transform: none; } }
+.privacy-banner { position: fixed; z-index: 100; right: 20px; bottom: 20px; width: min(480px, calc(100% - 40px)); max-height: 60vh; overflow-y: auto; padding: 22px; border: 1px solid var(--ed-rule); border-radius: 14px; background: var(--ed-surface); color: var(--ed-ink); box-shadow: 0 8px 36px var(--ed-shadow-strong); }
+.privacy-banner h2 { font-size: 18px; font-weight: 800; margin-bottom: 9px; }
+.privacy-banner p { font-size: 13px; line-height: 1.6; color: var(--ed-muted); }
+.privacy-banner p a { text-decoration: underline; text-underline-offset: 3px; color: var(--ed-blue); }
+.privacy-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.privacy-actions .ed-button { flex: 1; font-size: 12px; padding: 12px; white-space: normal; min-height: 44px; }
+.privacy-session { position: fixed; z-index: 100; bottom: 12px; left: 12px; right: 12px; padding: 12px; background: var(--ed-surface); color: var(--ed-ink); font-size: 12px; border: 1px solid var(--ed-rule); }

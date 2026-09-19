@@ -1,16 +1,14 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { solutions } from '@/pages/Workspace/SolutionsPage';
-import { SITE_URL, pages, missingPage, canonicalPath } from './site';
-import { notificationsData } from '@/utils/notificationsData';
+import contentMeta from 'virtual:content-meta';
+import { SITE_URL, pages, missingPage, canonicalPath, roadmapSchema } from './site';
 
 export function RouteMetadata() {
   const { pathname } = useLocation();
   useEffect(() => {
     const path = canonicalPath(pathname);
-    const article = solutions.find(item => path === `/solutions/${item.id}`);
-    const notification = notificationsData.find(item => path === `/notifications/${item.id}`);
-    const meta = pages[path] || (article ? { title: article.title, description: article.abstract } : notification ? { title: notification.title, description: 'Read this archived Edvvo platform announcement.', noindex: true } : missingPage);
+    const article = path.startsWith('/solutions/') && contentMeta[path];
+    const meta = pages[path] || contentMeta[path] || missingPage;
     const title = `${meta.title} | Edvvo`;
     document.title = title;
     const set = (attribute: 'name' | 'property', key: string, content: string) => {
@@ -29,6 +27,15 @@ export function RouteMetadata() {
     let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.append(canonical); }
     canonical.href = SITE_URL + path;
+    document.getElementById('roadmap-schema')?.remove();
+    const schema = roadmapSchema(path);
+    if (schema) {
+      const script = document.createElement('script');
+      script.id = 'roadmap-schema';
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(schema);
+      document.head.append(script);
+    }
   }, [pathname]);
   return null;
 }

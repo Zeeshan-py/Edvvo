@@ -2,14 +2,19 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import { JSDOM } from 'jsdom';
 const root = 'dist';
+assert.ok(!fs.existsSync(`${root}/_redirects`), 'Routing must remain in netlify.toml; a public _redirects file can override its 404 and alias rules');
+assert.match(fs.readFileSync('netlify.toml', 'utf8'), /to = "\/404\.html"\s+status = 404/, 'Unknown paths must return HTTP 404');
 const sitemap = fs.readFileSync(`${root}/sitemap.xml`, 'utf8');
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]);
 assert.equal(new Set(urls).size, urls.length, 'Duplicate sitemap entries');
 assert.ok(urls.length > 30, 'Missing route coverage');
+assert.equal(urls.filter(url => new URL(url).pathname.startsWith('/roadmaps/')).length, 16, 'Expected all 16 roadmap pages');
+const graph = new Map();
+const bodyTexts = new Set();
 for (const url of urls) {
   const { pathname, origin } = new URL(url);
   assert.equal(origin, 'https://edvvo.netlify.app');
-  const filename = pathname === '/' ? 'index.html' : `${pathname.slice(1)}/index.html`;
+  const filename = pathname === '/' ? 'index.html' : `${pathname.slice(1)}.html`;
   const document = new JSDOM(fs.readFileSync(`${root}/${filename}`, 'utf8')).window.document;
   assert.equal(document.querySelectorAll('link[rel=canonical]').length, 1, filename);
   assert.equal(document.querySelector('link[rel=canonical]').href, url, filename);
@@ -17,13 +22,42 @@ for (const url of urls) {
   assert.ok(document.title.endsWith('| Edvvo'), filename);
   assert.ok(document.querySelector('meta[name=description]').content.length > 50, filename);
   assert.ok(!document.querySelector('meta[name=robots]').content.includes('noindex'), filename);
+  assert.ok(document.querySelector('#app h1'), `${filename}: missing prerendered heading`);
+  assert.ok(document.querySelector('#app').textContent.trim().length > 300, `${filename}: empty page body`);
+  assert.ok(document.querySelectorAll('#app a[href]').length > 3, `${filename}: missing crawlable links`);
+  assert.ok(!document.querySelector('[aria-busy="true"]'), `${filename}: unresolved loading shell`);
+  const bodyText = document.querySelector('#app').textContent.replace(/\s+/g, ' ').trim();
+  assert.ok(!bodyTexts.has(bodyText), `${filename}: duplicate page content`);
+  bodyTexts.add(bodyText);
+  const links = [...document.querySelectorAll('#app a[href]')].map(a => new URL(a.getAttribute('href'), url))
+    .filter(link => link.origin === origin).map(link => link.pathname.replace(/\/+$/, '') || '/');
+  graph.set(pathname, links);
+  for (const link of links) {
+    assert.ok(fs.existsSync(`${root}/${link === '/' ? 'index' : link.slice(1)}.html`) || fs.existsSync(`${root}${link}`), `${filename}: broken internal link ${link}`);
+  }
+  if (pathname.startsWith('/roadmaps/')) {
+    const schema = JSON.parse(document.querySelector('#roadmap-schema').textContent);
+    assert.equal(schema['@type'], 'BreadcrumbList');
+    assert.equal(schema.itemListElement.at(-1).item, url);
+  }
   for (const asset of document.querySelectorAll('script[src^="/assets/"], link[href^="/assets/"]')) {
     assert.ok(fs.existsSync(root + (asset.getAttribute('src') || asset.getAttribute('href'))), filename);
   }
 }
+const reached = new Set(['/']);
+const queue = ['/'];
+while (queue.length) {
+  for (const link of graph.get(queue.shift()) || []) {
+    if (!reached.has(link)) { reached.add(link); queue.push(link); }
+  }
+}
+for (const url of urls) assert.ok(reached.has(new URL(url).pathname), `Orphan sitemap page: ${url}`);
 const notFound = new JSDOM(fs.readFileSync(`${root}/404.html`, 'utf8')).window.document;
 assert.match(notFound.querySelector('meta[name=robots]').content, /noindex/);
 const home = fs.readFileSync(`${root}/index.html`, 'utf8');
+assert.ok(!/src="https:\/\/(?:www\.googletagmanager|pagead2\.googlesyndication)/.test(home), 'Optional tracking must not bypass consent in HTML');
+assert.ok(!home.includes('fonts.googleapis.com'), 'Use locally hosted fonts');
+assert.ok(fs.existsSync(`${root}/fonts/manrope-latin-variable.woff2`), 'Missing local font');
 assert.ok(!fs.readFileSync('netlify.toml', 'utf8').includes('from = "https://edvvo.netlify.app/*"'), 'Do not redirect the canonical Netlify domain away');
 for (const file of fs.readdirSync(root, { recursive: true }).filter(file => file.endsWith('.html'))) {
   const doc = new JSDOM(fs.readFileSync(`${root}/${file}`, 'utf8')).window.document;

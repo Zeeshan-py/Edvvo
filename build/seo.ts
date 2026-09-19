@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import ts from 'typescript';
 import type { Plugin } from 'vite';
-import { SITE_URL, pages, missingPage, type PageMeta } from '../src/seo/site';
+import { SITE_URL, pages, missingPage, roadmapSchema, type PageMeta } from '../src/seo/site';
 
 // Read only literal metadata from the content arrays, without importing browser code.
 function contentPages(file: string, variable: string, prefix: string, noindex = false) {
@@ -27,6 +27,10 @@ const escape = (value: string) => value.replace(/&/g, '&amp;').replace(/"/g, '&q
 export function seoPlugin(): Plugin {
   return {
     name: 'edvvo-route-seo', enforce: 'post',
+    resolveId(id) { if (id === 'virtual:content-meta') return '\0virtual:content-meta'; },
+    load(id) {
+      if (id === '\0virtual:content-meta') return `export default ${JSON.stringify({ ...contentPages('src/pages/Workspace/SolutionsPage.tsx', 'solutions', '/solutions'), ...contentPages('src/utils/notificationsData.ts', 'notificationsData', '/notifications', true) })};`;
+    },
     generateBundle(_, bundle) {
       const index = bundle['index.html'];
       if (!index || index.type !== 'asset') throw new Error('Missing build HTML');
@@ -47,11 +51,13 @@ export function seoPlugin(): Plugin {
           `<meta name="twitter:title" content="${escape(meta.title)} | Edvvo" />`,
           `<meta name="twitter:description" content="${escape(meta.description)}" />`,
         ].join('\n    ');
-        return html.replace('</head>', `${tags}\n  </head>`);
+        const schema = roadmapSchema(path);
+        const structured = schema ? `<script id="roadmap-schema" type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>` : '';
+        return html.replace('</head>', `${tags}\n${structured}\n  </head>`);
       };
       for (const [path, meta] of Object.entries(allPages)) {
         if (path === '/') index.source = render(path, meta);
-        else this.emitFile({ type: 'asset', fileName: `${path.slice(1)}/index.html`, source: render(path, meta) });
+        else this.emitFile({ type: 'asset', fileName: `${path.slice(1)}.html`, source: render(path, meta) });
       }
       this.emitFile({ type: 'asset', fileName: '404.html', source: render('/404', missingPage) });
       const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${Object.entries(allPages).filter(([, meta]) => !meta.noindex).map(([path]) => `  <url><loc>${SITE_URL}${path}</loc></url>`).join('\n')}\n</urlset>\n`;

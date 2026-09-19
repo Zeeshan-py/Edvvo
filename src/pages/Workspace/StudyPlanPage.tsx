@@ -204,7 +204,7 @@ export const StudyPlanPage = (): JSX.Element => {
 
   // --- Study plans state with persistence ---
   const [studyPlans, setStudyPlans] = useState<Record<string, StudyPlan>>(() => {
-    const saved = localStorage.getItem('studyPlans');
+    const saved = typeof window === 'undefined' ? null : localStorage.getItem('studyPlans');
     if (saved) {
       try {
         return JSON.parse(saved);
