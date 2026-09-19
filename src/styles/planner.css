@@ -1,0 +1,52 @@
+.planner-page { background: var(--ed-paper); }
+.planner-canvas {
+  color: var(--ed-ink);
+  background:
+    radial-gradient(circle at 88% 4%, var(--ed-sage) 0, transparent 28%),
+    radial-gradient(circle at 4% 54%, var(--ed-sky) 0, transparent 24%),
+    var(--ed-paper);
+}
+.planner-content { padding-block: clamp(30px, 5vw, 70px) 90px; }
+.planner-intro { display: flex; align-items: center; justify-content: space-between; gap: 32px; border-bottom: 1px solid var(--ed-rule); padding-bottom: 42px; }
+.planner-intro-copy { max-width: 680px; }
+.planner-intro .eyebrow, .planner-tips .eyebrow { color: var(--ed-blue); }
+.planner-intro h1 { margin-block: 14px; font-size: clamp(40px, 6vw, 70px); }
+.planner-intro p { font-size: clamp(15px, 2vw, 19px); }
+.planner-intro-mark { flex: none; width: 175px; height: 175px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border-radius: 30px; border: 1px solid var(--ed-rule); background: var(--ed-peach); box-shadow: 8px 9px 0 var(--ed-sage), 8px 14px 25px var(--ed-shadow); transform: rotate(5deg); color: var(--ed-ink); }
+.planner-intro-mark span { font-size: 12px; font-weight: 800; line-height: 1.2; text-align: center; text-transform: uppercase; letter-spacing: .12em; }
+.planner-tabs { display: flex; gap: 10px; overflow-x: auto; padding: 2px 2px 8px; scrollbar-width: thin; }
+.planner-tab { flex: none; border: 1px solid var(--ed-rule); border-radius: 10px; padding: 12px 16px; background: var(--ed-surface); color: var(--ed-ink); font-size: 13px; font-weight: 750; transition: background .2s, box-shadow .2s, transform .2s; }
+.planner-tab:hover { transform: translateY(-2px); box-shadow: 0 4px 0 var(--ed-rule); }
+.planner-tab[aria-pressed="true"] { background: var(--ed-blue); color: var(--ed-paper); border-color: var(--ed-blue); box-shadow: 0 4px 0 var(--ed-blue-dark); }
+.planner-panel { padding: clamp(20px, 3vw, 34px); background: var(--ed-surface); border: 1px solid var(--ed-rule); border-radius: 20px; box-shadow: 0 5px 0 var(--ed-rule), 0 18px 35px var(--ed-shadow); }
+.planner-progress { background: linear-gradient(115deg, var(--ed-surface) 60%, var(--ed-sky)); }
+.planner-success, .planner-complete-title { color: var(--ed-green); }
+.planner-ring-track { color: var(--ed-rule); }
+.planner-ring-progress { color: var(--ed-blue); }
+.planner-add-button { min-height: 42px; padding: 11px 16px; }
+.planner-form { background: var(--ed-paper); }
+.planner-task-card { background: var(--ed-surface); border-color: var(--ed-rule); box-shadow: 0 3px 0 var(--ed-rule); }
+.planner-task-card:hover { border-color: var(--ed-blue); transform: translateY(-2px); box-shadow: 0 5px 0 var(--ed-rule), 0 12px 24px var(--ed-shadow); }
+.planner-task-card.is-complete { background: color-mix(in srgb, var(--ed-sage) 42%, var(--ed-surface)); }
+.planner-check { flex: none; border-color: var(--ed-muted); color: var(--ed-surface); }
+.is-complete .planner-check { border-color: var(--ed-green); background: var(--ed-green); }
+.planner-priority-high, .planner-priority-medium, .planner-priority-low { text-transform: capitalize; font-weight: 800; }
+.planner-priority-high { background: var(--ed-peach); color: var(--ed-ink); }
+.planner-priority-medium { background: var(--ed-yellow); color: #302719; }
+.planner-priority-low { background: var(--ed-sage); color: var(--ed-ink); }
+.planner-icon-action { border-radius: 9px; }
+.planner-icon-action:hover { background: var(--ed-paper); }
+.planner-start-button { flex: none; padding: 9px 12px; border-radius: 9px; background: var(--ed-blue); color: var(--ed-paper); font-size: 12px; font-weight: 800; }
+.planner-start-button:hover { background: var(--ed-blue-dark); }
+.planner-tips { border: 1px solid var(--ed-rule); background: var(--ed-sage); color: var(--ed-ink); }
+.planner-tips h3 { margin-top: 10px; }
+.planner-tips ul { line-height: 1.9; }
+@media (max-width: 640px) {
+  .planner-intro { align-items: flex-start; }
+  .planner-intro-mark { display: none; }
+  .planner-section-heading { align-items: flex-start; gap: 14px; flex-wrap: wrap; }
+  .planner-task-card > div { align-items: flex-start; flex-wrap: wrap; gap: 14px; }
+  .planner-task-actions { width: 100%; justify-content: flex-end; }
+  .planner-task-meta { flex-wrap: wrap; row-gap: 5px; }
+}
+@media (prefers-reduced-motion: reduce) { .planner-tab, .planner-task-card { transition: none; } .planner-tab:hover, .planner-task-card:hover { transform: none; } }

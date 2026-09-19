@@ -227,10 +227,10 @@ export const StudyPlanPage = (): JSX.Element => {
 
   const getPriorityColor = (priority: string) => {
     switch (priority) {
-      case 'high': return 'text-red-600 bg-red-100  ';
-      case 'medium': return 'text-yellow-600 ed-tint  ';
-      case 'low': return 'text-green-600 ed-tint  ';
-      default: return 'ed-muted ed-canvas  ';
+      case 'high': return 'planner-priority-high';
+      case 'medium': return 'planner-priority-medium';
+      case 'low': return 'planner-priority-low';
+      default: return 'planner-priority-low';
     }
   };
 
@@ -462,11 +462,11 @@ export const StudyPlanPage = (): JSX.Element => {
   };
 
   return (
-    <main className="flex flex-col w-full ed-surface  overflow-x-hidden transition-colors duration-300">
+    <main className="ed-page planner-page flex flex-col w-full overflow-x-hidden">
       <HeroSection />
 
-      <div className="flex flex-col w-full items-center bg-[#f7f9fc]  transition-colors duration-300 min-h-screen">
-        <section className="w-full max-w-[1200px] px-4 md:px-6 py-12">
+      <div className="planner-canvas flex flex-col w-full items-center min-h-screen">
+        <section className="ed-container planner-content">
           {/* Header */}
           <div className="flex items-center gap-4 mb-8">
             <Link
@@ -478,29 +478,23 @@ export const StudyPlanPage = (): JSX.Element => {
             </Link>
           </div>
 
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-xl ed-tint   ed-elevation mb-6">
-              <Target className="w-10 h-10 text-white" />
+          <div className="planner-intro mb-12">
+            <div className="planner-intro-copy">
+              <span className="eyebrow">YOUR STUDY SPACE / PLANNER</span>
+              <h1>Make room for progress.</h1>
+              <p>Pick a plan, choose your next task, and keep moving.</p>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold ed-ink  ed-type mb-4 leading-tight">
-              Study Planner
-            </h1>
-            <p className="text-lg md:text-xl ed-muted  max-w-3xl mx-auto leading-relaxed mb-8">
-              Organize your study schedule, track your progress, and achieve your academic goals
-            </p>
+            <div className="planner-intro-mark" aria-hidden="true"><Target size={42} strokeWidth={1.7} /><span>one step<br />at a time</span></div>
           </div>
 
           {/* Plan Selection */}
-          <div className="flex flex-wrap gap-4 mb-8 justify-center">
+          <div className="planner-tabs mb-8" role="group" aria-label="Choose a study plan">
             {Object.values(studyPlans).map((plan) => (
               <button
                 key={plan.id}
                 onClick={() => setSelectedPlan(plan.id)}
-                className={`px-6 py-3 rounded-2xl font-semibold transition-all duration-200 ${
-                  selectedPlan === plan.id
-                    ? 'ed-tint   text-white ed-elevation'
-                    : 'ed-surface  ed-ink  ed-hover-surface  border ed-border '
-                }`}
+                aria-pressed={selectedPlan === plan.id}
+                className="planner-tab"
               >
                 {plan.name}
               </button>
@@ -508,7 +502,7 @@ export const StudyPlanPage = (): JSX.Element => {
           </div>
 
           {/* Progress Overview */}
-          <div className="ed-surface  rounded-xl p-8 ed-elevation border ed-border  mb-8">
+          <div className="planner-panel planner-progress mb-8">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
               <div className="flex-1">
                 <h2 className="text-2xl font-bold ed-ink  ed-type mb-4">
@@ -522,7 +516,7 @@ export const StudyPlanPage = (): JSX.Element => {
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-600 " />
+                    <CheckCircle className="w-5 h-5 planner-success" />
                     <span className="ed-muted ">
                       <span className="font-semibold ed-ink ">{currentPlan.completedTasks}</span> of {currentPlan.tasks.length} completed
                     </span>
@@ -540,14 +534,14 @@ export const StudyPlanPage = (): JSX.Element => {
                 <div className="w-20 h-20 relative">
                   <svg className="w-20 h-20 transform -rotate-90" viewBox="0 0 36 36">
                     <path
-                      className="text-gray-200 "
+                      className="planner-ring-track"
                       stroke="currentColor"
                       strokeWidth="3"
                       fill="none"
                       d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                     />
                     <path
-                      className="text-orange-500"
+                      className="planner-ring-progress"
                       stroke="currentColor"
                       strokeWidth="3"
                       fill="none"
@@ -561,14 +555,14 @@ export const StudyPlanPage = (): JSX.Element => {
           </div>
 
           {/* Tasks Section */}
-          <div className="ed-surface  rounded-xl p-8 ed-elevation border ed-border ">
-            <div className="flex items-center justify-between mb-6">
+          <div className="planner-panel planner-tasks">
+            <div className="planner-section-heading flex items-center justify-between mb-6">
               <h2 className="text-2xl font-bold ed-ink  ed-type">
                 Study Tasks
               </h2>
               <button
                 onClick={() => setShowAddTask(true)}
-                className="flex items-center gap-2 px-4 py-2 ed-tint   text-white rounded-xl font-semibold   transition-all duration-200"
+                className="ed-button planner-add-button"
               >
                 <Plus className="w-4 h-4" />
                 Add Task
@@ -577,7 +571,7 @@ export const StudyPlanPage = (): JSX.Element => {
 
             {/* Add Task Modal */}
             {showAddTask && (
-              <div className="mb-6 p-6 ed-canvas  rounded-2xl border ed-border ">
+              <div className="planner-form mb-6 p-6 rounded-2xl border ed-border">
                 <h3 className="text-lg font-semibold ed-ink  mb-4">Add New Task</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
                   <input
@@ -621,7 +615,7 @@ export const StudyPlanPage = (): JSX.Element => {
                   </button>
                   <button
                     onClick={() => setShowAddTask(false)}
-                    className="px-4 py-2 ed-canvas0 text-white rounded-lg font-semibold ed-hover-surface transition-colors duration-200"
+                    className="ed-button secondary"
                   >
                     Cancel
                   </button>
@@ -634,19 +628,14 @@ export const StudyPlanPage = (): JSX.Element => {
               {currentPlan.tasks.map((task) => (
                 <div
                   key={task.id}
-                  className={
-                    'p-6 rounded-2xl border transition-all duration-200 ed-surface  ed-border  ed-hover-shadow'
-                  }
+                  className={`planner-task-card p-6 rounded-2xl border transition-all duration-200 ${task.completed ? 'is-complete' : ''}`}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4 flex-1">
                       <button
                         onClick={() => toggleTaskCompletion(task.id)}
-                        className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all duration-200 ${
-                          task.completed
-                            ? 'ed-tint0 border-green-500 text-white'
-                            : 'border-gray-300 dark:border-gray-600 hover:border-green-500'
-                        }`}
+                        aria-label={`${task.completed ? 'Mark incomplete' : 'Mark complete'}: ${task.title}`}
+                        className="planner-check w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all duration-200"
                       >
                         {task.completed && <CheckCircle className="w-4 h-4" />}
                       </button>
@@ -699,18 +688,14 @@ export const StudyPlanPage = (): JSX.Element => {
                         ) : (
                           <>
                             <div className="flex items-center gap-3 mb-2">
-                              <h3 className={`font-semibold text-lg ${
-                                task.completed
-                                  ? 'text-green-700  line-through'
-                                  : 'ed-ink '
-                              }`}>
+                              <h3 className={`font-semibold text-lg ${task.completed ? 'planner-complete-title line-through' : 'ed-ink'}`}>
                                 {task.title}
                               </h3>
                               <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(task.priority)}`}>
                                 {task.priority}
                               </span>
                             </div>
-                            <div className="flex items-center gap-4 text-sm ed-muted ">
+                            <div className="planner-task-meta flex items-center gap-4 text-sm ed-muted">
                               <span className="flex items-center gap-1">
                                 <BookOpen className="w-4 h-4" />
                                 {task.subject}
@@ -728,19 +713,21 @@ export const StudyPlanPage = (): JSX.Element => {
                         )}
                       </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="planner-task-actions flex items-center gap-2">
                       <button
                         onClick={() => {
                           setEditingTask(task.id);
                           setEditTaskData({...task, planId: selectedPlan});
                         }}
-                        className="p-2 ed-muted ed-hover-ink   transition-colors duration-200"
+                        aria-label={`Edit ${task.title}`}
+                        className="planner-icon-action p-2 ed-muted ed-hover-ink transition-colors duration-200"
                       >
                         <Edit className="w-4 h-4" />
                       </button>
                       <button
                         onClick={() => deleteTask(task.id)}
-                        className="p-2 ed-muted hover:text-red-600   transition-colors duration-200"
+                        aria-label={`Delete ${task.title}`}
+                        className="planner-icon-action p-2 ed-muted hover:text-red-600 transition-colors duration-200"
                       >
                         <Trash2 className="w-4 h-4" />
                       </button>
@@ -749,7 +736,7 @@ export const StudyPlanPage = (): JSX.Element => {
                           setShowStartDialog(task);
                           setPendingShowPopup(true);
                         }}
-                        className="p-2 text-white ed-tint   rounded-lg shadow-md   transition-all duration-200"
+                        className="planner-start-button"
                       >
                         ▶ Start
                       </button>
@@ -768,8 +755,9 @@ export const StudyPlanPage = (): JSX.Element => {
           </div>
 
           {/* Study Tips */}
-          <div className="mt-8 ed-tint   rounded-xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4 ed-type">Study Tips</h3>
+          <div className="planner-tips mt-8 rounded-xl p-8">
+            <span className="eyebrow">A LITTLE REMINDER</span>
+            <h3 className="text-2xl font-bold mb-4 ed-type">Make the session count.</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h4 className="font-semibold mb-2">Time Management</h4>

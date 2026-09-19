@@ -10,6 +10,7 @@ import "./styles/tailwind.css";
 import "./styles/studio.css";
 import "./styles/roadmaps.css";
 import "./styles/site.css";
+import "./styles/planner.css";
 
 // Get the root element
 const rootElement = document.getElementById("app");
