@@ -42,8 +42,9 @@
 .empty-page { padding-block: 90px; max-width: 780px; }
 .empty-page p { margin-block: 24px; }
 .directory-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.article-page article p a { text-decoration: underline; text-underline-offset: 3px; }
 .directory-card { background: var(--ed-surface); border: 1px solid var(--ed-rule); border-radius: 14px; box-shadow: 0 3px 0 var(--ed-rule); }
-.directory-card > a { display: flex; height: 100%; flex-direction: column; align-items: start; padding: 28px; gap: 18px; }
+.directory-card > a:not(.ed-text-link) { display: flex; height: 100%; flex-direction: column; align-items: start; padding: 28px; gap: 18px; }
 .directory-icon { padding: 16px; background: var(--ed-sky); border-radius: 12px; color: var(--ed-ink); }
 .directory-card:nth-child(3n+2) .directory-icon { background: var(--ed-sage); }
 .directory-card:nth-child(3n+3) .directory-icon { background: var(--ed-peach); }

@@ -1,9 +1,10 @@
-import { ArrowUpRight, MessageCircle, Youtube, Facebook } from "lucide-react";
+import { ArrowUpRight, Mail, MessageCircle, Youtube, Facebook } from "lucide-react";
 import { HeroSection } from "../Home/sections/HeroSection";
 import { FooterSection } from "../Home/sections/FooterSection";
 export const ContactPage = () => <main className="ed-page"><HeroSection />
   <div className="ed-container content-layout"><div><span className="eyebrow">CONTACT & FEEDBACK</span><h1>Let's make learning<br />a little easier.</h1><p>Have a suggestion or found something that needs fixing? Reach Edvvo through our public channels.</p></div>
     <div className="content-prose"><div className="contact-links">
+      <a href="mailto:zeeshanahmad0159@gmail.com"><Mail size={23} /><span><strong>Email Edvvo</strong><small>zeeshanahmad0159@gmail.com</small><small>Corrections, feedback and copyright requests.</small></span><ArrowUpRight size={17} /></a>
       <a href="https://www.facebook.com/share/1CE4C69Kpf/" target="_blank" rel="noopener noreferrer"><Facebook size={23} /><span><strong>Facebook</strong><small>Visit our page for feedback and contact options.</small></span><ArrowUpRight size={17} /></a>
       <a href="https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V" target="_blank" rel="noopener noreferrer"><MessageCircle size={23} /><span><strong>WhatsApp channel</strong><small>Follow public updates and announcements.</small></span><ArrowUpRight size={17} /></a>
       <a href="https://youtube.com/@edvvo?feature=shared" target="_blank" rel="noopener noreferrer"><Youtube size={23} /><span><strong>YouTube</strong><small>Visit the Edvvo channel.</small></span><ArrowUpRight size={17} /></a>

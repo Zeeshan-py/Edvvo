@@ -50,6 +50,8 @@ const RoadmapsPage = lazy(() => import("@/pages/Workspace/RoadmapsPage").then(mo
 const FocusTimerPage = lazy(() => import("@/pages/Workspace/FocusTimerPage").then(module => ({ default: module.FocusTimerPage })));
 const SolutionsPage = lazy(() => import("@/pages/Workspace/SolutionsPage").then(module => ({ default: module.SolutionsPage })));
 const StudyPlanPage = lazy(() => import("@/pages/Workspace/StudyPlanPage").then(module => ({ default: module.StudyPlanPage })));
+const RevisionWorkshopPage = lazy(() => import("@/pages/Workspace/RevisionWorkshopPage").then(module => ({ default: module.RevisionWorkshopPage })));
+const EditorialPolicyPage = lazy(() => import("@/pages/About/EditorialPolicyPage").then(module => ({ default: module.EditorialPolicyPage })));
 const SolutionDetailPage = lazy(() => import("@/pages/Workspace/SolutionDetailPage").then(module => ({ default: module.SolutionDetailPage })));
 
 // About pages
@@ -104,6 +106,8 @@ export const AppRouter = () => {
       <Route path="/research-papers" element={<ResearchRedirect />} />
       <Route path="/research-papers/:id" element={<ResearchRedirect />} />
       <Route path="/study-plan" element={<StudyPlanPage />} />
+      <Route path="/revision-workshop" element={<RevisionWorkshopPage />} />
+      <Route path="/editorial-policy" element={<EditorialPolicyPage />} />
 
       {/* About Pages */}
       <Route path="/about" element={<AboutPage />} />

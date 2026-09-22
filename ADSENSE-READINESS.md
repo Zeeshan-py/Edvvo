@@ -1,58 +1,49 @@
-# AdSense Preparation
+# AdSense content review
 
-This redesign does not establish eligibility or guarantee approval.
+Updated 22 September 2026. The reported rejection is low value content. These
+changes improve the site; they do not establish eligibility or guarantee approval.
 
-## Implemented
-- Extended student-desk typography, surfaces, colors, focus styles and restrained motion
-  to all routed pages, resource collections, article readers and shared UI controls.
-- Added the missing notification index, consistent results/article navigation and a 404.
-- Generated route-specific HTML titles, descriptions, Open Graph metadata and canonical
-  URLs for 41 indexable pages, including all 12 learning guides. Content still renders
-  through React; these HTML files provide metadata, not full server-rendered articles.
-- Sitemap and robots are generated from the shared route catalog during production builds.
-  The canonical origin is https://edvvo.netlify.app; old research-paper routes redirect to guides.
-- Notifications are archived utility content and use noindex; they are not in the sitemap.
-- Confirmed the current AdSense publisher matches public/ads.txt. Retained the current
-  Analytics and Tag Manager account IDs from the repository.
-- Removed unverified result-page ratings and board resource-count claims, repaired board
-  portal URLs using the official BBISE directory, and removed misplaced object text from
-  the first React guide.
-- Clear navigation, working class shortcuts and labeled external search results.
-- Removed invented testimonials and unsupported audience metrics from Home and About.
-- Added a contact route using the site's existing public channels.
-- Updated privacy disclosures to describe the Google scripts already in index.html.
-- No new ad placements or deceptive download buttons.
+## Implemented in this update
 
-## Review Before Applying
-- In Netlify, set VITE_GEMINI_API_KEY if the optional quiz generator is needed. The key
-  previously hardcoded in netlify.toml was removed; rotate it because it was exposed.
-  A VITE-prefixed key is still public in the browser; restrict it or use a backend proxy.
-- Submit https://edvvo.netlify.app/sitemap.xml in the verified Search Console property after
-  deployment. Confirm the custom domain, redirects, certificate and final HTTP responses.
-- Verify distribution rights for all linked books and PDFs. The vault includes commercial
-  textbook titles on third-party file hosts; a link alone does not prove permission.
-- Review original educational content, accuracy, attribution, and broken links across all
-  legacy resource pages. Some collections remain unavailable and should not carry ads.
-- Add a monitored direct contact address if available. Public social channels are currently
-  the only contact information present in the repository.
-- Review the privacy wording against actual hosting, Analytics, Tag Manager, chat and ad
-  configuration. Server-side settings cannot be established from this repository.
-- Configure and test Google's applicable consent requirements, including a certified CMP
-  when required for visitors in the EEA, UK and Switzerland. No CMP is implemented here.
-- Check existing AdSense auto-ad settings to avoid ads on empty, navigation-only or low-value
-  screens. Keep ads distinguishable from resources and away from download controls.
-- Review age-related ad settings for a site used by school students.
+- Added an original revision workshop: a session calculator, worked maths,
+  physics and chemistry exercises, error analysis and syllabus-checking guidance.
+- Replaced three outdated software guides with concrete learning exercises,
+  runnable examples, expected results and current official setup references.
+- Removed displayed fabricated ratings, download counts and placeholder previews
+  from the scholarly vault and entrance-test directory. Counts now use actual data.
+- Distinguished external resources from Google search links and Edvvo-authored work.
+- Removed empty board/past-paper choices from the resource explorer.
+- Added an editorial/corrections policy and the owner-authorized public contact:
+  zeeshanahmad0159@gmail.com. No expert credentials or staff identities are invented.
+- Added semantic article lists and safe, readable code blocks.
+- Included both new pages in navigation, metadata and sitemap generation.
+  Production builds prerender full content, not just metadata. The canonical
+  origin remains https://edvvo.netlify.app. Robots and sitemap are generated together.
+- Preserved consent-before-analytics/ads and the configured publisher ID/ads.txt.
 
-## Official Guidance
-- https://support.google.com/adsense/answer/7299563
-- https://support.google.com/adsense/answer/10502938
-- https://support.google.com/adsense/answer/1348695
-- https://support.google.com/adsense/answer/13554116
+## Owner review still required before requesting another review
 
-Design alone cannot replace content ownership, valuable original content, or policy review.
+1. Map each externally hosted textbook/PDF to its permission or license, including
+   edition, distribution scope and expiry. The owner confirmed permission exists;
+   the underlying documents have not been supplied or independently checked.
+2. Review remaining legacy articles for accuracy and distinct educational value,
+   especially legal, medical and professional guidance. Do not present introductory
+   summaries as expert advice. Test external resource links and remove stale entries.
+3. Verify deployed pages on mobile and desktop. Confirm real visitors can finish
+   useful tasks, not simply navigate to another site's content. Maintain corrections
+   based on real reports rather than inventing review activity or audience metrics.
+4. Check AdSense Auto ads exclusions for utility, error, policy and non-content screens.
+   Account-side ad placements and settings cannot be verified from this repository.
+5. Configure Google's applicable consent requirements, including a Google-certified
+   CMP where required. The custom consent banner is not a certified CMP.
+6. Use genuine audience development. Do not purchase artificial visits/clicks, click
+   your own ads or ask visitors to click ads. A word count, Lighthouse score, sitemap
+   size or particular number of pages does not promise approval.
+7. Request review only after deployment and a complete owner content/rights review.
+   This work does not submit a review or assert every policy issue is resolved.
 
-## Verification
-Run npm run typecheck, npm run build, npm run verify:seo and npm test -- --run.
-The SEO verifier checks every sitemap URL against the generated HTML, canonical uniqueness,
-metadata, asset paths, the 404 robots directive and AdSense publisher consistency.
-External references: https://bbise.edu.pk/OtherBoards and https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics.
+## Official references
+
+- https://support.google.com/adsense/answer/10015918
+- https://support.google.com/adsense/answer/48182
+- https://support.google.com/publisherpolicies/answer/11035931

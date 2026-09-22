@@ -8,48 +8,74 @@ export const solutions = [
   {
     id: 1,
     title: "Build a Simple To-Do App with React",
-    authors: "Edvvo Blog Team",
+    authors: "Edvvo",
     journal: "Edvvo Real Apps",
-    year: 2025,
-    abstract: "A comprehensive guide to creating a fully functional To-Do application in React, covering everything from project setup to advanced features and deployment.",
-    content: `# Build a Simple To-Do App with React
+    year: 2026,
+    abstract: "Build and test a small React study-task list with complete source code, independent task IDs and clear limits on data persistence.",
+    content: `## Build a small, testable study-task app
+This exercise creates an in-memory list with add, complete and remove actions. You need basic JavaScript arrays, functions and JSX. It deliberately does not include accounts, reminders or saved data: refreshing the page clears the list.
 
-## What is a To-Do App?
-A To-Do application is a task management tool that allows users to create, organize, update, and delete daily tasks or activities. It's one of the most fundamental projects for learning web development because it covers essential CRUD (Create, Read, Update, Delete) operations. To-Do apps help users stay organized by providing a digital way to track their responsibilities, set priorities, and mark completed tasks.
+## Set up the project
+Install a supported Node.js LTS release compatible with the current Vite requirements. Follow the official React setup reference below if your environment differs. Run these commands in a terminal:
+\`\`\`sh
+npm create vite@latest study-tasks -- --template react
+cd study-tasks
+npm install
+npm run dev
+\`\`\`
+Open the local URL printed by the development server. Replace src/App.jsx with the following component:
+\`\`\`jsx
+import { useState } from 'react';
 
-## Prerequisites and Requirements
-Before starting this project, you should have basic knowledge of HTML, CSS, and JavaScript. Understanding of ES6+ features like arrow functions, destructuring, and modules will be helpful. You'll also need Node.js installed on your computer (version 14 or higher recommended) and a code editor like VS Code. Familiarity with npm (Node Package Manager) is essential for managing dependencies.
+export default function App() {
+  const [title, setTitle] = useState('');
+  const [tasks, setTasks] = useState([]);
+  function addTask(event) {
+    event.preventDefault();
+    const text = title.trim();
+    if (!text) return;
+    setTasks(current => [...current, {
+      id: crypto.randomUUID(), title: text, done: false
+    }]);
+    setTitle('');
+  }
+  return <main>
+    <h1>My study tasks</h1>
+    <form onSubmit={addTask}>
+      <label htmlFor="task-title">New task</label>
+      <input id="task-title" value={title}
+        onChange={event => setTitle(event.target.value)} />
+      <button type="submit">Add task</button>
+    </form>
+    <p>{tasks.filter(task => task.done).length} of {tasks.length} complete</p>
+    <ul>{tasks.map(task => <li key={task.id}>
+      <label><input type="checkbox" checked={task.done}
+        onChange={() => setTasks(current => current.map(item =>
+          item.id === task.id ? { ...item, done: !item.done } : item
+        ))} />{task.title}</label>
+      <button type="button" aria-label={'Remove ' + task.title}
+        onClick={() => setTasks(current =>
+          current.filter(item => item.id !== task.id)
+        )}>Remove</button>
+    </li>)}</ul>
+  </main>;
+}
+\`\`\`
 
-## Project Setup and Environment
-Start by installing Node.js from the official website. Once installed, open your terminal or command prompt and run 'npx create-react-app todo-app' to create a new React project. This command sets up a complete development environment with build tools, testing framework, and development server. Navigate to your project folder using 'cd todo-app' and run 'npm start' to launch the development server on localhost:3000.
+## Understand the state changes
+The input has its own state so typing does not create a task. Submitting trims whitespace and appends a new object. Each task gets an ID independent of its title, allowing two tasks with the same words to behave independently. The checkbox maps the current array into a new array and changes only the matching object. Removal filters by ID rather than by title.
 
-## Creating the Basic Structure
-Begin by cleaning up the default files and creating a clean project structure. Remove unnecessary files from the src folder and create components for your app. Design the main App component that will hold the application state and render other components. Plan your component hierarchy: App > TodoList > TodoItem, and consider creating separate components for adding new todos and filtering existing ones.
+## Test before adding features
+- Submit spaces only: the list should stay empty.
+- Add two tasks named Read chapter one: both should appear.
+- Complete the second task: the counter should show 1 of 2 complete.
+- Remove the first task: the remaining task should still be checked.
+- Refresh: the list should become empty because this example has no persistence.
 
-## Implementing State Management
-Use React's useState hook to manage your application state. Create state variables for storing the list of todos, input field values, and filter options. Each todo item should have properties like id, text, completed status, and creation date. Implement functions to add new todos, toggle completion status, edit existing todos, and delete todos. Remember to use functional state updates when modifying arrays or objects.
-
-## Building the User Interface
-Design a clean and intuitive user interface using CSS or a styling framework. Create an input field for adding new todos with a submit button or enter key functionality. Display the todo list with checkboxes for marking completion, text for the todo content, and buttons for editing and deleting. Add visual feedback for completed tasks using strikethrough text or different colors. Include a counter showing total and completed tasks.
-
-## Adding Advanced Features
-Enhance your app with features like task prioritization using color coding or drag-and-drop functionality. Implement filtering options to show all tasks, only completed tasks, or only pending tasks. Add the ability to edit todos inline by clicking on them. Include due dates and reminders for tasks. Consider adding categories or tags to organize tasks better. Implement search functionality to find specific tasks quickly.
-
-## Local Storage Integration
-Implement local storage to persist todos between browser sessions. Use useEffect hook to load saved todos when the component mounts and save todos whenever the state changes. Handle edge cases like corrupted data or missing localStorage. This ensures users don't lose their tasks when they close and reopen the browser.
-
-## Common Problems and Solutions
-State not updating correctly: Always use the setter function from useState and avoid direct mutation of state arrays or objects. List not rendering: Ensure each item has a unique key prop when using map(). Event handlers not working: Check that you're passing functions correctly and not calling them immediately. CSS styles not applying: Verify class names and import statements for CSS files.
-
-## Testing Your Application
-Write unit tests for your components using Jest and React Testing Library. Test user interactions like adding, completing, and deleting todos. Test edge cases like empty input submission and filtering functionality. Use React Developer Tools browser extension to debug component state and props. Test your app in different browsers to ensure compatibility.
-
-## Deployment and Optimization
-Build your app for production using 'npm run build' which creates optimized files. Deploy to platforms like Netlify, Vercel, or GitHub Pages for free hosting. Optimize performance by implementing React.memo for components that don't need frequent re-renders. Consider code splitting for larger applications and implement lazy loading for better performance.
-
-## Next Steps and Improvements
-Once your basic todo app is working, consider adding features like user authentication, cloud synchronization, collaborative editing, or mobile app version using React Native. Explore state management libraries like Redux or Context API for more complex applications. Learn about Progressive Web App (PWA) features to make your app installable and work offline.`,
-    downloadUrl: "https://react.dev/learn",
+## Troubleshooting and next exercise
+If the terminal reports an unsupported engine, check the Node version against the build tool requirements rather than installing an obsolete release. If the page is blank, check the browser console and compare the closing JSX tags. Run npm run build to check the production bundle.
+As a next exercise, add a button that filters the displayed list to incomplete tasks. Keep the original tasks array intact so completed tasks can be shown again. Only then add storage, including a plan for invalid stored data and a clear explanation of where personal task text is saved.`,
+    downloadUrl: "https://react.dev/learn/build-a-react-app-from-scratch",
     citations: 0,
     category: "Application",
     keywords: ["React", "To-Do", "App", "Guide"]
@@ -57,51 +83,52 @@ Once your basic todo app is working, consider adding features like user authenti
   {
     id: 2,
     title: "How to Install MongoDB",
-    authors: "Edvvo Blog Team",
+    authors: "Edvvo",
     journal: "Edvvo Real Apps",
-    year: 2025,
-    abstract: "Complete installation guide for MongoDB across all major operating systems, including configuration, security setup, and best practices.",
-    content: `# How to Install MongoDB
+    year: 2026,
+    abstract: "Set up a supported MongoDB installation, verify a private local connection and practise inserting, querying and updating study records.",
+    content: `## Install the right components
+MongoDB Server stores documents. The mongosh shell sends commands to that server, while Compass is an optional graphical client. Installing a client alone does not start a database. Use the official Community installation reference below and select instructions for your operating system and chosen supported server version. Package repositories and supported operating systems change; do not reuse commands for an older distribution.
 
-## What is MongoDB?
-MongoDB is a popular NoSQL document database that stores data in flexible, JSON-like documents. Unlike traditional relational databases that use tables and rows, MongoDB uses collections and documents, making it ideal for applications that need to store complex, nested data structures. It's widely used in modern web development, especially with Node.js applications, and offers excellent scalability and performance for handling large amounts of unstructured data.
+## Verify a private local connection
+Install mongosh if it is not already present. Start the server using the service instructions for your installation. In a terminal, check the shell and connect to a local server:
+\`\`\`sh
+mongosh --version
+mongosh "mongodb://127.0.0.1:27017"
+\`\`\`
+If your server requires authentication, use its configured credentials and authentication database. Do not disable authentication to get past an error. Inside mongosh, run:
+\`\`\`javascript
+db.runCommand({ ping: 1 })
+\`\`\`
+A successful response includes ok: 1. A connection refusal usually means the server is not listening at that address or port; check its service status and logs before changing firewall settings.
 
-## System Requirements and Prerequisites
-Before installing MongoDB, ensure your system meets the minimum requirements. For Windows, you need Windows 7/Server 2008 R2 or later with at least 4GB RAM and 2GB free disk space. For macOS, you need macOS 10.14 or later. Linux users should have a supported distribution like Ubuntu 18.04+, CentOS 7+, or Debian 9+. Administrative privileges are required for installation on all platforms.
+## Create one practice record
+Use a disposable local practice database, not a school or production database. Enter these commands inside mongosh, not PowerShell:
+\`\`\`javascript
+use edvvo_practice
+db.sessions.insertOne({
+  topic: "Linear equations",
+  minutes: 25,
+  completed: false
+})
+db.sessions.find({ topic: "Linear equations" })
+db.sessions.updateOne(
+  { topic: "Linear equations" },
+  { $set: { completed: true } }
+)
+db.sessions.find({ completed: true })
+\`\`\`
+The insert result contains the new document ID. The first query should show the topic, numeric minutes and false completion value. The update should match one record; the final query should show it with completed set to true.
 
-## Windows Installation Process
-Download the MongoDB Community Server installer from the official MongoDB website. Choose the MSI installer for your Windows version (64-bit recommended). Run the installer as administrator and select 'Complete' installation type. During installation, choose to install MongoDB as a Windows service so it starts automatically. Configure the data directory (default: C:\\data\\db) and log directory (default: C:\\data\\log). The installer will also install MongoDB Compass, a graphical interface for database management.
+## Diagnose unexpected results
+Running insertOne repeatedly creates several documents. A topic is not a unique identifier: updateOne changes one matching document, not necessarily the one you intended. For a precise update, copy the returned _id and query by that ID. A string such as "25" is different from the number 25, so use consistent field types when comparing values.
 
-## Windows Configuration and Setup
-After installation, add MongoDB to your system PATH environment variable to use it from command line. Open Command Prompt as administrator and navigate to MongoDB bin directory (usually C:\\Program Files\\MongoDB\\Server\\[version]\\bin). Create the data directory if it doesn't exist using 'mkdir C:\\data\\db'. Test the installation by running 'mongod' command to start the MongoDB server, then open another command prompt and run 'mongo' to connect to the database.
+## Keep the exercise safe
+Do not expose this practice database to the internet, add real student records or paste credentials into screenshots. Local connection examples are not production security configurations. Before deploying a real application, follow the vendor guidance for authentication, restricted network access, backups and least-privilege application accounts.
 
-## macOS Installation with Homebrew
-First, install Homebrew if you haven't already by running the installation command from brew.sh. Once Homebrew is installed, add the MongoDB Homebrew tap by running 'brew tap mongodb/brew'. Install MongoDB Community Edition using 'brew install mongodb-community'. This method automatically handles dependencies and configures the necessary directories. Start MongoDB as a service using 'brew services start mongodb-community' or run it manually with 'mongod --config /usr/local/etc/mongod.conf'.
-
-## macOS Manual Installation
-If you prefer manual installation, download the MongoDB tarball from the official website. Extract the archive to your desired location (recommended: /usr/local/mongodb). Create necessary directories: /usr/local/var/mongodb for data and /usr/local/var/log/mongodb for logs. Add MongoDB binary path to your shell profile (bash_profile, zshrc, etc.) by adding 'export PATH=/usr/local/mongodb/bin:$PATH'. Reload your shell configuration and test the installation.
-
-## Linux Installation (Ubuntu/Debian)
-Import the MongoDB public GPG key using 'wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -'. Add the MongoDB repository to your package manager sources. For Ubuntu 20.04: 'echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list'. Update package database with 'sudo apt-get update' and install MongoDB with 'sudo apt-get install -y mongodb-org'.
-
-## Linux Installation (CentOS/RHEL)
-Create a MongoDB repository file at /etc/yum.repos.d/mongodb-org-5.0.repo with the appropriate repository configuration. Install MongoDB using 'sudo yum install -y mongodb-org'. Start and enable the MongoDB service using 'sudo systemctl start mongod' and 'sudo systemctl enable mongod'. Check service status with 'sudo systemctl status mongod' to ensure it's running properly.
-
-## Initial Configuration and Security
-After installation, configure MongoDB for security and performance. Edit the configuration file (mongod.conf) to enable authentication, bind to specific IP addresses, and set up SSL/TLS encryption. Create an administrative user by connecting to MongoDB and running database commands to add users with appropriate roles. Configure firewall rules to allow MongoDB traffic only from authorized sources.
-
-## Database Creation and Basic Usage
-Connect to MongoDB using the mongo shell by running 'mongo' command. Create a new database using 'use mydatabase' command. Insert documents using 'db.collection.insertOne()' or 'db.collection.insertMany()'. Query data using 'db.collection.find()' with various query operators. Update documents with 'db.collection.updateOne()' or 'db.collection.updateMany()'. Delete documents using 'db.collection.deleteOne()' or 'db.collection.deleteMany()'.
-
-## Common Installation Issues and Solutions
-If MongoDB service fails to start, check the log files for error messages. Common issues include insufficient disk space, permission problems, or port conflicts (default port 27017). On Windows, ensure the MongoDB service has proper permissions to access data directories. On Linux/macOS, check that mongod user exists and has correct permissions. For connection issues, verify firewall settings and network configuration.
-
-## Performance Optimization and Maintenance
-Configure appropriate memory allocation based on your system resources. Set up regular backup procedures using mongodump and mongorestore commands. Create indexes on frequently queried fields to improve performance. Monitor database performance using MongoDB's built-in profiler and metrics. Set up log rotation to prevent log files from consuming too much disk space. Consider using MongoDB Compass or other monitoring tools for ongoing maintenance.
-
-## Next Steps and Advanced Topics
-Once MongoDB is installed and running, explore advanced features like replica sets for high availability, sharding for horizontal scaling, and aggregation pipelines for complex data processing. Learn about MongoDB drivers for your programming language of choice. Consider setting up MongoDB Atlas, the cloud-hosted version of MongoDB, for production applications that need managed infrastructure and automatic scaling.`,
-    downloadUrl: "https://www.mongodb.com/docs/manual/installation/",
+## Your next exercise
+Insert a second, differently named topic. Query only completed sessions, then query sessions with minutes greater than 20. Predict which records should appear before running each query. Keep a note of the command and actual output so you can distinguish a connection problem from a query problem.`,
+    downloadUrl: "https://www.mongodb.com/docs/manual/administration/install-community/",
     citations: 0,
     category: "Database",
     keywords: ["MongoDB", "Installation", "Database", "Guide"]
@@ -109,59 +136,58 @@ Once MongoDB is installed and running, explore advanced features like replica se
   {
     id: 3,
     title: "How to Install Node.js and What is Node.js?",
-    authors: "Edvvo Blog Team",
+    authors: "Edvvo",
     journal: "Edvvo Real Apps",
-    year: 2025,
-    abstract: "Comprehensive guide to understanding Node.js, its architecture, installation process across platforms, and getting started with backend development.",
-    content: `# How to Install Node.js and What is Node.js?
+    year: 2026,
+    abstract: "Install a supported Node.js release and run a dependency-free study-time calculator with expected outputs and debugging exercises.",
+    content: `## What you are installing
+Node.js runs JavaScript outside the browser. This exercise uses it to calculate study time from a small array, without a web server or third-party dependencies. You should understand variables, objects and basic arithmetic before starting.
 
-## What is Node.js?
-Node.js is a powerful, open-source JavaScript runtime environment that allows developers to execute JavaScript code outside of web browsers. Built on Chrome's V8 JavaScript engine, Node.js enables server-side scripting and backend development using JavaScript. It uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications. Node.js has revolutionized web development by allowing developers to use JavaScript for both frontend and backend development, creating a unified development experience.
+## Choose a supported version
+Use the official download reference below. Select a supported LTS release compatible with your operating system and any existing project's requirements. Follow the instructions for your platform and installation method; avoid mixing several installers without checking which executable your terminal uses.
 
-## Node.js Architecture and Key Features
-Node.js operates on a single-threaded event loop architecture, which handles multiple concurrent connections efficiently without the overhead of thread management. The event loop processes I/O operations asynchronously, making Node.js exceptionally fast for applications that require real-time data processing. Key features include npm (Node Package Manager) with over a million packages, cross-platform compatibility, and built-in modules for file system operations, HTTP servers, and cryptography. The non-blocking nature makes it ideal for building REST APIs, real-time chat applications, and microservices.
+## Verify the installation
+Open a new terminal after installation:
+\`\`\`sh
+node --version
+npm --version
+\`\`\`
+Both commands should print a version. If Node is not found, check the installation and PATH rather than running your application as administrator. On PowerShell, Get-Command node shows the selected executable. On macOS or Linux, use command -v node.
 
-## Use Cases and Applications
-Node.js excels in building real-time applications like chat applications, online gaming platforms, collaboration tools, and live streaming services. It's widely used for creating REST APIs and GraphQL servers that serve data to frontend applications. Many companies use Node.js for building microservices architectures due to its lightweight nature and fast startup times. It's also popular for building command-line tools, desktop applications using Electron, and IoT applications that need to handle multiple device connections simultaneously.
+## Make a study-time calculator
+Create a file named study-total.mjs in a folder you can find again:
+\`\`\`javascript
+const sessions = [
+  { topic: 'Algebra', minutes: 25 },
+  { topic: 'Physics', minutes: 30 },
+  { topic: 'Review', minutes: 10 }
+];
+const total = sessions.reduce((sum, session) => sum + session.minutes, 0);
+const hours = Math.floor(total / 60);
+const minutes = total % 60;
+console.log('Total: ' + total + ' minutes (' + hours + 'h ' + minutes + 'm)');
+\`\`\`
+In that folder, run:
+\`\`\`sh
+node study-total.mjs
+\`\`\`
+Expected output:
+\`\`\`text
+Total: 65 minutes (1h 5m)
+\`\`\`
+The reducer starts at zero and adds each session. Dividing by 60 and rounding down gives whole hours; the remainder operator gives the minutes left over. All minutes in this exercise are numbers, not quoted strings.
 
-## System Requirements and Prerequisites
-Before installing Node.js, ensure your system meets the minimum requirements. For Windows, you need Windows 7 or later (64-bit recommended). macOS users need macOS 10.10 or later. Linux users should have a recent distribution like Ubuntu 14.04+, CentOS 7+, or Debian 8+. You'll need at least 512MB RAM and 500MB free disk space. Administrative privileges are required for installation. Basic knowledge of command line operations will be helpful for post-installation tasks.
+## Check the calculation yourself
+- Change Review from 10 to 20: expect 75 minutes, or 1h 15m.
+- Set sessions to an empty array: expect zero hours and minutes.
+- Add a session with zero minutes: the total should not change.
+If you later read user input, validate it before summing: reject negative, non-finite and non-numeric values rather than silently producing a misleading total.
 
-## Windows Installation Process
-Visit the official Node.js website (nodejs.org) and download the Windows installer (.msi file). Choose the LTS (Long Term Support) version for stability or the Current version for latest features. Run the installer as administrator and follow the installation wizard. The installer will automatically add Node.js to your system PATH and install npm (Node Package Manager). Accept the default installation directory (C:\\Program Files\\nodejs) unless you have specific requirements. The installer also includes necessary Visual C++ redistributables and build tools.
+## Common errors
+A module-not-found message can mean you are in the wrong folder or the filename is incorrect. Check that the editor did not save study-total.mjs.txt. A syntax error usually points to a missing quote, comma or bracket; compare the indicated line with the example. If different terminals report different versions, inspect their selected executable paths before reinstalling.
 
-## Windows Post-Installation Verification
-After installation, open Command Prompt or PowerShell and verify the installation by running 'node --version' and 'npm --version'. These commands should display the installed versions of Node.js and npm respectively. Test Node.js by creating a simple JavaScript file with 'console.log("Hello, Node.js!")' and running it with 'node filename.js'. If you encounter permission issues, ensure your user account has proper access rights or run the command prompt as administrator.
-
-## macOS Installation Methods
-For macOS, you can install Node.js using multiple methods. The official installer is available from nodejs.org - download the macOS installer (.pkg file) and follow the installation wizard. Alternatively, use Homebrew (recommended for developers) by running 'brew install node'. Another option is using Node Version Manager (nvm) which allows you to install and manage multiple Node.js versions: install nvm first, then use 'nvm install node' to get the latest version.
-
-## macOS Configuration and Verification
-After installation, open Terminal and verify the installation using 'node --version' and 'npm --version'. If you used the official installer, Node.js will be installed in /usr/local/bin/. For Homebrew installations, it's typically in /opt/homebrew/bin/ on Apple Silicon Macs or /usr/local/bin/ on Intel Macs. Test your installation by creating and running a simple Node.js script. Configure your shell profile (bash_profile, zshrc) if needed to ensure proper PATH configuration.
-
-## Linux Installation Options
-Linux users have several installation options. Use the official Node.js binary distributions by downloading from nodejs.org and extracting to /usr/local/. Alternatively, use your distribution's package manager: for Ubuntu/Debian use 'sudo apt update && sudo apt install nodejs npm', for CentOS/RHEL use 'sudo yum install nodejs npm' or 'sudo dnf install nodejs npm'. For the latest versions, add the NodeSource repository first. Another excellent option is using Node Version Manager (nvm) for flexibility in managing versions.
-
-## Using Node Version Manager (NVM)
-NVM allows you to install and switch between multiple Node.js versions easily. Install nvm using the installation script from the official repository. Once installed, use 'nvm install node' for the latest version, 'nvm install 14.17.0' for a specific version, or 'nvm install --lts' for the latest LTS version. Switch between versions using 'nvm use 14.17.0' and check available versions with 'nvm list'. This is particularly useful for projects that require different Node.js versions.
-
-## NPM (Node Package Manager) Basics
-NPM is automatically installed with Node.js and serves as the package manager for JavaScript. It provides access to hundreds of thousands of reusable code packages. Basic NPM commands include 'npm init' to create a new project, 'npm install package-name' to install packages, 'npm install -g package-name' for global installation, and 'npm list' to view installed packages. Understanding package.json files and dependency management is crucial for Node.js development.
-
-## Creating Your First Node.js Application
-Start by creating a new directory for your project and running 'npm init' to create a package.json file. Create an app.js file with basic server code using the built-in 'http' module. Write code to create a simple web server that responds to HTTP requests. Use 'node app.js' to run your application and test it in a web browser. This gives you hands-on experience with Node.js's core functionality and prepares you for more complex applications.
-
-## Common Installation Issues and Troubleshooting
-If Node.js commands are not recognized, check your PATH environment variable and ensure the Node.js binary directory is included. Permission errors on Windows can be resolved by running Command Prompt as administrator or adjusting user permissions. On macOS/Linux, avoid using sudo with npm by configuring npm to use a different directory for global packages. For version conflicts, use nvm to manage multiple Node.js versions. Clear npm cache using 'npm cache clean --force' if you encounter package installation issues.
-
-## Development Environment Setup
-After installing Node.js, set up a proper development environment. Choose a code editor like Visual Studio Code, which has excellent Node.js support with debugging capabilities, IntelliSense, and extensions. Install useful global packages like nodemon for automatic server restarts during development, or PM2 for process management in production. Configure your editor with Node.js-specific extensions and linting tools like ESLint for code quality.
-
-## Security Considerations and Best Practices
-Keep Node.js updated to the latest LTS version for security patches and stability. Regularly update npm packages using 'npm audit' to check for vulnerabilities and 'npm audit fix' to automatically fix issues. Use environment variables for sensitive configuration data instead of hardcoding values. Implement proper error handling in your applications and avoid running Node.js applications as root user in production environments.
-
-## Next Steps and Learning Path
-Once Node.js is installed and working, start learning about core modules like fs (file system), path, http, and events. Explore popular frameworks like Express.js for web applications, Socket.io for real-time features, and database libraries like Mongoose for MongoDB integration. Practice building APIs, handling file uploads, implementing authentication, and deploying applications to cloud platforms like AWS, Google Cloud, or Heroku.`,
+## Where npm fits
+This example needs no npm install step because it uses only JavaScript features. Larger projects describe dependencies in package.json. Review dependencies before installing them, keep supported versions updated, and test changes rather than applying automatic fixes blindly. As a next exercise, print a separate line for each topic and verify that those lines add up to the displayed total.`,
     downloadUrl: "https://nodejs.org/en/download/",
     citations: 0,
     category: "Backend",
@@ -170,7 +196,7 @@ Once Node.js is installed and working, start learning about core modules like fs
   {
     id: 4,
     title: "SQL Database Basics",
-    authors: "Edvvo Blog Team",
+    authors: "Edvvo",
     journal: "Edvvo Real Apps",
     year: 2025,
     abstract: "Complete introduction to SQL databases, covering fundamental concepts, installation procedures, query syntax, and practical applications in modern development.",
@@ -234,7 +260,7 @@ After mastering SQL basics, explore advanced topics like stored procedures and f
   {
     id: 5,
     title: "Machine Learning Basics",
-    authors: "Edvvo Blog Team",
+    authors: "Edvvo",
     journal: "Edvvo Real Apps",
     year: 2025,
     abstract: "Comprehensive introduction to machine learning concepts, algorithms, practical implementation strategies, and real-world applications for beginners.",
@@ -295,7 +321,7 @@ After mastering basics, explore specialized areas like deep learning for complex
   {
     id: 6,
     title: "How to Use Git for Version Control",
-    authors: "Edvvo Blog Team",
+    authors: "Edvvo",
     journal: "Edvvo Real Apps",
     year: 2025,
     abstract: "Complete guide to Git version control system, covering installation, fundamental concepts, collaborative workflows, and advanced techniques for software development.",
@@ -362,7 +388,7 @@ Integrate Git with CI/CD pipelines for automated testing and deployment. Most CI
   {
     id: 7,
     title: "Getting Started with Docker",
-    authors: "Edvvo Blog Team",
+    authors: "Edvvo",
     journal: "Edvvo Real Apps",
     year: 2025,
     abstract: "Comprehensive Docker guide covering containerization concepts, installation procedures, practical usage, orchestration, and deployment strategies for modern applications.",
@@ -744,7 +770,7 @@ export const SolutionsPage = (): JSX.Element => {
             </div>
             <div className="flex items-center gap-2 ed-surface  backdrop-blur-sm rounded-full px-4 py-2 ed-elevation">
               <Users className="w-5 h-5 ed-link" />
-              <span className="font-semibold ed-ink ">Expert Authors</span>
+              <span className="font-semibold ed-ink ">Learning exercises</span>
             </div>
           </div>
         </div>

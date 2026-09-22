@@ -13,6 +13,8 @@ export const pages: Record<string, PageMeta> = {
   '/roadmaps': page('Learning roadmaps', 'Follow step-by-step learning roadmaps with lessons, code examples and resources for developing practical skills at your own pace.'),
   '/focus-timer': page('Study focus timer', 'Use a focused study timer to plan work sessions and breaks. Build a manageable routine for reading, revision and practice.'),
   '/study-plan': page('Student study planner', 'Plan study tasks, set priorities and organize revision with a simple planner that saves your plans in your browser.'),
+  '/revision-workshop': page('Revision workshop: worked examples and session builder', 'Build a timed revision session, practise mathematics, physics and chemistry with worked examples, and use an error log to plan your next study task.'),
+  '/editorial-policy': page('Editorial approach and resource policy', 'Read how Edvvo distinguishes original learning material from external resources, handles corrections and copyright requests, and presents advertising.'),
   '/solutions': page('Practical learning guides', 'Read practical Edvvo guides on programming, databases, tools and professional skills, with explanations and links for further learning.'),
   '/about': page('About Edvvo', 'Learn about Edvvo, a student resource platform helping learners find study materials, explore academic paths and organize their learning.'),
   '/contact': page('Contact and resource feedback', 'Contact Edvvo through its public channels to suggest improvements, report a broken resource or raise a copyright or privacy concern.'),

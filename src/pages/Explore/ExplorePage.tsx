@@ -16,8 +16,6 @@ import { ResourceCollection } from "@/components/studio/ResourceCollection";
 const gradeKeys = ["class-9", "class-10", "class-11", "class-12"];
 const boardOptions = [
   { id: "punjab-board", label: "Punjab Board" },
-  { id: "sindh-board", label: "Sindh Board" },
-  { id: "past-papers", label: "Past papers" },
 ];
 const modes = [{ id: "books", label: "Textbooks", icon: BookOpen }, { id: "notes", label: "Notes & solutions", icon: FileText }, { id: "mind-sprint", label: "Practice", icon: Brain }];
 
@@ -38,6 +36,7 @@ export const ExplorePage = () => {
   return <main className="ed-page"><HeroSection />
     <section className="ed-container page-intro"><div><span className="eyebrow">THE RESOURCE LIBRARY</span><h1>Your next chapter.</h1><p>Choose your board and class. Find what you need.</p></div><Link to="/scholarly-vault" className="ed-text-link">Beyond the syllabus <ArrowUpRight size={17} /></Link></section>
     <section className="ed-container" aria-label="Choose resources">
+      <aside className="directory-note"><div><h2>Find a source. Then put it to work.</h2><p>Match the class, subject, language and edition to your current board syllabus before using a resource. After reading a section, close the notes and attempt a question independently. A title or filename alone does not establish syllabus alignment.</p><Link className="ed-text-link" to="/revision-workshop">Practise with worked examples and a revision plan <ArrowUpRight size={16} /></Link></div></aside>
       <div className="library-controls">
         <div className="control-group"><label htmlFor="board-select">Board</label><select id="board-select" value={board.id} onChange={e => set("board", e.target.value)}>{boardOptions.map(b => <option key={b.id} value={b.id}>{b.label}</option>)}</select></div>
         <div className="control-group" role="group" aria-label="Select class"><span>Class</span>{gradeKeys.map((g, i) => <button key={g} className="grade-button" aria-pressed={g === grade} onClick={() => set("grade", g)}>{i + 9}</button>)}</div>
