@@ -14,8 +14,9 @@ function contentPages(file: string, variable: string, prefix: string, noindex = 
         const values: Record<string, string> = {};
         for (const prop of item.properties) {
           if (ts.isPropertyAssignment(prop) && (ts.isStringLiteral(prop.initializer) || ts.isNumericLiteral(prop.initializer))) values[prop.name.getText(source)] = prop.initializer.text;
+          if (ts.isPropertyAssignment(prop) && prop.name.getText(source) === 'noindex' && prop.initializer.kind === ts.SyntaxKind.TrueKeyword) values.noindex = 'true';
         }
-        if (values.id && values.title) result[`${prefix}/${values.id}`] = { title: values.title, description: values.abstract || values.description || 'Read this archived Edvvo platform announcement.', noindex };
+        if (values.id && values.title) result[`${prefix}/${values.id}`] = { title: values.title, description: values.abstract || values.description || 'Read this archived Edvvo platform announcement.', noindex: noindex || values.noindex === 'true' };
       }
     }
     ts.forEachChild(node, visit);

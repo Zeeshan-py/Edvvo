@@ -1,13 +1,13 @@
-import { Star, Download, BookOpen } from "lucide-react";
+import { BookOpen, ExternalLink } from "lucide-react";
 import { Card } from "./card";
 import { Button } from "./button";
 
 interface BookCardProps {
   title: string; description: string; image?: string; category: string;
-  rating?: number; downloads?: number; downloadUrl?: string;
+  downloadUrl?: string;
   isPlaceholder?: boolean; className?: string; onClick?: () => void;
 }
-export const BookCard = ({ title, description, image, category, rating, downloads, downloadUrl, isPlaceholder = false, className = "", onClick }: BookCardProps) => {
+export const BookCard = ({ title, description, image, category, downloadUrl, isPlaceholder = false, className = "", onClick }: BookCardProps) => {
   const available = !isPlaceholder && Boolean(downloadUrl || onClick);
   const handleClick = () => {
     if (!available) return;
@@ -22,11 +22,7 @@ export const BookCard = ({ title, description, image, category, rating, download
     <div className="p-5">
       <h3 className="text-lg font-bold mb-2">{title}</h3>
       <p className="ed-muted text-sm mb-5">{description}</p>
-      {!isPlaceholder && <div className="flex gap-4 ed-muted text-sm mb-4">
-        {rating !== undefined && <span className="inline-flex gap-1 items-center"><Star size={15} />{rating}</span>}
-        {downloads !== undefined && <span className="inline-flex gap-1 items-center"><Download size={15} />{downloads >= 1000 ? (downloads / 1000).toFixed(1) + "k" : downloads}</span>}
-      </div>}
-      <Button onClick={handleClick} disabled={!available} className="w-full">{available ? "Download resource" : "Not available"}</Button>
+      <Button onClick={handleClick} disabled={!available} className="w-full">{available ? <><ExternalLink size={16} /> Open source</> : "Source unavailable"}</Button>
     </div>
   </Card>;
 };

@@ -18,7 +18,6 @@ const islamicStudiesPrograms = [
     color: " ",
     bgPattern: "ed-tint    ",
     subjects: ["Islamic Theology", "Islamic Jurisprudence", "Islamic History", "Arabic Language", "Quranic Studies"],
-    resourceCount: 25
   },
   {
     id: "ma-islamic-studies",
@@ -30,7 +29,6 @@ const islamicStudiesPrograms = [
     color: " ",
     bgPattern: "ed-tint    ",
     subjects: ["Advanced Islamic Theology", "Research Methods", "Islamic Philosophy", "Contemporary Islamic Issues", "Thesis Work"],
-    resourceCount: 18
   },
   {
     id: "mphil-phd-islamic-studies",
@@ -42,7 +40,6 @@ const islamicStudiesPrograms = [
     color: " ",
     bgPattern: "ed-tint    ",
     subjects: ["Advanced Research", "Dissertation", "Academic Writing", "Specialized Studies", "Teaching Methods"],
-    resourceCount: 12
   },
   {
     id: "dars-e-nizami",
@@ -54,7 +51,6 @@ const islamicStudiesPrograms = [
     color: " ",
     bgPattern: "ed-tint    ",
     subjects: ["Traditional Islamic Sciences", "Hadith Studies", "Fiqh", "Arabic Literature", "Islamic Ethics"],
-    resourceCount: 30
   },
   {
     id: "diploma-short-courses",
@@ -66,7 +62,6 @@ const islamicStudiesPrograms = [
     color: " ",
     bgPattern: "ed-tint    ",
     subjects: ["Arabic Language", "Quranic Recitation", "Islamic Finance", "Hadith Studies", "Islamic Counseling"],
-    resourceCount: 15
   }
 ];
 
@@ -254,9 +249,6 @@ export const IslamicStudiesPage = (): JSX.Element => {
                           <IconComponent className="w-7 h-7 lg:w-8 lg:h-8 text-white" />
                         </div>
                         <div className="flex flex-col items-end gap-2">
-                          <span className="px-3 py-1.5 rounded-full text-xs font-semibold ed-canvas  ed-ink  border ed-border  shadow-sm transition-all duration-300">
-                            {program.resourceCount} Resources
-                          </span>
                           <span className="px-3 py-1.5 rounded-full text-xs font-semibold ed-tint   text-white shadow-sm">
                             {program.duration}
                           </span>

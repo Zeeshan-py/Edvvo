@@ -1,7 +1,8 @@
 # AdSense content review
 
-Updated 22 September 2026. The reported rejection is low value content. These
-changes improve the site; they do not establish eligibility or guarantee approval.
+Updated 2 October 2026 after a second low-value-content rejection. The live site
+already contained the September changes, so the new work focuses on the remaining
+site-wide quality signals. These changes do not establish eligibility or guarantee approval.
 
 ## Implemented in this update
 
@@ -20,13 +21,23 @@ changes improve the site; they do not establish eligibility or guarantee approva
   Production builds prerender full content, not just metadata. The canonical
   origin remains https://edvvo.netlify.app. Robots and sitemap are generated together.
 - Preserved consent-before-analytics/ads and the configured publisher ID/ads.txt.
+- Removed external-resource directories, repeated academic-field listings and the
+  board/results hubs from the sitemap. They remain available to users with `noindex`.
+- Limited the public guide catalog to the three tutorials that were manually rewritten
+  and marked nine unreviewed legacy guides `noindex` until they can be replaced.
+- Added a build failure for any indexable route with fewer than 200 visible words.
+  This is a maintenance threshold, not an AdSense approval rule.
+- Removed the remaining visible sample ratings, download totals, resource totals and
+  fictional team bylines from shared resource and guide interfaces.
+- Restricted AdSense loading to the original guides, roadmaps and study tools. Analytics
+  can still run after consent on supporting pages, but ads do not load there.
 
 ## Owner review still required before requesting another review
 
 1. Map each externally hosted textbook/PDF to its permission or license, including
    edition, distribution scope and expiry. The owner confirmed permission exists;
    the underlying documents have not been supplied or independently checked.
-2. Review remaining legacy articles for accuracy and distinct educational value,
+2. Replace or remove the nine noindexed legacy articles after subject review,
    especially legal, medical and professional guidance. Do not present introductory
    summaries as expert advice. Test external resource links and remove stale entries.
 3. Verify deployed pages on mobile and desktop. Confirm real visitors can finish

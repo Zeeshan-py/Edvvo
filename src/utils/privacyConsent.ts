@@ -1,7 +1,19 @@
 export const CONSENT_KEY = 'edvvo-optional-consent-v1';
 export type Consent = 'accepted' | 'declined';
 const lifetime = 180 * 24 * 60 * 60 * 1000;
-let loaded = false;
+let measurementLoaded = false;
+let adsLoaded = false;
+
+export function adsEligiblePath(pathname: string) {
+  return pathname === '/'
+    || pathname === '/focus-timer'
+    || pathname === '/study-plan'
+    || pathname === '/revision-workshop'
+    || pathname === '/solutions'
+    || /^\/solutions\/[1-3]$/.test(pathname)
+    || pathname === '/roadmaps'
+    || pathname.startsWith('/roadmaps/');
+}
 
 export function readConsent(): Consent | null {
   try {
@@ -15,22 +27,26 @@ export function saveConsent(choice: Consent) {
     return true;
   } catch { return false; }
 }
-export function loadOptionalServices() {
-  if (loaded) return;
-  loaded = true;
+export function loadOptionalServices(pathname = window.location.pathname) {
   const google = window as typeof window & { dataLayer?: unknown[]; gtag?: (...args: unknown[]) => void };
-  google.dataLayer = google.dataLayer || [];
-  google.gtag = function () { google.dataLayer!.push(arguments); };
-  // Acceptance enables basic measurement and ads, not personalized advertising.
-  google.gtag('consent', 'default', { analytics_storage: 'granted', ad_storage: 'granted', ad_user_data: 'denied', ad_personalization: 'denied' });
-  google.gtag('js', new Date());
-  google.gtag('config', 'G-PQYBGT9591');
-  google.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
-  for (const [id, src] of [
+  if (!measurementLoaded) {
+    measurementLoaded = true;
+    google.dataLayer = google.dataLayer || [];
+    google.gtag = function () { google.dataLayer!.push(arguments); };
+    google.gtag('consent', 'default', { analytics_storage: 'granted', ad_storage: 'granted', ad_user_data: 'denied', ad_personalization: 'denied' });
+    google.gtag('js', new Date());
+    google.gtag('config', 'G-PQYBGT9591');
+    google.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
+  }
+  const services = [
     ['edvvo-ga4', 'https://www.googletagmanager.com/gtag/js?id=G-PQYBGT9591'],
     ['edvvo-gtm', 'https://www.googletagmanager.com/gtm.js?id=GTM-KNSF24NR'],
-    ['edvvo-ads', 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1073239228894562'],
-  ]) {
+  ];
+  if (adsEligiblePath(pathname) && !adsLoaded) {
+    adsLoaded = true;
+    services.push(['edvvo-ads', 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1073239228894562']);
+  }
+  for (const [id, src] of services) {
     if (document.getElementById(id)) continue;
     const script = document.createElement('script');
     script.id = id; script.src = src; script.async = true;
@@ -50,5 +66,5 @@ export function withdrawOptionalServices() {
     document.cookie = `${expired}; domain=${location.hostname}`;
   }
   // Removing script tags cannot stop already running third-party code.
-  return loaded;
+  return measurementLoaded || adsLoaded;
 }

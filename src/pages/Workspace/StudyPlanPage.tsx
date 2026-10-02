@@ -754,6 +754,17 @@ export const StudyPlanPage = (): JSX.Element => {
             </div>
           </div>
 
+          <section className="planner-panel mt-8 p-6 md:p-8">
+            <span className="eyebrow">BUILD A PLAN YOU CAN CHECK</span>
+            <h2 className="text-2xl font-bold mb-4 ed-type">Turn subjects into visible actions.</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ed-muted">
+              <div><h3 className="font-semibold ed-ink mb-2">1. Name the result</h3><p>Write “answer five motion questions and mark the units,” not “study physics.” A task should produce something you can inspect. If it contains two different activities, split it so an unfinished step can move without hiding completed work.</p></div>
+              <div><h3 className="font-semibold ed-ink mb-2">2. Estimate from evidence</h3><p>Use the time a similar task took, then leave room to check your work. Priority describes consequence, not difficulty: a short assignment due tomorrow may be higher priority than a difficult chapter due next month.</p></div>
+              <div><h3 className="font-semibold ed-ink mb-2">3. Review the plan</h3><p>At the end of the day, mark what is actually complete. Move only the next concrete action, and adjust future estimates when a task took longer. The plan is stored in this browser, so use another backup for information you cannot replace.</p></div>
+            </div>
+            <p className="mt-6 ed-muted">Begin with one required task and one small review task. A crowded schedule can look productive while making it harder to choose what to start. For a timed practice structure, open the <Link className="ed-link underline" to="/revision-workshop">revision workshop</Link>; for a simple countdown, use the <Link className="ed-link underline" to="/focus-timer">focus timer</Link>.</p>
+          </section>
+
           {/* Study Tips */}
           <div className="planner-tips mt-8 rounded-xl p-8">
             <span className="eyebrow">A LITTLE REMINDER</span>
@@ -762,17 +773,17 @@ export const StudyPlanPage = (): JSX.Element => {
               <div>
                 <h4 className="font-semibold mb-2">Time Management</h4>
                 <ul className="text-sm space-y-1 opacity-90">
-                  <li>• Use the Pomodoro Technique (25 min work, 5 min break)</li>
-                  <li>• Prioritize high-importance tasks first</li>
-                  <li>• Schedule breaks to maintain focus</li>
+                  <li>• Choose a task with a checkable finish</li>
+                  <li>• Put required, time-sensitive work first</li>
+                  <li>• Leave time to check the result</li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-2">Effective Learning</h4>
                 <ul className="text-sm space-y-1 opacity-90">
-                  <li>• Review material within 24 hours</li>
-                  <li>• Use active recall techniques</li>
-                  <li>• Create mind maps for complex topics</li>
+                  <li>• Recall the method before reopening notes</li>
+                  <li>• Attempt a question without copying</li>
+                  <li>• Record one mistake to retry later</li>
                 </ul>
               </div>
             </div>

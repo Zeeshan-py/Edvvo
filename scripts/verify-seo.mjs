@@ -7,7 +7,7 @@ assert.match(fs.readFileSync('netlify.toml', 'utf8'), /to = "\/404\.html"\s+stat
 const sitemap = fs.readFileSync(`${root}/sitemap.xml`, 'utf8');
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]);
 assert.equal(new Set(urls).size, urls.length, 'Duplicate sitemap entries');
-assert.ok(urls.length > 30, 'Missing route coverage');
+assert.ok(urls.length >= 30, 'Missing high-value route coverage');
 assert.equal(urls.filter(url => new URL(url).pathname.startsWith('/roadmaps/')).length, 16, 'Expected all 16 roadmap pages');
 const graph = new Map();
 const bodyTexts = new Set();
@@ -27,6 +27,7 @@ for (const url of urls) {
   assert.ok(document.querySelectorAll('#app a[href]').length > 3, `${filename}: missing crawlable links`);
   assert.ok(!document.querySelector('[aria-busy="true"]'), `${filename}: unresolved loading shell`);
   const bodyText = document.querySelector('#app').textContent.replace(/\s+/g, ' ').trim();
+  assert.ok(bodyText.split(/\s+/).length >= 200, `${filename}: indexable page has fewer than 200 visible words`);
   assert.ok(!bodyTexts.has(bodyText), `${filename}: duplicate page content`);
   bodyTexts.add(bodyText);
   const links = [...document.querySelectorAll('#app a[href]')].map(a => new URL(a.getAttribute('href'), url))

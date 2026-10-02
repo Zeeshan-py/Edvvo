@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://edvvo.netlify.app/</loc></url>
-  <url><loc>https://edvvo.netlify.app/explore</loc></url>
   <url><loc>https://edvvo.netlify.app/entertainment</loc></url>
-  <url><loc>https://edvvo.netlify.app/entry-test</loc></url>
-  <url><loc>https://edvvo.netlify.app/scholarly-vault</loc></url>
-  <url><loc>https://edvvo.netlify.app/academic-explorer</loc></url>
-  <url><loc>https://edvvo.netlify.app/result</loc></url>
   <url><loc>https://edvvo.netlify.app/roadmaps</loc></url>
   <url><loc>https://edvvo.netlify.app/focus-timer</loc></url>
   <url><loc>https://edvvo.netlify.app/study-plan</loc></url>
@@ -14,10 +9,8 @@
   <url><loc>https://edvvo.netlify.app/editorial-policy</loc></url>
   <url><loc>https://edvvo.netlify.app/solutions</loc></url>
   <url><loc>https://edvvo.netlify.app/about</loc></url>
-  <url><loc>https://edvvo.netlify.app/contact</loc></url>
   <url><loc>https://edvvo.netlify.app/privacy-policy</loc></url>
   <url><loc>https://edvvo.netlify.app/terms-of-service</loc></url>
-  <url><loc>https://edvvo.netlify.app/board/punjab-board</loc></url>
   <url><loc>https://edvvo.netlify.app/roadmaps/data-engineering</loc></url>
   <url><loc>https://edvvo.netlify.app/roadmaps/applied-machine-learning</loc></url>
   <url><loc>https://edvvo.netlify.app/roadmaps/qa-test-automation</loc></url>
@@ -34,29 +27,7 @@
   <url><loc>https://edvvo.netlify.app/roadmaps/android-development</loc></url>
   <url><loc>https://edvvo.netlify.app/roadmaps/cloud-devops</loc></url>
   <url><loc>https://edvvo.netlify.app/roadmaps/web-accessibility</loc></url>
-  <url><loc>https://edvvo.netlify.app/islamic-studies</loc></url>
-  <url><loc>https://edvvo.netlify.app/engineering-applied-science</loc></url>
-  <url><loc>https://edvvo.netlify.app/engineering-programs</loc></url>
-  <url><loc>https://edvvo.netlify.app/applied-science-programs</loc></url>
-  <url><loc>https://edvvo.netlify.app/computer-science</loc></url>
-  <url><loc>https://edvvo.netlify.app/business-finance</loc></url>
-  <url><loc>https://edvvo.netlify.app/natural-biological-sciences</loc></url>
-  <url><loc>https://edvvo.netlify.app/health-paramedical</loc></url>
-  <url><loc>https://edvvo.netlify.app/social-sciences-humanities</loc></url>
-  <url><loc>https://edvvo.netlify.app/architecture-design</loc></url>
-  <url><loc>https://edvvo.netlify.app/law</loc></url>
-  <url><loc>https://edvvo.netlify.app/education</loc></url>
-  <url><loc>https://edvvo.netlify.app/agriculture-vet</loc></url>
   <url><loc>https://edvvo.netlify.app/solutions/1</loc></url>
   <url><loc>https://edvvo.netlify.app/solutions/2</loc></url>
   <url><loc>https://edvvo.netlify.app/solutions/3</loc></url>
-  <url><loc>https://edvvo.netlify.app/solutions/4</loc></url>
-  <url><loc>https://edvvo.netlify.app/solutions/5</loc></url>
-  <url><loc>https://edvvo.netlify.app/solutions/6</loc></url>
-  <url><loc>https://edvvo.netlify.app/solutions/7</loc></url>
-  <url><loc>https://edvvo.netlify.app/solutions/8</loc></url>
-  <url><loc>https://edvvo.netlify.app/solutions/9</loc></url>
-  <url><loc>https://edvvo.netlify.app/solutions/10</loc></url>
-  <url><loc>https://edvvo.netlify.app/solutions/11</loc></url>
-  <url><loc>https://edvvo.netlify.app/solutions/12</loc></url>
 </urlset>

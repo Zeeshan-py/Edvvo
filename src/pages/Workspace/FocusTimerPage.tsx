@@ -11,6 +11,7 @@ export const FocusTimerPage = (): JSX.Element => {
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const [timerMode, setTimerMode] = useState<'work' | 'break'>('work');
   const [sessions, setSessions] = useState(0);
+  const [notice, setNotice] = useState('Choose one specific task before you start.');
 
   // Timer effect
   useEffect(() => {
@@ -27,19 +28,19 @@ export const FocusTimerPage = (): JSX.Element => {
     } else if (timerMinutes === 0 && timerSeconds === 0 && isTimerRunning) {
       setIsTimerRunning(false);
       if (timerMode === 'work') {
-        setSessions(sessions + 1);
-        alert("Work session complete! Time for a break!");
+        setSessions(value => value + 1);
+        setNotice('Work session complete. Step away for a short break.');
         setTimerMode('break');
         setTimerMinutes(5);
       } else {
-        alert("Break time over! Ready for another work session?");
+        setNotice('Break complete. Choose the next small task before restarting.');
         setTimerMode('work');
         setTimerMinutes(25);
       }
       setTimerSeconds(0);
     }
     return () => clearInterval(interval);
-  }, [isTimerRunning, timerMinutes, timerSeconds, timerMode, sessions]);
+  }, [isTimerRunning, timerMinutes, timerSeconds, timerMode]);
 
   const resetTimer = () => {
     setTimerMinutes(timerMode === 'work' ? 25 : 5);
@@ -189,9 +190,17 @@ export const FocusTimerPage = (): JSX.Element => {
                 <p className="ed-muted  text-lg">
                   Sessions Completed: <span className="font-bold text-green-600 ">{sessions}</span>
                 </p>
+                <p className="ed-muted mt-2" role="status" aria-live="polite">{notice}</p>
               </div>
             </div>
           </div>
+
+          <section className="mt-16 max-w-4xl mx-auto ed-surface rounded-2xl p-6 md:p-8 ed-elevation border ed-border">
+            <h2 className="text-2xl font-bold ed-ink ed-type mb-4">Use the timer as a boundary, not a score</h2>
+            <p className="ed-muted mb-4">Start by writing one result you can check, such as “solve two equations and verify both answers.” A short session is useful when the task is clear. Choose 15 minutes for recalling definitions or beginning a difficult task, 25 minutes for one worked example, and 45 or 60 minutes only when you can stay with the same type of work. The preset is a convenience, not a rule or a measure of how well you studied.</p>
+            <p className="ed-muted mb-4">Pause if you need information that is not available, if the task changes, or if you are repeatedly guessing. Write the missing prerequisite before opening another tab. During a break, leave the question visible but stop solving it. A five-minute break should help you return with a decision: continue, simplify the task, or move the unfinished step to your planner.</p>
+            <p className="ed-muted">At the end, do not count time alone. Record what you produced, one error you corrected, and the exact first action for your next session. If you finished early, use the remaining time to check the answer independently instead of filling the interval with unrelated work. For a guided version with recall, practice and review stages, use the <Link className="ed-link underline" to="/revision-workshop">revision workshop</Link>.</p>
+          </section>
 
           {/* Tips Section */}
           <div className="mt-16 max-w-4xl mx-auto">

@@ -12,8 +12,6 @@ export const SearchSection = (): JSX.Element => {
     description: book.description,
     image: "../depth-7--frame-0.png", // Using placeholder image
     category: book.subject,
-    rating: book.rating || 4.5,
-    downloads: book.downloads || 100,
     dateAdded: book.dateAdded,
     class: book.class,
     board: book.board,
@@ -39,8 +37,6 @@ export const SearchSection = (): JSX.Element => {
             description={book.description}
             image={book.image}
             category={book.category}
-            rating={book.rating}
-            downloads={book.downloads}
             downloadUrl={book.downloadUrl}
             className="hover:transform hover:scale-105 transition-all duration-300"
           />

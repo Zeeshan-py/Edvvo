@@ -7,7 +7,7 @@ import { NotFoundPage } from '../NotFoundPage';
 
 export const SolutionDetailPage = () => {
   const { id } = useParams();
-  const solution = solutions.find(s => String(s.id) === id);
+  const solution = solutions.find(s => String(s.id) === id && !('noindex' in s && s.noindex));
 
   if (!solution) {
     return <NotFoundPage />;

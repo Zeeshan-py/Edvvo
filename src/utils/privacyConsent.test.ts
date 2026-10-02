@@ -23,6 +23,17 @@ describe('Optional service consent', () => {
     expect(document.getElementById('edvvo-ga4')).toHaveAttribute('src', expect.stringContaining('G-PQYBGT9591'));
     expect(consent.withdrawOptionalServices()).toBe(true);
   });
+  it('keeps ads off supporting and error pages while retaining analytics', async () => {
+    const consent = await import('./privacyConsent');
+    expect(consent.adsEligiblePath('/roadmaps/web-development')).toBe(true);
+    expect(consent.adsEligiblePath('/solutions/2')).toBe(true);
+    expect(consent.adsEligiblePath('/solutions/9')).toBe(false);
+    expect(consent.adsEligiblePath('/privacy-policy')).toBe(false);
+    expect(consent.adsEligiblePath('/not-found')).toBe(false);
+    consent.loadOptionalServices('/privacy-policy');
+    expect(document.getElementById('edvvo-ga4')).toBeInTheDocument();
+    expect(document.getElementById('edvvo-ads')).not.toBeInTheDocument();
+  });
   it('ignores expired, invalid and corrupt preferences', async () => {
     const consent = await import('./privacyConsent');
     for (const value of ['invalid json', JSON.stringify({ choice: 'accepted', expires: 1 }), JSON.stringify({ choice: 'anything', expires: Date.now() + 100000 })]) {

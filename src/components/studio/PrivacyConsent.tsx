@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { loadOptionalServices, readConsent, saveConsent, withdrawOptionalServices, type Consent } from '@/utils/privacyConsent';
 
 export function PrivacyConsent() {
+  const { pathname } = useLocation();
   const [choice, setChoice] = useState(readConsent);
   const [open, setOpen] = useState(() => readConsent() === null);
   const [sessionOnly, setSessionOnly] = useState(false);
   useEffect(() => {
-    if (choice === 'accepted') loadOptionalServices();
-  }, [choice]);
+    if (choice === 'accepted') loadOptionalServices(pathname);
+  }, [choice, pathname]);
   useEffect(() => {
     const show = () => setOpen(true);
     const sync = (event: StorageEvent) => {

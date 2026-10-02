@@ -8,8 +8,6 @@ describe('BookCard Component', () => {
     title: 'Mathematics Class 10',
     description: 'Complete mathematics guide for class 10 students',
     category: 'Mathematics',
-    rating: 4.5,
-    downloads: 1200,
     downloadUrl: 'https://example.com/download',
   };
 
@@ -24,16 +22,6 @@ describe('BookCard Component', () => {
     expect(screen.getByText('Mathematics')).toBeInTheDocument();
   });
 
-  it('displays rating when provided', () => {
-    render(<BookCard {...mockBookProps} />);
-    expect(screen.getByText('4.5')).toBeInTheDocument();
-  });
-
-  it('displays download count when provided', () => {
-    render(<BookCard {...mockBookProps} />);
-    expect(screen.getByText('1.2k')).toBeInTheDocument();
-  });
-
   it('renders placeholder icon when isPlaceholder is true', () => {
     render(<BookCard {...mockBookProps} isPlaceholder={true} />);
     const icons = screen.getAllByTestId('lucide-book-open');
@@ -45,8 +33,7 @@ describe('BookCard Component', () => {
     const windowOpenSpy = vi.spyOn(window, 'open').mockImplementation(() => null);
 
     render(<BookCard {...mockBookProps} />);
-    const downloadButton = screen.getByRole('button', { name: /download/i });
-    await user.click(downloadButton);
+    await user.click(screen.getByRole('button', { name: /open source/i }));
 
     expect(windowOpenSpy).toHaveBeenCalledWith(mockBookProps.downloadUrl, '_blank', 'noopener,noreferrer');
     windowOpenSpy.mockRestore();
@@ -57,7 +44,7 @@ describe('BookCard Component', () => {
     const handleClick = vi.fn();
 
     render(<BookCard {...mockBookProps} onClick={handleClick} />);
-    await user.click(screen.getByRole('button', { name: /download resource/i }));
+    await user.click(screen.getByRole('button', { name: /open source/i }));
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 

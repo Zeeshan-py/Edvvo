@@ -31,10 +31,10 @@ export const BoardPage: React.FC = () => {
       color: ' ',
       bgPattern: 'ed-tint    ',
       classes: [
-        { id: 'class-9', title: 'Class 9', description: 'Ninth grade study materials', resourceCount: 450 },
-        { id: 'class-10', title: 'Class 10', description: 'Tenth grade study materials', resourceCount: 520 },
-        { id: 'class-11', title: 'Class 11', description: 'Eleventh grade study materials', resourceCount: 680 },
-        { id: 'class-12', title: 'Class 12', description: 'Twelfth grade study materials', resourceCount: 750 }
+        { id: 'class-9', title: 'Class 9', description: 'Ninth grade study materials' },
+        { id: 'class-10', title: 'Class 10', description: 'Tenth grade study materials' },
+        { id: 'class-11', title: 'Class 11', description: 'Eleventh grade study materials' },
+        { id: 'class-12', title: 'Class 12', description: 'Twelfth grade study materials' }
       ]
     },
     'scholarly-vault': {
@@ -51,7 +51,7 @@ export const BoardPage: React.FC = () => {
     {
       id: 'books',
       title: 'Books',
-      description: 'Complete textbooks and reference materials for all subjects and classes.',
+      description: 'Browse the textbook links currently listed for this class.',
       icon: BookOpen,
       color: ' ',
       bgPattern: 'ed-tint    ',
@@ -59,7 +59,7 @@ export const BoardPage: React.FC = () => {
     {
       id: 'notes',
       title: 'Notes/Solution',
-      description: 'Detailed notes, solved examples, and step-by-step solutions for better understanding.',
+      description: 'Browse the notes and solution links currently listed for this class.',
       icon: FileText,
       color: ' ',
       bgPattern: 'ed-tint    ',
@@ -67,7 +67,7 @@ export const BoardPage: React.FC = () => {
     {
       id: 'mind-sprint',
       title: 'Mind Sprint',
-      description: 'AI-powered MCQ generator with customizable difficulty levels and syllabus-based questions. (Updated)',
+      description: 'Generate practice questions and verify them against your current syllabus.',
       icon: Brain,
       color: ' ',
       bgPattern: 'ed-tint    ',
@@ -127,11 +127,6 @@ export const BoardPage: React.FC = () => {
         <p className="text-lg ed-muted ">
           No resources available at this time.
         </p>
-        <div className="mt-4 text-sm ed-muted">
-          <p>Debug Info:</p>
-          <p>Selected Class: {selectedClass || 'null'}</p>
-          <p>Selected Category: {selectedCategory || 'null'}</p>
-        </div>
       </div>
     );
   };

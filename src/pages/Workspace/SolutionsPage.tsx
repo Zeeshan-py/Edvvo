@@ -195,6 +195,7 @@ This example needs no npm install step because it uses only JavaScript features.
   },
   {
     id: 4,
+    noindex: true,
     title: "SQL Database Basics",
     authors: "Edvvo",
     journal: "Edvvo Real Apps",
@@ -259,6 +260,7 @@ After mastering SQL basics, explore advanced topics like stored procedures and f
   },
   {
     id: 5,
+    noindex: true,
     title: "Machine Learning Basics",
     authors: "Edvvo",
     journal: "Edvvo Real Apps",
@@ -320,6 +322,7 @@ After mastering basics, explore specialized areas like deep learning for complex
   },
   {
     id: 6,
+    noindex: true,
     title: "How to Use Git for Version Control",
     authors: "Edvvo",
     journal: "Edvvo Real Apps",
@@ -387,6 +390,7 @@ Integrate Git with CI/CD pipelines for automated testing and deployment. Most CI
   },
   {
     id: 7,
+    noindex: true,
     title: "Getting Started with Docker",
     authors: "Edvvo",
     journal: "Edvvo Real Apps",
@@ -460,8 +464,9 @@ Common Docker issues include networking problems, permission errors, and resourc
   },
   {
     id: 8,
+    noindex: true,
     title: "Software Developer's Guide to Common Real-World Challenges",
-    authors: "Edvvo Professional Team",
+    authors: "Edvvo",
     journal: "Edvvo Career Solutions",
     year: 2025,
     abstract: "Comprehensive guide addressing the most common challenges software developers face in their daily work, from debugging complex systems to managing technical debt and client expectations.",
@@ -512,8 +517,9 @@ Poor documentation creates long-term problems for teams and future developers. W
   },
   {
     id: 9,
+    noindex: true,
     title: "Legal Professional's Survival Guide: Modern Practice Challenges",
-    authors: "Edvvo Legal Team",
+    authors: "Edvvo",
     journal: "Edvvo Professional Development",
     year: 2025,
     abstract: "Essential guide for lawyers navigating contemporary legal practice challenges, from technology adoption and client management to work-life balance and ethical considerations in the digital age.",
@@ -564,8 +570,9 @@ Legal practices must prepare for various crisis scenarios including natural disa
   },
   {
     id: 10,
+    noindex: true,
     title: "Healthcare Professionals: Navigating Modern Medical Practice",
-    authors: "Edvvo Healthcare Team",
+    authors: "Edvvo",
     journal: "Edvvo Medical Solutions",
     year: 2025,
     abstract: "Comprehensive guide for healthcare professionals addressing current challenges in medical practice, from electronic health records and patient communication to burnout prevention and regulatory compliance.",
@@ -616,8 +623,9 @@ Modern healthcare requires collaboration across multiple disciplines and organiz
   },
   {
     id: 11,
+    noindex: true,
     title: "Educator's Toolkit: Modern Teaching Challenges and Solutions",
-    authors: "Edvvo Education Team",
+    authors: "Edvvo",
     journal: "Edvvo Teaching Excellence",
     year: 2025,
     abstract: "Essential guide for educators addressing contemporary classroom challenges, from technology integration and diverse learning needs to parent communication and professional development in the digital age.",
@@ -668,8 +676,9 @@ Student populations reflect increasing cultural, linguistic, and socioeconomic d
   },
   {
     id: 12,
+    noindex: true,
     title: "Business Professional's Guide to Workplace Excellence",
-    authors: "Edvvo Business Team",
+    authors: "Edvvo",
     journal: "Edvvo Corporate Solutions",
     year: 2025,
     abstract: "Comprehensive resource for business professionals navigating modern workplace challenges, from remote work dynamics and digital transformation to leadership development and career advancement strategies.",
@@ -725,10 +734,11 @@ export const SolutionsPage = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   // Extract unique categories from solutions
-  const categories = ['all', ...Array.from(new Set(solutions.map(s => s.category)))];
+  const publishedSolutions = solutions.filter(solution => !('noindex' in solution && solution.noindex));
+  const categories = ['all', ...Array.from(new Set(publishedSolutions.map(s => s.category)))];
 
   // Filter solutions by search and category
-  const filteredSolutions = solutions.filter(solution => {
+  const filteredSolutions = publishedSolutions.filter(solution => {
     const matchesCategory = selectedCategory === 'all' || solution.category === selectedCategory;
     const matchesSearch =
       solution.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -759,14 +769,14 @@ export const SolutionsPage = (): JSX.Element => {
             Solutions & Guides
           </h1>
           <p className="text-lg md:text-xl ed-muted  max-w-3xl mx-auto leading-relaxed mb-8">
-            Comprehensive step-by-step guides for developers and tech enthusiasts
+            Small technical exercises with runnable examples, expected results, and limits you can check.
           </p>
 
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <div className="flex items-center gap-2 ed-surface  backdrop-blur-sm rounded-full px-4 py-2 ed-elevation">
               <FileText className="w-5 h-5 ed-link" />
-              <span className="font-semibold ed-ink ">{solutions.length} Guides</span>
+              <span className="font-semibold ed-ink ">{publishedSolutions.length} Reviewed guides</span>
             </div>
             <div className="flex items-center gap-2 ed-surface  backdrop-blur-sm rounded-full px-4 py-2 ed-elevation">
               <Users className="w-5 h-5 ed-link" />
@@ -774,6 +784,13 @@ export const SolutionsPage = (): JSX.Element => {
             </div>
           </div>
         </div>
+
+        <section className="max-w-4xl mx-auto mb-12 ed-surface rounded-2xl border ed-border p-6 md:p-8">
+          <h2 className="text-2xl font-bold ed-ink ed-type mb-4">Learn by producing a result</h2>
+          <p className="ed-muted mb-4">Each published guide starts with a narrow outcome: run a small program, verify a local database connection, or make a state change you can observe. Follow the example once, compare the actual result with the expected result, and then complete the suggested variation without copying. When the output differs, keep the exact command and error message so you can separate an installation problem from a code problem.</p>
+          <p className="ed-muted mb-4">Software versions and operating-system requirements change. The reference link on each guide points to the relevant official project documentation; use it to confirm current prerequisites before installing anything. Examples are designed for disposable practice data and should not be treated as production security or deployment configurations.</p>
+          <p className="ed-muted">Only the three guides below are currently in the reviewed catalog. Older introductory articles have been removed from this directory until they can be checked and rewritten. If an example no longer produces the stated result, report the page, environment and observed output through the <Link className="ed-link underline" to="/contact">corrections page</Link>.</p>
+        </section>
 
         {/* Search and Filter */}
         <section className="mb-12">
