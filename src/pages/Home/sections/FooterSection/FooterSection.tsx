@@ -3,8 +3,8 @@ import { ArrowUpRight } from "lucide-react";
 import { BrandMark } from "@/components/ui/brand-mark";
 export const FooterSection = () => <footer className="ed-footer">
   <div className="ed-container footer-main">
-    <div><Link to="/" aria-label="Edvvo home"><BrandMark /></Link><p>A little help for your next chapter.</p><span>Books, notes and tools for students in Pakistan.</span></div>
-    <nav aria-label="Learning links"><strong>Keep learning</strong><Link to="/revision-workshop">Revision workshop</Link><Link to="/explore">Resource library</Link><Link to="/entertainment">Study space</Link><Link to="/roadmaps">Learning roadmaps</Link><Link to="/solutions">Practical guides</Link><Link to="/academic-explorer">Explore careers</Link></nav>
+    <div><Link to="/" aria-label="Edvvo home"><BrandMark /></Link><p>A practical study system for your next exam.</p><span>Private, free planning and revision tools for students.</span></div>
+    <nav aria-label="Learning links"><strong>Study tools</strong><Link to="/study-plan">Study planner</Link><Link to="/focus-timer">Focus timer</Link><Link to="/revision-workshop">Revision workshop</Link><Link to="/past-paper-tracker">Past paper tracker</Link><Link to="/study-methods">Study methods</Link><Link to="/explore">Resource library</Link></nav>
     <nav aria-label="About and support"><strong>Good to know</strong><Link to="/about">About Edvvo</Link><Link to="/contact">Contact & feedback</Link><Link to="/editorial-policy">Editorial policy</Link><Link to="/privacy-policy">Privacy policy</Link><Link to="/terms-of-service">Terms of use</Link></nav>
     <nav aria-label="Social links"><strong>Stay in the loop</strong><a href="https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V" target="_blank" rel="noopener noreferrer">WhatsApp <ArrowUpRight size={14} /></a><a href="https://youtube.com/@edvvo?feature=shared" target="_blank" rel="noopener noreferrer">YouTube <ArrowUpRight size={14} /></a><a href="https://www.facebook.com/share/1CE4C69Kpf/" target="_blank" rel="noopener noreferrer">Facebook <ArrowUpRight size={14} /></a></nav>
   </div>

@@ -5,9 +5,10 @@ import { BrandMark } from "@/components/ui/brand-mark";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const navigation = [
-  { to: "/explore", label: "Library" },
-  { to: "/entertainment", label: "Study space" },
-  { to: "/roadmaps", label: "Roadmaps" },
+  { to: "/study-plan", label: "Planner" },
+  { to: "/revision-workshop", label: "Revision" },
+  { to: "/study-methods", label: "Study methods" },
+  { to: "/explore", label: "Resources" },
   { to: "/about", label: "About" },
 ];
 
@@ -34,7 +35,7 @@ export const HeroSection = () => {
         <nav className="desktop-nav" aria-label="Main navigation">{navigation.map(n => <NavLink key={n.to} to={n.to}>{n.label}</NavLink>)}</nav>
         <div className="header-actions">
           <ThemeToggle />
-          <Link className="ed-button header-cta" to="/explore">Find resources <ArrowUpRight size={16} /></Link>
+          <Link className="ed-button header-cta" to="/study-plan">Plan a session <ArrowUpRight size={16} /></Link>
           <button className="mobile-toggle ed-icon-button" onClick={() => setOpen(v => !v)} aria-expanded={open} aria-controls="mobile-nav" aria-label={open ? "Close menu" : "Open menu"}>{open ? <X /> : <Menu />}</button>
         </div>
       </div>

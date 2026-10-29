@@ -9,10 +9,8 @@ export function adsEligiblePath(pathname: string) {
     || pathname === '/focus-timer'
     || pathname === '/study-plan'
     || pathname === '/revision-workshop'
-    || pathname === '/solutions'
-    || /^\/solutions\/[1-3]$/.test(pathname)
-    || pathname === '/roadmaps'
-    || pathname.startsWith('/roadmaps/');
+    || pathname === '/past-paper-tracker'
+    || pathname === '/study-methods';
 }
 
 export function readConsent(): Consent | null {

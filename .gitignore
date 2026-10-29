@@ -12,6 +12,8 @@ dist
 dist-ssr
 .cache/
 reports/lighthouse/
+.playwright-cli/
+output/
 *.local
 
 # Editor directories and files

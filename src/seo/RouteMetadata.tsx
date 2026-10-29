@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import contentMeta from 'virtual:content-meta';
-import { SITE_URL, pages, missingPage, canonicalPath, roadmapSchema } from './site';
+import { SITE_URL, pages, missingPage, canonicalPath, roadmapSchema, studyToolSchema } from './site';
 
 export function RouteMetadata() {
   const { pathname } = useLocation();
@@ -28,10 +28,11 @@ export function RouteMetadata() {
     if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.append(canonical); }
     canonical.href = SITE_URL + path;
     document.getElementById('roadmap-schema')?.remove();
-    const schema = roadmapSchema(path);
+    document.getElementById('study-tool-schema')?.remove();
+    const schema = roadmapSchema(path) || studyToolSchema(path);
     if (schema) {
       const script = document.createElement('script');
-      script.id = 'roadmap-schema';
+      script.id = roadmapSchema(path) ? 'roadmap-schema' : 'study-tool-schema';
       script.type = 'application/ld+json';
       script.textContent = JSON.stringify(schema);
       document.head.append(script);

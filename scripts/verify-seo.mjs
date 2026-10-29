@@ -7,8 +7,9 @@ assert.match(fs.readFileSync('netlify.toml', 'utf8'), /to = "\/404\.html"\s+stat
 const sitemap = fs.readFileSync(`${root}/sitemap.xml`, 'utf8');
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]);
 assert.equal(new Set(urls).size, urls.length, 'Duplicate sitemap entries');
-assert.ok(urls.length >= 30, 'Missing high-value route coverage');
-assert.equal(urls.filter(url => new URL(url).pathname.startsWith('/roadmaps/')).length, 16, 'Expected all 16 roadmap pages');
+const expectedIndexablePaths = ['/', '/about', '/editorial-policy', '/focus-timer', '/past-paper-tracker', '/revision-workshop', '/study-methods', '/study-plan'];
+assert.deepEqual(urls.map(url => new URL(url).pathname).sort(), expectedIndexablePaths, 'Sitemap must contain only focused, original pages');
+assert.equal([...sitemap.matchAll(/<lastmod>(.*?)<\/lastmod>/g)].length, urls.length, 'Every sitemap URL needs an accurate lastmod date');
 const graph = new Map();
 const bodyTexts = new Set();
 for (const url of urls) {
@@ -36,10 +37,10 @@ for (const url of urls) {
   for (const link of links) {
     assert.ok(fs.existsSync(`${root}/${link === '/' ? 'index' : link.slice(1)}.html`) || fs.existsSync(`${root}${link}`), `${filename}: broken internal link ${link}`);
   }
-  if (pathname.startsWith('/roadmaps/')) {
-    const schema = JSON.parse(document.querySelector('#roadmap-schema').textContent);
-    assert.equal(schema['@type'], 'BreadcrumbList');
-    assert.equal(schema.itemListElement.at(-1).item, url);
+  if (['/focus-timer', '/study-plan', '/revision-workshop', '/past-paper-tracker'].includes(pathname)) {
+    const schema = JSON.parse(document.querySelector('#study-tool-schema').textContent);
+    assert.equal(schema['@type'], 'WebApplication');
+    assert.equal(schema.url, url);
   }
   for (const asset of document.querySelectorAll('script[src^="/assets/"], link[href^="/assets/"]')) {
     assert.ok(fs.existsSync(root + (asset.getAttribute('src') || asset.getAttribute('href'))), filename);
@@ -66,6 +67,8 @@ for (const file of fs.readdirSync(root, { recursive: true }).filter(file => file
     const element = doc.querySelector(selector);
     assert.equal(new URL(element.getAttribute('href') || element.getAttribute('content')).origin, 'https://edvvo.netlify.app', `${file}: ${selector}`);
   }
+  const canonicalPath = new URL(doc.querySelector('link[rel=canonical]').href).pathname;
+  if (file !== '404.html' && !expectedIndexablePaths.includes(canonicalPath)) assert.match(doc.querySelector('meta[name=robots]').content, /noindex/, `${file}: supporting page must be noindex`);
 }
 const publisher = home.match(/name="google-adsense-account" content="ca-(pub-\d+)"/)[1];
 assert.ok(fs.readFileSync(`${root}/ads.txt`, 'utf8').includes(`google.com, ${publisher}, DIRECT, f08c47fec0942fa0`));

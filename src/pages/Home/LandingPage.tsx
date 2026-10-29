@@ -8,10 +8,10 @@ import { HeroSection } from "./sections/HeroSection";
 import { FooterSection } from "./sections/FooterSection";
 
 const categories = [
-  { title: "Textbooks", description: "Your syllabus, all in one place.", kind: "books" as const, to: "/explore?type=books", label: "READ & LEARN" },
-  { title: "Notes & solutions", description: "Less confusion. More clarity.", kind: "notes" as const, to: "/explore?type=notes", label: "REVISE & REMEMBER" },
-  { title: "Entry tests", description: "Prepare for your next big step.", kind: "test" as const, to: "/entry-test", label: "PRACTISE & PREPARE" },
-  { title: "Explore careers", description: "Find a path that feels like you.", kind: "career" as const, to: "/academic-explorer", label: "DISCOVER & GROW" },
+  { title: "Build a study plan", description: "Turn subjects into small tasks you can finish.", kind: "books" as const, to: "/study-plan", label: "PLAN & PRIORITISE" },
+  { title: "Practise one topic", description: "Use worked examples, a session builder and an error log.", kind: "notes" as const, to: "/revision-workshop", label: "ATTEMPT & CHECK" },
+  { title: "Track past papers", description: "See which mistakes deserve your next revision session.", kind: "test" as const, to: "/past-paper-tracker", label: "RECORD & IMPROVE" },
+  { title: "Choose a study method", description: "Match retrieval, spacing and practice to the problem.", kind: "career" as const, to: "/study-methods", label: "LEARN WITH PURPOSE" },
 ];
 const tips = [
   { title: "Turn a chapter into a study session", text: "Choose one small topic. Read it once, close the book, and explain the idea in your own words. Check what you missed, then try a question without looking at the answer." },
@@ -43,11 +43,11 @@ export const LandingPage = () => {
     <HeroSection />
     <section className="ed-container home-hero">
       <div className="hero-copy">
-        <span className="eyebrow"><span className="status-dot" /> A SPACE FOR CURIOUS MINDS</span>
-        <h1>Big dreams.<br />Small steps.<br /><span>Start here.</span></h1>
-        <p>Your books, notes and study tools.<br />A little less searching. A lot more learning.</p>
-        <div className="hero-actions"><Link to="/explore" className="ed-button">Explore the library <ArrowUpRight size={18} /></Link><Link to="/entertainment" className="ed-text-link">My study space <ArrowRight size={17} /></Link></div>
-        <div className="hero-footnote"><Check size={15} /> Free to explore <span /> No account needed</div>
+        <span className="eyebrow"><span className="status-dot" /> FREE STUDY TOOLS. NO ACCOUNT.</span>
+        <h1>Plan it.<br />Practise it.<br /><span>Know what changed.</span></h1>
+        <p>A private study planner, revision workshop and past-paper tracker built for students who need a clear next step.</p>
+        <div className="hero-actions"><Link to="/study-plan" className="ed-button">Build today's plan <ArrowUpRight size={18} /></Link><Link to="/study-methods" className="ed-text-link">Choose a method <ArrowRight size={17} /></Link></div>
+        <div className="hero-footnote"><Check size={15} /> Your study data stays in this browser <span /> No sign-up</div>
       </div>
       <StudyScene />
     </section>
@@ -71,7 +71,7 @@ export const LandingPage = () => {
     </section>}
 
     <section className="ed-container home-library">
-      <div className="section-heading"><div><span className="eyebrow">YOUR LEARNING TOOLKIT</span><h2>What do you need today?</h2></div><Link to="/explore" className="ed-text-link">Browse library <ArrowRight size={17} /></Link></div>
+      <div className="section-heading"><div><span className="eyebrow">YOUR STUDY SYSTEM</span><h2>Choose one useful next action.</h2></div><Link to="/explore" className="ed-text-link">Need a textbook? Browse resources <ArrowRight size={17} /></Link></div>
       <div className="resource-grid">{categories.map((card, i) => <MotionCard key={card.kind} delay={i * 75} className={`resource-card tone-${card.kind}`}>
         <Link to={card.to}><div className="card-top"><span>{card.label}</span><span className="card-arrow"><ArrowUpRight size={19} /></span></div><CardArt kind={card.kind} /><div className="card-copy"><h3>{card.title}</h3><p>{card.description}</p></div></Link>
       </MotionCard>)}</div>
@@ -79,7 +79,7 @@ export const LandingPage = () => {
 
     <section className="ed-container study-strip">
       <div className="focus-feature"><div className="focus-dial" aria-hidden="true"><Timer size={22} /><strong>25:00</strong><span>ONE FOCUSED SESSION</span></div><div><span className="eyebrow">LESS SCROLLING. MORE DOING.</span><h2>Make time<br />for your next win.</h2><Link className="ed-button" to="/focus-timer">Let's focus <ArrowRight size={17} /></Link></div></div>
-      <div className="study-links"><Link to="/study-plan"><span className="tool-number">01</span><span><strong>Plan your study day</strong><small>One task at a time.</small></span><ArrowUpRight size={21} /></Link><Link to="/roadmaps"><span className="tool-number">02</span><span><strong>Follow a roadmap</strong><small>Know what to learn next.</small></span><ArrowUpRight size={21} /></Link><Link to="/result"><span className="tool-number">03</span><span><strong>Find your board results</strong><small>Links to official result portals.</small></span><ArrowUpRight size={21} /></Link></div>
+      <div className="study-links"><Link to="/study-plan"><span className="tool-number">01</span><span><strong>Plan your study day</strong><small>One task at a time.</small></span><ArrowUpRight size={21} /></Link><Link to="/past-paper-tracker"><span className="tool-number">02</span><span><strong>Track a paper attempt</strong><small>Turn marks into a retry.</small></span><ArrowUpRight size={21} /></Link><Link to="/revision-workshop"><span className="tool-number">03</span><span><strong>Practise with feedback</strong><small>Worked examples and an error log.</small></span><ArrowUpRight size={21} /></Link></div>
     </section>
 
     <section className="ed-container learning-notes">

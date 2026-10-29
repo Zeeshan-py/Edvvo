@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import ts from 'typescript';
 import type { Plugin } from 'vite';
-import { SITE_URL, pages, missingPage, roadmapSchema, type PageMeta } from '../src/seo/site';
+import { SITE_URL, pages, missingPage, roadmapSchema, studyToolSchema, type PageMeta } from '../src/seo/site';
 
 // Read only literal metadata from the content arrays, without importing browser code.
 function contentPages(file: string, variable: string, prefix: string, noindex = false) {
@@ -30,13 +30,13 @@ export function seoPlugin(): Plugin {
     name: 'edvvo-route-seo', enforce: 'post',
     resolveId(id) { if (id === 'virtual:content-meta') return '\0virtual:content-meta'; },
     load(id) {
-      if (id === '\0virtual:content-meta') return `export default ${JSON.stringify({ ...contentPages('src/pages/Workspace/SolutionsPage.tsx', 'solutions', '/solutions'), ...contentPages('src/utils/notificationsData.ts', 'notificationsData', '/notifications', true) })};`;
+      if (id === '\0virtual:content-meta') return `export default ${JSON.stringify({ ...contentPages('src/pages/Workspace/SolutionsPage.tsx', 'solutions', '/solutions', true), ...contentPages('src/utils/notificationsData.ts', 'notificationsData', '/notifications', true) })};`;
     },
     generateBundle(_, bundle) {
       const index = bundle['index.html'];
       if (!index || index.type !== 'asset') throw new Error('Missing build HTML');
       const template = String(index.source);
-      const allPages = { ...pages, ...contentPages('src/pages/Workspace/SolutionsPage.tsx', 'solutions', '/solutions'), ...contentPages('src/utils/notificationsData.ts', 'notificationsData', '/notifications', true) };
+      const allPages = { ...pages, ...contentPages('src/pages/Workspace/SolutionsPage.tsx', 'solutions', '/solutions', true), ...contentPages('src/utils/notificationsData.ts', 'notificationsData', '/notifications', true) };
       const render = (path: string, meta: PageMeta) => {
         let html = template.replace(/<title>[\s\S]*?<\/title>/, `<title>${escape(meta.title)} | Edvvo</title>`);
         html = html.replace(/<meta\s+(?:name|property)="(?:description|robots|og:title|og:description|og:url|og:type|twitter:title|twitter:description)"[^>]*>/g, '');
@@ -52,8 +52,10 @@ export function seoPlugin(): Plugin {
           `<meta name="twitter:title" content="${escape(meta.title)} | Edvvo" />`,
           `<meta name="twitter:description" content="${escape(meta.description)}" />`,
         ].join('\n    ');
-        const schema = roadmapSchema(path);
-        const structured = schema ? `<script id="roadmap-schema" type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>` : '';
+        const roadmap = roadmapSchema(path);
+        const studyTool = studyToolSchema(path);
+        const schema = roadmap || studyTool;
+        const structured = schema ? `<script id="${roadmap ? 'roadmap-schema' : 'study-tool-schema'}" type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>` : '';
         return html.replace('</head>', `${tags}\n${structured}\n  </head>`);
       };
       for (const [path, meta] of Object.entries(allPages)) {
@@ -61,7 +63,7 @@ export function seoPlugin(): Plugin {
         else this.emitFile({ type: 'asset', fileName: `${path.slice(1)}.html`, source: render(path, meta) });
       }
       this.emitFile({ type: 'asset', fileName: '404.html', source: render('/404', missingPage) });
-      const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${Object.entries(allPages).filter(([, meta]) => !meta.noindex).map(([path]) => `  <url><loc>${SITE_URL}${path}</loc></url>`).join('\n')}\n</urlset>\n`;
+      const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${Object.entries(allPages).filter(([, meta]) => !meta.noindex).map(([path, meta]) => `  <url><loc>${SITE_URL}${path}</loc>${meta.updated ? `<lastmod>${meta.updated}</lastmod>` : ''}</url>`).join('\n')}\n</urlset>\n`;
       const robots = `User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /assets/private/\n\nUser-agent: GPTBot\nDisallow: /\nUser-agent: ChatGPT-User\nDisallow: /\nUser-agent: CCBot\nDisallow: /\nUser-agent: anthropic-ai\nDisallow: /\nUser-agent: Google-Extended\nDisallow: /\nUser-agent: FacebookBot\nDisallow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`;
       // Keep checked-in public files and deployed files generated from the same route list.
       for (const [name, content] of Object.entries({ 'sitemap.xml': sitemap, 'robots.txt': robots })) {

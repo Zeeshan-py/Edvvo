@@ -25,9 +25,10 @@ describe('Optional service consent', () => {
   });
   it('keeps ads off supporting and error pages while retaining analytics', async () => {
     const consent = await import('./privacyConsent');
-    expect(consent.adsEligiblePath('/roadmaps/web-development')).toBe(true);
-    expect(consent.adsEligiblePath('/solutions/2')).toBe(true);
-    expect(consent.adsEligiblePath('/solutions/9')).toBe(false);
+    expect(consent.adsEligiblePath('/roadmaps/web-development')).toBe(false);
+    expect(consent.adsEligiblePath('/solutions/2')).toBe(false);
+    expect(consent.adsEligiblePath('/past-paper-tracker')).toBe(true);
+    expect(consent.adsEligiblePath('/study-methods')).toBe(true);
     expect(consent.adsEligiblePath('/privacy-policy')).toBe(false);
     expect(consent.adsEligiblePath('/not-found')).toBe(false);
     consent.loadOptionalServices('/privacy-policy');
