@@ -73,13 +73,14 @@ Roadmaps, technology tutorials, resource directories, result portals and policy 
 - Refreshed sitemap row: success, submitted 30 October, last read 30 October, eight discovered pages.
 - `/past-paper-tracker` now lists `https://edvvo.netlify.app/sitemap.xml` as its referring sitemap. Its Google-index view remains `Discovered - currently not indexed` with last crawl `N/A` until Google schedules the first crawl.
 - Google's 30 October live test reports `URL is available to Google` and `Page can be indexed` for `/past-paper-tracker`.
+- The subsequent manual indexing request returned `Quota Exceeded` and instructed the owner to try again tomorrow. This quota is controlled by Google and does not invalidate the successful sitemap submission or live-test result.
 - Links report: zero detected external links and zero detected internal links.
 - Manual actions: no issues detected.
 - Security issues: no issues detected.
 
 ## Required follow-through
 
-1. Request indexing for at most the homepage and `/past-paper-tracker` when the daily quota is available; repeated requests do not accelerate crawling.
+1. Do not make more indexing requests today. When Google resets the daily allowance, request the homepage once and `/past-paper-tracker` once at most; repeated requests do not accelerate crawling.
 2. Wait for Search Console to update the Page indexing report. Google's documentation says crawling may take days to weeks and does not guarantee indexing.
 3. Earn genuine discovery signals: link directly to the relevant tool from Edvvo's existing YouTube, Facebook and WhatsApp profiles; ask a teacher, school club or education publisher to reference a specific useful tool only if they independently find it useful. Do not buy, exchange or mass-create backlinks.
 4. Collect real usage and feedback before requesting another AdSense review. A technically valid site can still be rejected when it has little original value, authority or demonstrated user interest.
