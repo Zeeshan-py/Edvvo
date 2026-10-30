@@ -6,7 +6,7 @@
 - Deployed source commit: `14b722b8809f59d98a50f2b6491a2982e200f989`
 - Search Console property is verified.
 - Search Console reports no manual actions and no security issues.
-- The current eight-URL sitemap is live. Search Console had not fetched this version when this audit was recorded; its table still showed 30 discovered pages from the 26 October read.
+- The current eight-URL sitemap is live and was submitted successfully. Search Console read it on 30 October and reports exactly eight discovered pages.
 - Search Console's Page indexing report was last updated 23 October and still showed 29 discovered-not-indexed pages and one indexed page. That report predates this deployment.
 
 ## Root-cause conclusion
@@ -70,19 +70,19 @@ Roadmaps, technology tutorials, resource directories, result portals and policy 
 ## Search Console evidence
 
 - Page indexing snapshot: 29 not indexed, one indexed; reason `Discovered - currently not indexed`; report last updated 23 October 2026.
-- Existing sitemap row: success, submitted 6 October, last read 26 October, 30 discovered pages. This is the previous sitemap version, not the deployed eight-URL version.
-- New `/past-paper-tracker` inspection immediately after deployment: unknown to Google, no referring sitemap detected, no referring page detected, and last crawl `N/A`. This is expected until Google fetches the refreshed sitemap.
+- Refreshed sitemap row: success, submitted 30 October, last read 30 October, eight discovered pages.
+- `/past-paper-tracker` now lists `https://edvvo.netlify.app/sitemap.xml` as its referring sitemap. Its Google-index view remains `Discovered - currently not indexed` with last crawl `N/A` until Google schedules the first crawl.
+- Google's 30 October live test reports `URL is available to Google` and `Page can be indexed` for `/past-paper-tracker`.
 - Links report: zero detected external links and zero detected internal links.
 - Manual actions: no issues detected.
 - Security issues: no issues detected.
 
 ## Required follow-through
 
-1. Submit the existing `sitemap.xml` path once after deployment so Search Console refreshes the changed eight-URL file. Do not repeatedly resubmit it.
-2. Use a live URL test on one new tool after submission. Request indexing for at most the homepage and one strongest tool when the daily quota is available; repeated requests do not accelerate crawling.
-3. Wait for Search Console to read the new sitemap and update the Page indexing report. Google's documentation says crawling may take days to weeks and does not guarantee indexing.
-4. Earn genuine discovery signals: link directly to the relevant tool from Edvvo's existing YouTube, Facebook and WhatsApp profiles; ask a teacher, school club or education publisher to reference a specific useful tool only if they independently find it useful. Do not buy, exchange or mass-create backlinks.
-5. Collect real usage and feedback before requesting another AdSense review. A technically valid site can still be rejected when it has little original value, authority or demonstrated user interest.
+1. Request indexing for at most the homepage and `/past-paper-tracker` when the daily quota is available; repeated requests do not accelerate crawling.
+2. Wait for Search Console to update the Page indexing report. Google's documentation says crawling may take days to weeks and does not guarantee indexing.
+3. Earn genuine discovery signals: link directly to the relevant tool from Edvvo's existing YouTube, Facebook and WhatsApp profiles; ask a teacher, school club or education publisher to reference a specific useful tool only if they independently find it useful. Do not buy, exchange or mass-create backlinks.
+4. Collect real usage and feedback before requesting another AdSense review. A technically valid site can still be rejected when it has little original value, authority or demonstrated user interest.
 
 ## Limits
 
