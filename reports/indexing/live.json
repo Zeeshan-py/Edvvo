@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-09-19T08:19:38.220Z",
+  "checkedAt": "2026-10-30T04:28:49.596Z",
   "origin": "https://edvvo.netlify.app",
   "robots": "User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /assets/private/\n\nUser-agent: GPTBot\nDisallow: /\nUser-agent: ChatGPT-User\nDisallow: /\nUser-agent: CCBot\nDisallow: /\nUser-agent: anthropic-ai\nDisallow: /\nUser-agent: Google-Extended\nDisallow: /\nUser-agent: FacebookBot\nDisallow: /\n\nSitemap: https://edvvo.netlify.app/sitemap.xml\n",
-  "sitemap": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url><loc>https://edvvo.netlify.app/</loc></url>\n  <url><loc>https://edvvo.netlify.app/explore</loc></url>\n  <url><loc>https://edvvo.netlify.app/entertainment</loc></url>\n  <url><loc>https://edvvo.netlify.app/entry-test</loc></url>\n  <url><loc>https://edvvo.netlify.app/scholarly-vault</loc></url>\n  <url><loc>https://edvvo.netlify.app/academic-explorer</loc></url>\n  <url><loc>https://edvvo.netlify.app/result</loc></url>\n  <url><loc>https://edvvo.netlify.app/roadmaps</loc></url>\n  <url><loc>https://edvvo.netlify.app/focus-timer</loc></url>\n  <url><loc>https://edvvo.netlify.app/study-plan</loc></url>\n  <url><loc>https://edvvo.netlify.app/solutions</loc></url>\n  <url><loc>https://edvvo.netlify.app/about</loc></url>\n  <url><loc>https://edvvo.netlify.app/contact</loc></url>\n  <url><loc>https://edvvo.netlify.app/privacy-policy</loc></url>\n  <url><loc>https://edvvo.netlify.app/terms-of-service</loc></url>\n  <url><loc>https://edvvo.netlify.app/board/punjab-board</loc></url>\n  <url><loc>https://edvvo.netlify.app/islamic-studies</loc></url>\n  <url><loc>https://edvvo.netlify.app/engineering-applied-science</loc></url>\n  <url><loc>https://edvvo.netlify.app/engineering-programs</loc></url>\n  <url><loc>https://edvvo.netlify.app/applied-science-programs</loc></url>\n  <url><loc>https://edvvo.netlify.app/computer-science</loc></url>\n  <url><loc>https://edvvo.netlify.app/business-finance</loc></url>\n  <url><loc>https://edvvo.netlify.app/natural-biological-sciences</loc></url>\n  <url><loc>https://edvvo.netlify.app/health-paramedical</loc></url>\n  <url><loc>https://edvvo.netlify.app/social-sciences-humanities</loc></url>\n  <url><loc>https://edvvo.netlify.app/architecture-design</loc></url>\n  <url><loc>https://edvvo.netlify.app/law</loc></url>\n  <url><loc>https://edvvo.netlify.app/education</loc></url>\n  <url><loc>https://edvvo.netlify.app/agriculture-vet</loc></url>\n  <url><loc>https://edvvo.netlify.app/solutions/1</loc></url>\n  <url><loc>https://edvvo.netlify.app/solutions/2</loc></url>\n  <url><loc>https://edvvo.netlify.app/solutions/3</loc></url>\n  <url><loc>https://edvvo.netlify.app/solutions/4</loc></url>\n  <url><loc>https://edvvo.netlify.app/solutions/5</loc></url>\n  <url><loc>https://edvvo.netlify.app/solutions/6</loc></url>\n  <url><loc>https://edvvo.netlify.app/solutions/7</loc></url>\n  <url><loc>https://edvvo.netlify.app/solutions/8</loc></url>\n  <url><loc>https://edvvo.netlify.app/solutions/9</loc></url>\n  <url><loc>https://edvvo.netlify.app/solutions/10</loc></url>\n  <url><loc>https://edvvo.netlify.app/solutions/11</loc></url>\n  <url><loc>https://edvvo.netlify.app/solutions/12</loc></url>\n</urlset>\n",
+  "sitemap": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url><loc>https://edvvo.netlify.app/</loc><lastmod>2026-10-30</lastmod></url>\n  <url><loc>https://edvvo.netlify.app/focus-timer</loc><lastmod>2026-10-30</lastmod></url>\n  <url><loc>https://edvvo.netlify.app/study-plan</loc><lastmod>2026-10-30</lastmod></url>\n  <url><loc>https://edvvo.netlify.app/revision-workshop</loc><lastmod>2026-10-30</lastmod></url>\n  <url><loc>https://edvvo.netlify.app/past-paper-tracker</loc><lastmod>2026-10-30</lastmod></url>\n  <url><loc>https://edvvo.netlify.app/study-methods</loc><lastmod>2026-10-30</lastmod></url>\n  <url><loc>https://edvvo.netlify.app/editorial-policy</loc><lastmod>2026-10-30</lastmod></url>\n  <url><loc>https://edvvo.netlify.app/about</loc><lastmod>2026-10-30</lastmod></url>\n</urlset>\n",
   "pages": [
     {
       "url": "https://edvvo.netlify.app/",
@@ -18,11 +18,54 @@
         "robots": "index, follow, max-image-preview:large",
         "xRobots": null,
         "server": "Netlify",
-        "title": "Study resources, notes and learning tools | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "title": "Free study planner and revision tools for students | Edvvo",
+        "bodyCharacters": 2782,
+        "headings": [
+          "Plan it.Practise it.Know what changed."
+        ],
+        "links": [
+          "https://edvvo.netlify.app/#study-content",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore?grade=class-9",
+          "https://edvvo.netlify.app/explore?grade=class-10",
+          "https://edvvo.netlify.app/explore?grade=class-11",
+          "https://edvvo.netlify.app/explore?grade=class-12",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/terms-of-service",
+          "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+          "https://youtube.com/@edvvo?feature=shared",
+          "https://www.facebook.com/share/1CE4C69Kpf/",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy"
+        ],
+        "bodyHash": "cafc84e08421aa19496f9d6174e9861d81254223f1cb0c92e7cda5e7cfc115bb"
       },
       "googlebot": {
         "chain": [
@@ -36,354 +79,54 @@
         "robots": "index, follow, max-image-preview:large",
         "xRobots": null,
         "server": "Netlify",
-        "title": "Study resources, notes and learning tools | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/explore",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/explore",
-            "status": 301,
-            "location": "/explore/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/explore/",
-            "status": 200,
-            "location": null
-          }
+        "title": "Free study planner and revision tools for students | Edvvo",
+        "bodyCharacters": 2782,
+        "headings": [
+          "Plan it.Practise it.Know what changed."
         ],
-        "canonical": "https://edvvo.netlify.app/explore",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Student resource library | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/explore",
-            "status": 301,
-            "location": "/explore/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/explore/",
-            "status": 200,
-            "location": null
-          }
+        "links": [
+          "https://edvvo.netlify.app/#study-content",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore?grade=class-9",
+          "https://edvvo.netlify.app/explore?grade=class-10",
+          "https://edvvo.netlify.app/explore?grade=class-11",
+          "https://edvvo.netlify.app/explore?grade=class-12",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/terms-of-service",
+          "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+          "https://youtube.com/@edvvo?feature=shared",
+          "https://www.facebook.com/share/1CE4C69Kpf/",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy"
         ],
-        "canonical": "https://edvvo.netlify.app/explore",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Student resource library | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/entertainment",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/entertainment",
-            "status": 301,
-            "location": "/entertainment/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/entertainment/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/entertainment",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Study space and learning tools | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/entertainment",
-            "status": 301,
-            "location": "/entertainment/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/entertainment/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/entertainment",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Study space and learning tools | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/entry-test",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/entry-test",
-            "status": 301,
-            "location": "/entry-test/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/entry-test/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/entry-test",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Entry test resources | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/entry-test",
-            "status": 301,
-            "location": "/entry-test/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/entry-test/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/entry-test",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Entry test resources | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/scholarly-vault",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/scholarly-vault",
-            "status": 301,
-            "location": "/scholarly-vault/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/scholarly-vault/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/scholarly-vault",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Scholarly vault | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/scholarly-vault",
-            "status": 301,
-            "location": "/scholarly-vault/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/scholarly-vault/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/scholarly-vault",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Scholarly vault | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/academic-explorer",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/academic-explorer",
-            "status": 301,
-            "location": "/academic-explorer/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/academic-explorer/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/academic-explorer",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Explore academic fields | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/academic-explorer",
-            "status": 301,
-            "location": "/academic-explorer/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/academic-explorer/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/academic-explorer",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Explore academic fields | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/result",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/result",
-            "status": 301,
-            "location": "/result/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/result/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/result",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Board examination results | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/result",
-            "status": 301,
-            "location": "/result/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/result/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/result",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Board examination results | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/roadmaps",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/roadmaps",
-            "status": 301,
-            "location": "/roadmaps/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/roadmaps/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/roadmaps",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Learning roadmaps | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/roadmaps",
-            "status": 301,
-            "location": "/roadmaps/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/roadmaps/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/roadmaps",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Learning roadmaps | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "bodyHash": "cafc84e08421aa19496f9d6174e9861d81254223f1cb0c92e7cda5e7cfc115bb"
       }
     },
     {
@@ -392,11 +135,6 @@
         "chain": [
           {
             "url": "https://edvvo.netlify.app/focus-timer",
-            "status": 301,
-            "location": "/focus-timer/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/focus-timer/",
             "status": 200,
             "location": null
           }
@@ -406,20 +144,45 @@
         "xRobots": null,
         "server": "Netlify",
         "title": "Study focus timer | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "bodyCharacters": 2487,
+        "headings": [
+          "Focus Timer"
+        ],
+        "links": [
+          "https://edvvo.netlify.app/focus-timer#study-content",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/entertainment",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/terms-of-service",
+          "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+          "https://youtube.com/@edvvo?feature=shared",
+          "https://www.facebook.com/share/1CE4C69Kpf/",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy"
+        ],
+        "bodyHash": "f8d422adcd0ff0a313e346950c98ff82d6d2c162cf84038edca709699c888a65"
       },
       "googlebot": {
         "chain": [
           {
             "url": "https://edvvo.netlify.app/focus-timer",
-            "status": 301,
-            "location": "/focus-timer/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/focus-timer/",
             "status": 200,
             "location": null
           }
@@ -429,10 +192,40 @@
         "xRobots": null,
         "server": "Netlify",
         "title": "Study focus timer | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "bodyCharacters": 2487,
+        "headings": [
+          "Focus Timer"
+        ],
+        "links": [
+          "https://edvvo.netlify.app/focus-timer#study-content",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/entertainment",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/terms-of-service",
+          "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+          "https://youtube.com/@edvvo?feature=shared",
+          "https://www.facebook.com/share/1CE4C69Kpf/",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy"
+        ],
+        "bodyHash": "f8d422adcd0ff0a313e346950c98ff82d6d2c162cf84038edca709699c888a65"
       }
     },
     {
@@ -441,11 +234,6 @@
         "chain": [
           {
             "url": "https://edvvo.netlify.app/study-plan",
-            "status": 301,
-            "location": "/study-plan/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/study-plan/",
             "status": 200,
             "location": null
           }
@@ -455,20 +243,46 @@
         "xRobots": null,
         "server": "Netlify",
         "title": "Student study planner | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "bodyCharacters": 2725,
+        "headings": [
+          "Make room for progress."
+        ],
+        "links": [
+          "https://edvvo.netlify.app/study-plan#study-content",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/entertainment",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/terms-of-service",
+          "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+          "https://youtube.com/@edvvo?feature=shared",
+          "https://www.facebook.com/share/1CE4C69Kpf/",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy"
+        ],
+        "bodyHash": "b0cebf85db57ec63a817382791b297ac215df7b0cf2964a8683d0df3b5b14650"
       },
       "googlebot": {
         "chain": [
           {
             "url": "https://edvvo.netlify.app/study-plan",
-            "status": 301,
-            "location": "/study-plan/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/study-plan/",
             "status": 200,
             "location": null
           }
@@ -478,59 +292,477 @@
         "xRobots": null,
         "server": "Netlify",
         "title": "Student study planner | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "bodyCharacters": 2725,
+        "headings": [
+          "Make room for progress."
+        ],
+        "links": [
+          "https://edvvo.netlify.app/study-plan#study-content",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/entertainment",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/terms-of-service",
+          "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+          "https://youtube.com/@edvvo?feature=shared",
+          "https://www.facebook.com/share/1CE4C69Kpf/",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy"
+        ],
+        "bodyHash": "b0cebf85db57ec63a817382791b297ac215df7b0cf2964a8683d0df3b5b14650"
       }
     },
     {
-      "url": "https://edvvo.netlify.app/solutions",
+      "url": "https://edvvo.netlify.app/revision-workshop",
       "browser": {
         "chain": [
           {
-            "url": "https://edvvo.netlify.app/solutions",
-            "status": 301,
-            "location": "/solutions/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/",
+            "url": "https://edvvo.netlify.app/revision-workshop",
             "status": 200,
             "location": null
           }
         ],
-        "canonical": "https://edvvo.netlify.app/solutions",
+        "canonical": "https://edvvo.netlify.app/revision-workshop",
         "robots": "index, follow, max-image-preview:large",
         "xRobots": null,
         "server": "Netlify",
-        "title": "Practical learning guides | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "title": "Revision workshop: worked examples and session builder | Edvvo",
+        "bodyCharacters": 6611,
+        "headings": [
+          "Turn one topic into a finished study session."
+        ],
+        "links": [
+          "https://edvvo.netlify.app/revision-workshop#study-content",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/revision-workshop#session",
+          "https://edvvo.netlify.app/revision-workshop#examples",
+          "https://edvvo.netlify.app/revision-workshop#error-log",
+          "https://edvvo.netlify.app/revision-workshop#syllabus",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/study-plan",
+          "https://www.biselahore.com/",
+          "https://edvvo.netlify.app/result",
+          "https://openstax.org/details/books/college-physics-2e",
+          "mailto:zeeshanahmad0159@gmail.com",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/terms-of-service",
+          "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+          "https://youtube.com/@edvvo?feature=shared",
+          "https://www.facebook.com/share/1CE4C69Kpf/",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy"
+        ],
+        "bodyHash": "d05b6491022e9764bcdd7ab848c62ea66c99b4324eaf39b15bad44c388581af8"
       },
       "googlebot": {
         "chain": [
           {
-            "url": "https://edvvo.netlify.app/solutions",
-            "status": 301,
-            "location": "/solutions/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/",
+            "url": "https://edvvo.netlify.app/revision-workshop",
             "status": 200,
             "location": null
           }
         ],
-        "canonical": "https://edvvo.netlify.app/solutions",
+        "canonical": "https://edvvo.netlify.app/revision-workshop",
         "robots": "index, follow, max-image-preview:large",
         "xRobots": null,
         "server": "Netlify",
-        "title": "Practical learning guides | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "title": "Revision workshop: worked examples and session builder | Edvvo",
+        "bodyCharacters": 6611,
+        "headings": [
+          "Turn one topic into a finished study session."
+        ],
+        "links": [
+          "https://edvvo.netlify.app/revision-workshop#study-content",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/revision-workshop#session",
+          "https://edvvo.netlify.app/revision-workshop#examples",
+          "https://edvvo.netlify.app/revision-workshop#error-log",
+          "https://edvvo.netlify.app/revision-workshop#syllabus",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/study-plan",
+          "https://www.biselahore.com/",
+          "https://edvvo.netlify.app/result",
+          "https://openstax.org/details/books/college-physics-2e",
+          "mailto:zeeshanahmad0159@gmail.com",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/terms-of-service",
+          "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+          "https://youtube.com/@edvvo?feature=shared",
+          "https://www.facebook.com/share/1CE4C69Kpf/",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy"
+        ],
+        "bodyHash": "d05b6491022e9764bcdd7ab848c62ea66c99b4324eaf39b15bad44c388581af8"
+      }
+    },
+    {
+      "url": "https://edvvo.netlify.app/past-paper-tracker",
+      "browser": {
+        "chain": [
+          {
+            "url": "https://edvvo.netlify.app/past-paper-tracker",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "canonical": "https://edvvo.netlify.app/past-paper-tracker",
+        "robots": "index, follow, max-image-preview:large",
+        "xRobots": null,
+        "server": "Netlify",
+        "title": "Past paper mistake tracker | Edvvo",
+        "bodyCharacters": 2418,
+        "headings": [
+          "Turn every lost mark into a specific revision task."
+        ],
+        "links": [
+          "https://edvvo.netlify.app/past-paper-tracker#study-content",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/terms-of-service",
+          "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+          "https://youtube.com/@edvvo?feature=shared",
+          "https://www.facebook.com/share/1CE4C69Kpf/",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy"
+        ],
+        "bodyHash": "b46e7871811e6754ce7962777034a8b5049d649725d273f2beb9e4ed9d15d15f"
+      },
+      "googlebot": {
+        "chain": [
+          {
+            "url": "https://edvvo.netlify.app/past-paper-tracker",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "canonical": "https://edvvo.netlify.app/past-paper-tracker",
+        "robots": "index, follow, max-image-preview:large",
+        "xRobots": null,
+        "server": "Netlify",
+        "title": "Past paper mistake tracker | Edvvo",
+        "bodyCharacters": 2418,
+        "headings": [
+          "Turn every lost mark into a specific revision task."
+        ],
+        "links": [
+          "https://edvvo.netlify.app/past-paper-tracker#study-content",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/terms-of-service",
+          "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+          "https://youtube.com/@edvvo?feature=shared",
+          "https://www.facebook.com/share/1CE4C69Kpf/",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy"
+        ],
+        "bodyHash": "b46e7871811e6754ce7962777034a8b5049d649725d273f2beb9e4ed9d15d15f"
+      }
+    },
+    {
+      "url": "https://edvvo.netlify.app/study-methods",
+      "browser": {
+        "chain": [
+          {
+            "url": "https://edvvo.netlify.app/study-methods",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "canonical": "https://edvvo.netlify.app/study-methods",
+        "robots": "index, follow, max-image-preview:large",
+        "xRobots": null,
+        "server": "Netlify",
+        "title": "Study methods: retrieval, spacing and practice | Edvvo",
+        "bodyCharacters": 4980,
+        "headings": [
+          "Choose a method for the learning problem in front of you."
+        ],
+        "links": [
+          "https://edvvo.netlify.app/study-methods#study-content",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/study-methods#diagnose",
+          "https://edvvo.netlify.app/study-methods#cycle",
+          "https://edvvo.netlify.app/study-methods#examples",
+          "https://edvvo.netlify.app/study-methods#evidence",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://doi.org/10.1177/1529100612453266",
+          "https://doi.org/10.1111/j.1467-9280.2006.01693.x",
+          "https://doi.org/10.1111/j.1467-9280.2008.02209.x",
+          "mailto:zeeshanahmad0159@gmail.com",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/terms-of-service",
+          "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+          "https://youtube.com/@edvvo?feature=shared",
+          "https://www.facebook.com/share/1CE4C69Kpf/",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy"
+        ],
+        "bodyHash": "09138c6ef1681741835cf535d8a7d3efc72db01f5a001c92b8a0b4da6df17093"
+      },
+      "googlebot": {
+        "chain": [
+          {
+            "url": "https://edvvo.netlify.app/study-methods",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "canonical": "https://edvvo.netlify.app/study-methods",
+        "robots": "index, follow, max-image-preview:large",
+        "xRobots": null,
+        "server": "Netlify",
+        "title": "Study methods: retrieval, spacing and practice | Edvvo",
+        "bodyCharacters": 4980,
+        "headings": [
+          "Choose a method for the learning problem in front of you."
+        ],
+        "links": [
+          "https://edvvo.netlify.app/study-methods#study-content",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/study-methods#diagnose",
+          "https://edvvo.netlify.app/study-methods#cycle",
+          "https://edvvo.netlify.app/study-methods#examples",
+          "https://edvvo.netlify.app/study-methods#evidence",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://doi.org/10.1177/1529100612453266",
+          "https://doi.org/10.1111/j.1467-9280.2006.01693.x",
+          "https://doi.org/10.1111/j.1467-9280.2008.02209.x",
+          "mailto:zeeshanahmad0159@gmail.com",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/terms-of-service",
+          "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+          "https://youtube.com/@edvvo?feature=shared",
+          "https://www.facebook.com/share/1CE4C69Kpf/",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy"
+        ],
+        "bodyHash": "09138c6ef1681741835cf535d8a7d3efc72db01f5a001c92b8a0b4da6df17093"
+      }
+    },
+    {
+      "url": "https://edvvo.netlify.app/editorial-policy",
+      "browser": {
+        "chain": [
+          {
+            "url": "https://edvvo.netlify.app/editorial-policy",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "canonical": "https://edvvo.netlify.app/editorial-policy",
+        "robots": "index, follow, max-image-preview:large",
+        "xRobots": null,
+        "server": "Netlify",
+        "title": "Editorial approach and resource policy | Edvvo",
+        "bodyCharacters": 3498,
+        "headings": [
+          "Editorial approach and resource policy"
+        ],
+        "links": [
+          "https://edvvo.netlify.app/editorial-policy#study-content",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/study-plan",
+          "mailto:zeeshanahmad0159@gmail.com",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/terms-of-service",
+          "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+          "https://youtube.com/@edvvo?feature=shared",
+          "https://www.facebook.com/share/1CE4C69Kpf/",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy"
+        ],
+        "bodyHash": "a351732152e438633f299bb79393f3988064ee169584db04058963ff36f5c5cd"
+      },
+      "googlebot": {
+        "chain": [
+          {
+            "url": "https://edvvo.netlify.app/editorial-policy",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "canonical": "https://edvvo.netlify.app/editorial-policy",
+        "robots": "index, follow, max-image-preview:large",
+        "xRobots": null,
+        "server": "Netlify",
+        "title": "Editorial approach and resource policy | Edvvo",
+        "bodyCharacters": 3498,
+        "headings": [
+          "Editorial approach and resource policy"
+        ],
+        "links": [
+          "https://edvvo.netlify.app/editorial-policy#study-content",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/study-plan",
+          "mailto:zeeshanahmad0159@gmail.com",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/terms-of-service",
+          "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+          "https://youtube.com/@edvvo?feature=shared",
+          "https://www.facebook.com/share/1CE4C69Kpf/",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy"
+        ],
+        "bodyHash": "a351732152e438633f299bb79393f3988064ee169584db04058963ff36f5c5cd"
       }
     },
     {
@@ -539,11 +771,6 @@
         "chain": [
           {
             "url": "https://edvvo.netlify.app/about",
-            "status": 301,
-            "location": "/about/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/about/",
             "status": 200,
             "location": null
           }
@@ -553,20 +780,48 @@
         "xRobots": null,
         "server": "Netlify",
         "title": "About Edvvo | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "bodyCharacters": 2114,
+        "headings": [
+          "A little help.A new possibility."
+        ],
+        "links": [
+          "https://edvvo.netlify.app/about#study-content",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/terms-of-service",
+          "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+          "https://youtube.com/@edvvo?feature=shared",
+          "https://www.facebook.com/share/1CE4C69Kpf/",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy"
+        ],
+        "bodyHash": "db35e45c646630776c16b19d6fdb22d9cb58718df5d66f1521865dbf30edb649"
       },
       "googlebot": {
         "chain": [
           {
             "url": "https://edvvo.netlify.app/about",
-            "status": 301,
-            "location": "/about/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/about/",
             "status": 200,
             "location": null
           }
@@ -576,1431 +831,43 @@
         "xRobots": null,
         "server": "Netlify",
         "title": "About Edvvo | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/contact",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/contact",
-            "status": 301,
-            "location": "/contact/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/contact/",
-            "status": 200,
-            "location": null
-          }
+        "bodyCharacters": 2114,
+        "headings": [
+          "A little help.A new possibility."
         ],
-        "canonical": "https://edvvo.netlify.app/contact",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Contact and resource feedback | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/contact",
-            "status": 301,
-            "location": "/contact/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/contact/",
-            "status": 200,
-            "location": null
-          }
+        "links": [
+          "https://edvvo.netlify.app/about#study-content",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/",
+          "https://edvvo.netlify.app/study-plan",
+          "https://edvvo.netlify.app/focus-timer",
+          "https://edvvo.netlify.app/revision-workshop",
+          "https://edvvo.netlify.app/past-paper-tracker",
+          "https://edvvo.netlify.app/study-methods",
+          "https://edvvo.netlify.app/explore",
+          "https://edvvo.netlify.app/about",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/editorial-policy",
+          "https://edvvo.netlify.app/privacy-policy",
+          "https://edvvo.netlify.app/terms-of-service",
+          "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+          "https://youtube.com/@edvvo?feature=shared",
+          "https://www.facebook.com/share/1CE4C69Kpf/",
+          "https://edvvo.netlify.app/contact",
+          "https://edvvo.netlify.app/privacy-policy"
         ],
-        "canonical": "https://edvvo.netlify.app/contact",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Contact and resource feedback | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/privacy-policy",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/privacy-policy",
-            "status": 301,
-            "location": "/privacy-policy/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/privacy-policy/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/privacy-policy",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Privacy policy | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/privacy-policy",
-            "status": 301,
-            "location": "/privacy-policy/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/privacy-policy/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/privacy-policy",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Privacy policy | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/terms-of-service",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/terms-of-service",
-            "status": 301,
-            "location": "/terms-of-service/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/terms-of-service/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/terms-of-service",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Terms of service | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/terms-of-service",
-            "status": 301,
-            "location": "/terms-of-service/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/terms-of-service/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/terms-of-service",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Terms of service | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/board/punjab-board",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/board/punjab-board",
-            "status": 301,
-            "location": "/board/punjab-board/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/board/punjab-board/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/board/punjab-board",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Punjab Board class resources | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/board/punjab-board",
-            "status": 301,
-            "location": "/board/punjab-board/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/board/punjab-board/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/board/punjab-board",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Punjab Board class resources | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/islamic-studies",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/islamic-studies",
-            "status": 301,
-            "location": "/islamic-studies/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/islamic-studies/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/islamic-studies",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Islamic Studies | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/islamic-studies",
-            "status": 301,
-            "location": "/islamic-studies/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/islamic-studies/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/islamic-studies",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Islamic Studies | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/engineering-applied-science",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/engineering-applied-science",
-            "status": 301,
-            "location": "/engineering-applied-science/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/engineering-applied-science/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/engineering-applied-science",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Engineering and Applied Science | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/engineering-applied-science",
-            "status": 301,
-            "location": "/engineering-applied-science/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/engineering-applied-science/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/engineering-applied-science",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Engineering and Applied Science | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/engineering-programs",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/engineering-programs",
-            "status": 301,
-            "location": "/engineering-programs/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/engineering-programs/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/engineering-programs",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Engineering Programs | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/engineering-programs",
-            "status": 301,
-            "location": "/engineering-programs/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/engineering-programs/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/engineering-programs",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Engineering Programs | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/applied-science-programs",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/applied-science-programs",
-            "status": 301,
-            "location": "/applied-science-programs/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/applied-science-programs/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/applied-science-programs",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Applied Science Programs | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/applied-science-programs",
-            "status": 301,
-            "location": "/applied-science-programs/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/applied-science-programs/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/applied-science-programs",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Applied Science Programs | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/computer-science",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/computer-science",
-            "status": 301,
-            "location": "/computer-science/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/computer-science/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/computer-science",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Computer Science and IT | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/computer-science",
-            "status": 301,
-            "location": "/computer-science/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/computer-science/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/computer-science",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Computer Science and IT | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/business-finance",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/business-finance",
-            "status": 301,
-            "location": "/business-finance/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/business-finance/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/business-finance",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Business and Finance | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/business-finance",
-            "status": 301,
-            "location": "/business-finance/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/business-finance/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/business-finance",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Business and Finance | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/natural-biological-sciences",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/natural-biological-sciences",
-            "status": 301,
-            "location": "/natural-biological-sciences/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/natural-biological-sciences/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/natural-biological-sciences",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Natural and Biological Sciences | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/natural-biological-sciences",
-            "status": 301,
-            "location": "/natural-biological-sciences/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/natural-biological-sciences/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/natural-biological-sciences",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Natural and Biological Sciences | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/health-paramedical",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/health-paramedical",
-            "status": 301,
-            "location": "/health-paramedical/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/health-paramedical/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/health-paramedical",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Health and Paramedical Studies | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/health-paramedical",
-            "status": 301,
-            "location": "/health-paramedical/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/health-paramedical/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/health-paramedical",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Health and Paramedical Studies | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/social-sciences-humanities",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/social-sciences-humanities",
-            "status": 301,
-            "location": "/social-sciences-humanities/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/social-sciences-humanities/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/social-sciences-humanities",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Social Sciences and Humanities | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/social-sciences-humanities",
-            "status": 301,
-            "location": "/social-sciences-humanities/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/social-sciences-humanities/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/social-sciences-humanities",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Social Sciences and Humanities | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/architecture-design",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/architecture-design",
-            "status": 301,
-            "location": "/architecture-design/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/architecture-design/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/architecture-design",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Architecture and Design | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/architecture-design",
-            "status": 301,
-            "location": "/architecture-design/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/architecture-design/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/architecture-design",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Architecture and Design | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/law",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/law",
-            "status": 301,
-            "location": "/law/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/law/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/law",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Law | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/law",
-            "status": 301,
-            "location": "/law/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/law/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/law",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Law | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/education",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/education",
-            "status": 301,
-            "location": "/education/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/education/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/education",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Education | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/education",
-            "status": 301,
-            "location": "/education/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/education/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/education",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Education | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/agriculture-vet",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/agriculture-vet",
-            "status": 301,
-            "location": "/agriculture-vet/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/agriculture-vet/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/agriculture-vet",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Agriculture and Veterinary Studies | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/agriculture-vet",
-            "status": 301,
-            "location": "/agriculture-vet/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/agriculture-vet/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/agriculture-vet",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Agriculture and Veterinary Studies | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/solutions/1",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/1",
-            "status": 301,
-            "location": "/solutions/1/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/1/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/1",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Build a Simple To-Do App with React | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/1",
-            "status": 301,
-            "location": "/solutions/1/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/1/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/1",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Build a Simple To-Do App with React | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/solutions/2",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/2",
-            "status": 301,
-            "location": "/solutions/2/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/2/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/2",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "How to Install MongoDB | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/2",
-            "status": 301,
-            "location": "/solutions/2/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/2/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/2",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "How to Install MongoDB | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/solutions/3",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/3",
-            "status": 301,
-            "location": "/solutions/3/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/3/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/3",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "How to Install Node.js and What is Node.js? | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/3",
-            "status": 301,
-            "location": "/solutions/3/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/3/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/3",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "How to Install Node.js and What is Node.js? | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/solutions/4",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/4",
-            "status": 301,
-            "location": "/solutions/4/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/4/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/4",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "SQL Database Basics | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/4",
-            "status": 301,
-            "location": "/solutions/4/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/4/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/4",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "SQL Database Basics | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/solutions/5",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/5",
-            "status": 301,
-            "location": "/solutions/5/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/5/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/5",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Machine Learning Basics | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/5",
-            "status": 301,
-            "location": "/solutions/5/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/5/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/5",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Machine Learning Basics | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/solutions/6",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/6",
-            "status": 301,
-            "location": "/solutions/6/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/6/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/6",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "How to Use Git for Version Control | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/6",
-            "status": 301,
-            "location": "/solutions/6/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/6/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/6",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "How to Use Git for Version Control | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/solutions/7",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/7",
-            "status": 301,
-            "location": "/solutions/7/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/7/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/7",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Getting Started with Docker | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/7",
-            "status": 301,
-            "location": "/solutions/7/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/7/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/7",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Getting Started with Docker | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/solutions/8",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/8",
-            "status": 301,
-            "location": "/solutions/8/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/8/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/8",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Software Developer's Guide to Common Real-World Challenges | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/8",
-            "status": 301,
-            "location": "/solutions/8/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/8/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/8",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Software Developer's Guide to Common Real-World Challenges | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/solutions/9",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/9",
-            "status": 301,
-            "location": "/solutions/9/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/9/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/9",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Legal Professional's Survival Guide: Modern Practice Challenges | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/9",
-            "status": 301,
-            "location": "/solutions/9/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/9/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/9",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Legal Professional's Survival Guide: Modern Practice Challenges | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/solutions/10",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/10",
-            "status": 301,
-            "location": "/solutions/10/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/10/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/10",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Healthcare Professionals: Navigating Modern Medical Practice | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/10",
-            "status": 301,
-            "location": "/solutions/10/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/10/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/10",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Healthcare Professionals: Navigating Modern Medical Practice | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/solutions/11",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/11",
-            "status": 301,
-            "location": "/solutions/11/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/11/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/11",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Educator's Toolkit: Modern Teaching Challenges and Solutions | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/11",
-            "status": 301,
-            "location": "/solutions/11/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/11/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/11",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Educator's Toolkit: Modern Teaching Challenges and Solutions | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      }
-    },
-    {
-      "url": "https://edvvo.netlify.app/solutions/12",
-      "browser": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/12",
-            "status": 301,
-            "location": "/solutions/12/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/12/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/12",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Business Professional's Guide to Workplace Excellence | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "googlebot": {
-        "chain": [
-          {
-            "url": "https://edvvo.netlify.app/solutions/12",
-            "status": 301,
-            "location": "/solutions/12/"
-          },
-          {
-            "url": "https://edvvo.netlify.app/solutions/12/",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "canonical": "https://edvvo.netlify.app/solutions/12",
-        "robots": "index, follow, max-image-preview:large",
-        "xRobots": null,
-        "server": "Netlify",
-        "title": "Business Professional's Guide to Workplace Excellence | Edvvo",
-        "bodyCharacters": 0,
-        "headings": [],
-        "links": [],
-        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "bodyHash": "db35e45c646630776c16b19d6fdb22d9cb58718df5d66f1521865dbf30edb649"
       }
     }
   ],
@@ -2010,6 +877,11 @@
       "chain": [
         {
           "url": "https://edvvo.netlify.app/about/",
+          "status": 301,
+          "location": "/about"
+        },
+        {
+          "url": "https://edvvo.netlify.app/about",
           "status": 200,
           "location": null
         }
@@ -2019,10 +891,43 @@
       "xRobots": null,
       "server": "Netlify",
       "title": "About Edvvo | Edvvo",
-      "bodyCharacters": 0,
-      "headings": [],
-      "links": [],
-      "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "bodyCharacters": 2114,
+      "headings": [
+        "A little help.A new possibility."
+      ],
+      "links": [
+        "https://edvvo.netlify.app/about#study-content",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/editorial-policy",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/focus-timer",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/past-paper-tracker",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/editorial-policy",
+        "https://edvvo.netlify.app/privacy-policy",
+        "https://edvvo.netlify.app/terms-of-service",
+        "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+        "https://youtube.com/@edvvo?feature=shared",
+        "https://www.facebook.com/share/1CE4C69Kpf/",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/privacy-policy"
+      ],
+      "bodyHash": "db35e45c646630776c16b19d6fdb22d9cb58718df5d66f1521865dbf30edb649"
     },
     {
       "path": "/about.html",
@@ -2033,26 +938,54 @@
           "location": null
         }
       ],
-      "canonical": "https://edvvo.netlify.app/",
+      "canonical": "https://edvvo.netlify.app/about",
       "robots": "index, follow, max-image-preview:large",
       "xRobots": null,
       "server": "Netlify",
-      "title": "Study resources, notes and learning tools | Edvvo",
-      "bodyCharacters": 0,
-      "headings": [],
-      "links": [],
-      "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "title": "About Edvvo | Edvvo",
+      "bodyCharacters": 2114,
+      "headings": [
+        "A little help.A new possibility."
+      ],
+      "links": [
+        "https://edvvo.netlify.app/about.html#study-content",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/editorial-policy",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/focus-timer",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/past-paper-tracker",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/editorial-policy",
+        "https://edvvo.netlify.app/privacy-policy",
+        "https://edvvo.netlify.app/terms-of-service",
+        "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+        "https://youtube.com/@edvvo?feature=shared",
+        "https://www.facebook.com/share/1CE4C69Kpf/",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/privacy-policy"
+      ],
+      "bodyHash": "db35e45c646630776c16b19d6fdb22d9cb58718df5d66f1521865dbf30edb649"
     },
     {
       "path": "/about?utm_source=audit",
       "chain": [
         {
           "url": "https://edvvo.netlify.app/about?utm_source=audit",
-          "status": 301,
-          "location": "/about/?utm_source=audit"
-        },
-        {
-          "url": "https://edvvo.netlify.app/about/?utm_source=audit",
           "status": 200,
           "location": null
         }
@@ -2062,58 +995,435 @@
       "xRobots": null,
       "server": "Netlify",
       "title": "About Edvvo | Edvvo",
-      "bodyCharacters": 0,
-      "headings": [],
-      "links": [],
-      "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "bodyCharacters": 2114,
+      "headings": [
+        "A little help.A new possibility."
+      ],
+      "links": [
+        "https://edvvo.netlify.app/about?utm_source=audit#study-content",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/editorial-policy",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/focus-timer",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/past-paper-tracker",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/editorial-policy",
+        "https://edvvo.netlify.app/privacy-policy",
+        "https://edvvo.netlify.app/terms-of-service",
+        "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+        "https://youtube.com/@edvvo?feature=shared",
+        "https://www.facebook.com/share/1CE4C69Kpf/",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/privacy-policy"
+      ],
+      "bodyHash": "db35e45c646630776c16b19d6fdb22d9cb58718df5d66f1521865dbf30edb649"
     },
     {
       "path": "/research-papers",
-      "chain": [],
-      "error": "fetch failed",
-      "cause": "UND_ERR_CONNECT_TIMEOUT"
+      "chain": [
+        {
+          "url": "https://edvvo.netlify.app/research-papers",
+          "status": 301,
+          "location": "/solutions"
+        },
+        {
+          "url": "https://edvvo.netlify.app/solutions",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "canonical": "https://edvvo.netlify.app/solutions",
+      "robots": "noindex, follow",
+      "xRobots": null,
+      "server": "Netlify",
+      "title": "Practical learning guides archive | Edvvo",
+      "bodyCharacters": 2740,
+      "headings": [
+        "Solutions & Guides"
+      ],
+      "links": [
+        "https://edvvo.netlify.app/solutions#study-content",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/solutions/1",
+        "https://edvvo.netlify.app/solutions/2",
+        "https://edvvo.netlify.app/solutions/3",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/focus-timer",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/past-paper-tracker",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/editorial-policy",
+        "https://edvvo.netlify.app/privacy-policy",
+        "https://edvvo.netlify.app/terms-of-service",
+        "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+        "https://youtube.com/@edvvo?feature=shared",
+        "https://www.facebook.com/share/1CE4C69Kpf/",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/privacy-policy"
+      ],
+      "bodyHash": "ae62e8136889d410d2bb5cf89aaccbdde317d103bff5371f9f463cff1dc949dd"
     },
     {
       "path": "/board/scholarly-vault",
-      "chain": [],
-      "error": "fetch failed",
-      "cause": "UND_ERR_CONNECT_TIMEOUT"
+      "chain": [
+        {
+          "url": "https://edvvo.netlify.app/board/scholarly-vault",
+          "status": 301,
+          "location": "/scholarly-vault"
+        },
+        {
+          "url": "https://edvvo.netlify.app/scholarly-vault",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "canonical": "https://edvvo.netlify.app/scholarly-vault",
+      "robots": "noindex, follow",
+      "xRobots": null,
+      "server": "Netlify",
+      "title": "Scholarly vault | Edvvo",
+      "bodyCharacters": 5782,
+      "headings": [
+        "The scholarly vault."
+      ],
+      "links": [
+        "https://edvvo.netlify.app/scholarly-vault#study-content",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://mega.nz/file/2wZwnDDB#36n2jJDRivpUlX6fBwF0uuf2zqizkHQSRehiBnFg9Ac",
+        "https://mega.nz/file/rx4jnIJZ#k3PDOJiFGuQtU_vxQ8TraasWEj7T5O57H8cuyQvcA8w",
+        "https://mega.nz/file/WhxXTbRQ#9_XaLGld-kEyQFhql8cdY3bmR-BuqOeF2ofFArKu8TM",
+        "https://mega.nz/file/fsQ2ADbC#n71v5dHpZi_gjCHRFPSV7RYBOeW3j-YB88hmNnQyteM",
+        "https://mega.nz/file/bo4jyCqT#7m3EcuBzMSY0Q8_NyfDkNVDm6UGUAYyMfFFX6vjXqLI",
+        "https://mega.nz/file/K5BiBS7L#KbW2zvh3NerWfRX5W3ORHgBvaIlbH5Qft4NcpiVH0oE",
+        "https://mega.nz/file/z4BGRBCL#ctiZlqX4VPU2L3bbjqgg5HdzyFDuG4oTqLOhR4fB7eg",
+        "https://mega.nz/file/nlZDQIhD#5j-ahs1gexqFUPbr3PyeDOkkb-XHxF7E35-r0EJrifo",
+        "https://mega.nz/file/384SURoZ#JC7Ih2HnK6thOxdbJrfiy6RF-m7gHt04nnQg9UhV76g",
+        "https://mega.nz/file/jhQ3lRSA#BdJnxOORxjiVWaKIafoLKoaYZEZcZ5HKkScUkH0lASg",
+        "https://mega.nz/file/usQS0JaC#HXfFEBFIDdJ_nlh_dmL3QCW4RgfI395YSW3m2wYuD2I",
+        "https://mega.nz/file/q1phSBaY#QaOkR9jWO5wiCsjy2wB7dHVQql5Lr-VG-gLkTqAGoRA",
+        "mailto:zeeshanahmad0159@gmail.com",
+        "https://edvvo.netlify.app/editorial-policy",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/focus-timer",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/past-paper-tracker",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/editorial-policy",
+        "https://edvvo.netlify.app/privacy-policy",
+        "https://edvvo.netlify.app/terms-of-service",
+        "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+        "https://youtube.com/@edvvo?feature=shared",
+        "https://www.facebook.com/share/1CE4C69Kpf/",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/privacy-policy"
+      ],
+      "bodyHash": "329920ce43581b35f5bf2579e6b3a65313174d65768b1e2fcec1dd5e1a1ad6e3"
     },
     {
       "path": "/not-a-real-edvvo-page",
-      "chain": [],
-      "error": "fetch failed",
-      "cause": "UND_ERR_CONNECT_TIMEOUT"
+      "chain": [
+        {
+          "url": "https://edvvo.netlify.app/not-a-real-edvvo-page",
+          "status": 404,
+          "location": null
+        }
+      ],
+      "canonical": "https://edvvo.netlify.app/404",
+      "robots": "noindex, follow",
+      "xRobots": null,
+      "server": "Netlify",
+      "title": "Page not found | Edvvo",
+      "bodyCharacters": 878,
+      "headings": [
+        "Let's find your next chapter."
+      ],
+      "links": [
+        "https://edvvo.netlify.app/not-a-real-edvvo-page#study-content",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/focus-timer",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/past-paper-tracker",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/editorial-policy",
+        "https://edvvo.netlify.app/privacy-policy",
+        "https://edvvo.netlify.app/terms-of-service",
+        "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+        "https://youtube.com/@edvvo?feature=shared",
+        "https://www.facebook.com/share/1CE4C69Kpf/",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/privacy-policy"
+      ],
+      "bodyHash": "b9a29e43860797ae63a3a13835802693657a1ca127659b0758d01c9e724694b3"
     },
     {
       "path": "/roadmaps/invalid",
-      "chain": [],
-      "error": "fetch failed",
-      "cause": "UND_ERR_CONNECT_TIMEOUT"
+      "chain": [
+        {
+          "url": "https://edvvo.netlify.app/roadmaps/invalid",
+          "status": 404,
+          "location": null
+        }
+      ],
+      "canonical": "https://edvvo.netlify.app/404",
+      "robots": "noindex, follow",
+      "xRobots": null,
+      "server": "Netlify",
+      "title": "Page not found | Edvvo",
+      "bodyCharacters": 878,
+      "headings": [
+        "Let's find your next chapter."
+      ],
+      "links": [
+        "https://edvvo.netlify.app/roadmaps/invalid#study-content",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/focus-timer",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/past-paper-tracker",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/editorial-policy",
+        "https://edvvo.netlify.app/privacy-policy",
+        "https://edvvo.netlify.app/terms-of-service",
+        "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+        "https://youtube.com/@edvvo?feature=shared",
+        "https://www.facebook.com/share/1CE4C69Kpf/",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/privacy-policy"
+      ],
+      "bodyHash": "b9a29e43860797ae63a3a13835802693657a1ca127659b0758d01c9e724694b3"
     },
     {
       "path": "/solutions/invalid",
-      "chain": [],
-      "error": "fetch failed",
-      "cause": "ENOTFOUND"
+      "chain": [
+        {
+          "url": "https://edvvo.netlify.app/solutions/invalid",
+          "status": 404,
+          "location": null
+        }
+      ],
+      "canonical": "https://edvvo.netlify.app/404",
+      "robots": "noindex, follow",
+      "xRobots": null,
+      "server": "Netlify",
+      "title": "Page not found | Edvvo",
+      "bodyCharacters": 878,
+      "headings": [
+        "Let's find your next chapter."
+      ],
+      "links": [
+        "https://edvvo.netlify.app/solutions/invalid#study-content",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/focus-timer",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/past-paper-tracker",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/editorial-policy",
+        "https://edvvo.netlify.app/privacy-policy",
+        "https://edvvo.netlify.app/terms-of-service",
+        "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+        "https://youtube.com/@edvvo?feature=shared",
+        "https://www.facebook.com/share/1CE4C69Kpf/",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/privacy-policy"
+      ],
+      "bodyHash": "b9a29e43860797ae63a3a13835802693657a1ca127659b0758d01c9e724694b3"
     },
     {
       "path": "/notifications",
-      "chain": [],
-      "error": "fetch failed",
-      "cause": "ENOTFOUND"
+      "chain": [
+        {
+          "url": "https://edvvo.netlify.app/notifications",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "canonical": "https://edvvo.netlify.app/notifications",
+      "robots": "noindex, follow",
+      "xRobots": null,
+      "server": "Netlify",
+      "title": "Edvvo updates | Edvvo",
+      "bodyCharacters": 5818,
+      "headings": [
+        "Notifications"
+      ],
+      "links": [
+        "https://edvvo.netlify.app/notifications#study-content",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/notifications/14",
+        "https://edvvo.netlify.app/notifications/13",
+        "https://edvvo.netlify.app/notifications/12",
+        "https://edvvo.netlify.app/notifications/11",
+        "https://edvvo.netlify.app/notifications/10",
+        "https://edvvo.netlify.app/notifications/9",
+        "https://edvvo.netlify.app/notifications/8",
+        "https://edvvo.netlify.app/notifications/7",
+        "https://edvvo.netlify.app/notifications/6",
+        "https://edvvo.netlify.app/notifications/5",
+        "https://edvvo.netlify.app/notifications/4",
+        "https://edvvo.netlify.app/notifications/3",
+        "https://edvvo.netlify.app/notifications/2",
+        "https://edvvo.netlify.app/notifications/1",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/focus-timer",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/past-paper-tracker",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/editorial-policy",
+        "https://edvvo.netlify.app/privacy-policy",
+        "https://edvvo.netlify.app/terms-of-service",
+        "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+        "https://youtube.com/@edvvo?feature=shared",
+        "https://www.facebook.com/share/1CE4C69Kpf/",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/privacy-policy"
+      ],
+      "bodyHash": "15e51f3eed783ea04e643b909647df71e2eef5bac45c4ea8a2e668d8389a2c59"
     },
     {
       "path": "http://edvvo.netlify.app/about",
-      "chain": [],
-      "error": "fetch failed",
-      "cause": "ENOTFOUND"
+      "chain": [
+        {
+          "url": "http://edvvo.netlify.app/about",
+          "status": 301,
+          "location": "https://edvvo.netlify.app/about"
+        },
+        {
+          "url": "https://edvvo.netlify.app/about",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "canonical": "https://edvvo.netlify.app/about",
+      "robots": "index, follow, max-image-preview:large",
+      "xRobots": null,
+      "server": "Netlify",
+      "title": "About Edvvo | Edvvo",
+      "bodyCharacters": 2114,
+      "headings": [
+        "A little help.A new possibility."
+      ],
+      "links": [
+        "https://edvvo.netlify.app/about#study-content",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/editorial-policy",
+        "https://edvvo.netlify.app/",
+        "https://edvvo.netlify.app/study-plan",
+        "https://edvvo.netlify.app/focus-timer",
+        "https://edvvo.netlify.app/revision-workshop",
+        "https://edvvo.netlify.app/past-paper-tracker",
+        "https://edvvo.netlify.app/study-methods",
+        "https://edvvo.netlify.app/explore",
+        "https://edvvo.netlify.app/about",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/editorial-policy",
+        "https://edvvo.netlify.app/privacy-policy",
+        "https://edvvo.netlify.app/terms-of-service",
+        "https://whatsapp.com/channel/0029VbAGAGWCBtx5xamqF93V",
+        "https://youtube.com/@edvvo?feature=shared",
+        "https://www.facebook.com/share/1CE4C69Kpf/",
+        "https://edvvo.netlify.app/contact",
+        "https://edvvo.netlify.app/privacy-policy"
+      ],
+      "bodyHash": "db35e45c646630776c16b19d6fdb22d9cb58718df5d66f1521865dbf30edb649"
     },
     {
       "path": "https://www.edvvo.netlify.app/",
       "chain": [],
-      "error": "fetch failed",
-      "cause": "ENOTFOUND"
+      "error": "fetch failed"
     }
   ]
 }
